@@ -3,6 +3,9 @@
     font-family: "Poppins", sans-serif;
     text-align: center;
 }
+html{
+    margin: 100px;
+}
 .grid-container{
     display: grid;
     grid-template-columns: (3,1fr);

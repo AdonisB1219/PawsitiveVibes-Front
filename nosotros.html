@@ -12,15 +12,15 @@
     <main class="grid-container">
         <!-- Quienes somos -->
         <!--Contenedor 1-->
-        <div id="quienes-somos">
-            <h1 class="fw-bolder">¿Quiénes somos?</h1>
+        <div class="quienes-somos" id="quienes-somos">
+            <h1>¿Quiénes somos?</h1>
             <p>Somos un equipo de profesionales comprometidos con brindar una experiencia de compra satisfactoria e inolvidable a nuestros clientes, mediante la venta de una gran variedad de productos a un solo click de distancia, siempre procurando la felicidad y el bienestar de tus mascotas.</p>
         </div>
 
         <!-- Nuestros valores -->
         <!--Contenedor 2-->
         <div class="nuestros-valores">
-            <h1 class="fw-bolder">Nuestros valores</h1>
+            <h1>Nuestros valores</h1>
             <div class="row row-cols-1 row-cols-md-3 g-4">
                 <div class="col">
                   <div class="card h-100">
@@ -28,6 +28,7 @@
                       <img src="./src/img/bienestar.jpeg" class="card-img-top" alt="...">
                     </div>
                     <div class="card-body">
+                      
                       <h5 class="card-title valor1">Compromiso con el bienestar animal</h5>
                       <p class="card-text">Valoramos y promovemos el cuidado, la salud y el bienestar de todas las mascotas.</p>
                     </div>
@@ -55,7 +56,6 @@
                     </div>
                   </div>
                 </div>
-              
             </div>
           </div>
 
@@ -79,68 +79,74 @@
 
         <!-- Equipo -->
         <!--Contenedor 4-->
+        
         <div class="equipo">
-          <div class="titulo">
-            <h1 class="col fw-bolder">Te presentamos al equipo</h1> 
+          <div class="titulo-equipo">
+            <h1>Te presentamos al equipo</h1> 
           </div>
-                <div class="card col-6 col-lg-4" >
-                    <div class="divimg">
-                      <img src="./src/img/Diego.jpeg" class="card-img-top" alt="...">
-                    </div>
-                      <div class="card-body">
-                      <h3>Diego Lopez</h3>
-                      <p class="card-text">Mi nombre es Diego López, y soy ingeniero en Mecánica Eléctrica. Además, poseo habilidades como desarrollador Java Full Stack, con un enfoque principal en el backend</p>
-                    </div>
+          <div class="container">
+          <div class="row row-cols-md-3 row-cols-1">
+            <div class="container-equipo diego col-4">
+              <figure>
+              <img src="./src/img/diego1.png" class="card-img-top" alt="...">
+                <div class="capa">
+                  <h3>Diego López</h3>
+                  <p>Soy ingeniero en Mecánica Eléctrica. Además, poseo habilidades como desarrollador Java Full Stack, con un enfoque principal en el backend.</p>
                 </div>
-                <div class="card col-6 col-lg-4">
-                  <div class="divimg">  
-                    <img src="./src/img/Carlos.jpeg" class="card-img-top" alt="...">
-                  </div>  
-                  <div class="card-body">
-                      <h3>Carlos Ramos</h3>
-                      <p class="card-text">Desarrollador Java Full Stack. Apasionado del diseño y la tecnología. Entre mis habilidades está el uso de HTML, CSS, Bootstrap, JavaScript y Java.</p>
-                    </div>
+              </figure>
+            </div>
+            <div class="container-equipo carlos col-4">
+              <figure>
+                <img src="./src/img/carlos1.png" class="card-img-top" alt="...">
+                <div class="capa">
+                  <h3>Carlos Ramos</h3>
+                  <p>Desarrollador Java Full Stack. Apasionado del diseño y la tecnología. Entre mis habilidades está el uso de HTML, CSS, Bootstrap, JavaScript y Java.</p>
                 </div>
-                <div class="card col-6 col-lg-4">
-                    <div class="divimg"> 
-                      <img src="./src/img/Adonis.jpeg" class="card-img-top" alt="...">
-                    </div>
-                      <div class="card-body">
-                      <h3>Adonis Becerra</h3>
-                      <p class="card-text">Desarrollador Java Full Stack e Ingeniero Industrial. He participado en proyectos de desarrollo web, tengo conocimientos en HTML, CSS, Bootstrap, JavaScript y Java.</p>
-                    </div>
+              </figure>
+            </div>
+            <div class="container-equipo adonis col-4">
+              <figure>
+                <img src="./src/img//adonis1.png" class="card-img-top" alt="...">
+                <div class="capa">
+                  <h3>Adonis Becerra</h3>
+                  <p>Desarrollador Java Full Stack e Ingeniero Industrial. He participado en proyectos de desarrollo web, tengo conocimientos en HTML, CSS, Bootstrap, JavaScript y Java.</p>
                 </div>
-                <div class="card col-6 col-lg-4">
-                    <div class="divimg"> 
-                      <img src="./src/img/Beatriz.jpeg" class="card-img-top" alt="...">
-                    </div>
-                      <div class="card-body">
-                      <h3>Beatriz Osuna</h3>
-                      <p class="card-text">Desarrollora FullStack Java. Parte del Programa Generation y estudiante de Ing. de Software. Afronto proyectos con autonomía, iniciativa, responsabilidad y siempre buscando la excelencia.</p>
-                    </div>
+              </figure>
+            </div>
+          </div>
+          <div class="row row-cols-md-3 row-cols-1">
+            <div class="container-equipo beti col-4">
+              <figure>
+                <img src="./src/img/beti1.png" class="card-img-top" alt="...">
+                <div class="capa">
+                  <h3>Beatriz Osuna</h3>
+                  <p>Soy desarrollora FullStack Java. Formo Programa Generation y actualmente estudio Ing de Software, mi autonomía y capacidad de tomar iniciativa me permiten afrontar proyectos de manera independiente.</p>
                 </div>
-                <div class="card col-6 col-lg-4">
-                  <div class="divimg">   
-                    <img src="./src/img/Adriana.jpeg" class="card-img-top" alt="...">
-                  </div>  
-                    <div class="card-body">
-                      <h3>Adriana Benton</h3>
-                      <p class="card-text">Adriana Gabriela Alvarez Benton | Desarrolladora Java full Stack | Ing. en Telemática | Lic. Relaciones Internacionales | Apasionada por el diseño web con CSS y Bootstrap | Full time Mom</p>
-                    </div>
+              </figure>
+            </div>
+            <div class="container-equipo adri col-4">
+              <figure>
+                <img src="./src/img/Adriana.jpeg" class="card-img-top" alt="...">
+                <div class="capa">
+                  <h3>Adriana Benton</h3>
+                  <p>Desarrolladora Java full Stack | Ing. en Telemática | Lic. Relaciones Internacionales | Apasionada por el diseño web con CSS y Bootstrap | Full time Mom</p>
                 </div>
-                <div class="card col-6 col-lg-4">
-                    <div class="divimg">
-                      <img src="./src/img/Mariel.jpeg" class="card-img-top" alt="...">
-                    </div>
-                      <div class="card-body">
-                      <h3>Mariel Martiñon</h3>
-                      <p class="card-text">Desarrolladora Java Full Stack con conocimiento en HTML, CSS y Java Script.  Experiencia en elaboración de páginas web.</p>
-                    </div>
-                  </div>
+              </figure>
+            </div>
+            <div class="container-equipo mariel col-4">
+              <figure>
+                <img src="./src/img/mariel1.png" class="card-img-top" alt="...">
+                <div class="capa">
+                  <h3>Mariel Martiñon</h3>
+                  <p>Desarrolladora Java Full Stack con conocimiento en HTML, CSS y Java Script.  Experiencia en elaboración de páginas web.</p>
+                </div>
+              </figure>
+            </div>
+          </div>
+        </div>       
         </div>
-
     </main>
-   
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 

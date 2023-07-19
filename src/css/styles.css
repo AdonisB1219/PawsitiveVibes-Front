@@ -1,0 +1,62 @@
+
+*{
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: (3,1fr);
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+    "quienes-somos quienes-somos quienes-somos"
+    "nuestros-valores nuestros-valores nuestros-valores"
+    "mision-vision mision-vision mision-vision"
+    "equipo equipo equipo";
+    gap: 30px;
+}
+#quienes-somos{
+    grid-area: quienes-somos;
+}
+.nuestros-valores{
+    grid-area: nuestros-valores;
+}
+.mision-vision{
+    grid-area: mision-vision;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+.equipo{
+    grid-area: equipo;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#container-text{
+        width: 30%;
+        min-width: 300px;
+        margin: 0;
+        padding: 0;
+        gap: 30px;
+        align-items: center;
+        justify-content: center;
+    }
+#container-imagen img{
+    border-radius: 10px;
+}
+.card{
+    margin: 0;
+}
+.divimg{
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+}
+.titulo{
+    display: block;
+    width: 100%;
+}

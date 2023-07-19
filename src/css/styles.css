@@ -62,4 +62,23 @@ html{
 .titulo{
     display: block;
     width: 100%;
+   
+}
+.valor1{
+    background-color: #F06319;
+   border: 20px;
+   padding: 5px;
+   
+}
+.valor2{
+    background-color: #E8A42B;
+   border: 20px;
+   padding: 5px;
+   
+}
+.valor3{
+    background-color: #33658A;
+   border: 20px;
+   padding: 5px;
+   
 }

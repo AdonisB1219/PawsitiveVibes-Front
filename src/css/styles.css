@@ -149,6 +149,10 @@
     
 }
 
+.titulo-equipo h1{
+    text-align: center;
+}
+
 .container-equipo figure{
     position: relative;
     height: 300px;

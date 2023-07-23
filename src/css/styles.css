@@ -39,20 +39,21 @@
    border: 20px;
    padding: 9px;
    border-radius: 15px;
-   
+   color: white;
 }
 .valor2{
     background-color: #E8A42B;
    border: 20px;
    padding: 9px;
    border-radius: 15px;
+   color: white;
 }
 .valor3{
    background-color: #33658A;
    border: 20px;
    padding: 9px;
    border-radius: 15px;
-   
+   color: white;
 }
 
 .card-text{
@@ -136,6 +137,9 @@
    
 }
 
+.card-img-top{
+    object-fit: scale-down;
+}
 
 /* animacion fotos equipo*/
 .container-equipo{
@@ -153,7 +157,7 @@
     width: 300px;
     overflow: hidden;
     border-radius: 6px;
-    box-shadow: 0px 15px 25px rgba(0, 0,0, 0.5);
+    box-shadow: 0px 0px 25px rgba(0, 0,0, 0.5);
     cursor:pointer;
 }
 
@@ -219,6 +223,22 @@
     max-width: 200px;
     margin: auto;
 } 
+
+
+/*Tamaño de letra para celular*/
+@media (max-width: 600px) {
+    .quienes-somos > p{
+        font-size: 18px;
+    }
+    
+    #container-mision > p{
+        font-size: 18px;  
+    }
+
+    #container-vision > p{
+        font-size: 18px;  
+    }
+}
 
 
 /*grid-----------------------*/

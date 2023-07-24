@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="./src/css/contacto.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!--Link iconos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <!--Div contenedor-->
+    <div class="container text-center">
+        
+        <div class="title">
+            <h1>Contáctanos.</h1>
+        </div>
+        
+        <div class="row" >
+        <!--Div datos-contacto-->
+          <div class="col datos-contacto" >
+            <div class="tit" id="atencion">
+                <h3>Atención al cliente.</h3>
+            </div>
+            <div class="info" id="telefono">
+                <i class="iconos fa-solid fa-phone"></i>
+                <p>+ 52 6691009316</p>
+                <p>800 910 5682</p>
+            </div>
+            <div class="info" id="horario">
+                <i class="iconos fa-solid fa-clock"></i>
+                <p>Lunes a Viernes: 9 a 19 hrs</p>
+                <p>Sábado y Domingo: 10 a 17 hrs</p>
+            </div>
+            <div class="ubicacion">
+                <div class="mapa">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.450481925854!2d-99.20189222641966!3d19.436135040571216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d202049e615117%3A0xe4bb3c7492bbef21!2sAv.%20Homero%201099%2C%20Polanco%2C%20Polanco%20III%20Secc%2C%20Miguel%20Hidalgo%2C%2011540%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses!2smx!4v1690231989742!5m2!1ses!2smx" width="300" height="225" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="direccion">
+                    <p >Calle: XXXXXXXXXXXXXXXX
+                        Numero: XXXX
+                        México</p>
+                </div>   
+            </div>
+
+          </div>
+        <!--Div formulario-contacto-->
+          <div class="col formulario" >
+            <div class="tit" id="titulo-form">
+                <h3>¿Cómo podemos ayudarte?</h3>
+            </div>
+            <div class="form1">
+            <form>
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" aria-describedby="nombre">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">Nunca compartirtemos tu correo con nadie</div>
+                </div>
+                <div class="mb-3">
+                    <label for="mensaje" class="form-label">Mensaje</label>
+                    <input type="text" class="form-control" id="mensaje" aria-describedby="mensaje">
+                </div>
+                <div class="mb-3">
+                    <label for="tel" class="form-label">Teléfono</label>
+                    <input type="text" class="form-control" id="tel" aria-describedby="tel">
+                </div>
+                <div class="form-group">
+                    <label for="seleccion">Motivo</label>
+                    <select class="form-control" id="seleccion">
+                        <option value="">-- Elige una opción --</option>
+                        <option value="opcion1">Sugerencias</option>
+                        <option value="opcion2">Quejas</option>
+                        <option value="opcion3">Devoluciones y aclaraciones</option>
+                        <option value="opcion4">Otro</option>
+                    </select>
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Acepto terminos y condiciones</label>
+                </div>
+                <button type="submit" class=" enviar btn btn-primary">Enviar</button>
+            </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+</html>

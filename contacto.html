@@ -51,27 +51,27 @@
                 <h3>¿Cómo podemos ayudarte?</h3>
             </div>
             <div class="form1">
-            <form>
+            <form id="form">
                 <div class="mb-3">
                     <label for="nombre" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="nombre" aria-describedby="nombre">
+                    <input type="text" class="form-control" name="nombre" id="nombre" aria-describedby="nombre">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <label for="email" class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email">
                     <div id="emailHelp" class="form-text">Nunca compartirtemos tu correo con nadie</div>
                 </div>
                 <div class="mb-3">
                     <label for="mensaje" class="form-label">Mensaje</label>
-                    <textarea type="text" class="form-control" id="mensaje" aria-describedby="mensaje" rows="3"></textarea>
+                    <textarea type="text" class="form-control" id="mensaje" aria-describedby="mensaje" rows="3" name="mensaje"></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="tel" class="form-label">Teléfono</label>
-                    <input type="text" class="form-control" id="tel" aria-describedby="tel">
+                    <input type="text" class="form-control" id="tel" aria-describedby="tel" name="tel">
                 </div>
                 <div class="form-group">
-                    <label for="seleccion">Motivo</label>
-                    <select class="form-control" id="seleccion">
+                    <label for="motivo">Motivo</label>
+                    <select class="form-control" id="motivo" name="motivo">
                         <option value="">-- Elige una opción --</option>
                         <option value="opcion1">Sugerencias</option>
                         <option value="opcion2">Quejas</option>
@@ -83,12 +83,19 @@
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
                     <label class="form-check-label" for="exampleCheck1">Acepto terminos y condiciones</label>
                 </div>
-                <button type="submit" class=" enviar btn btn-primary" id="enviar">Enviar</button>
+                <button type="submit" class="enviar btn btn-primary" id="enviar">Enviar</button>
             </form>
             </div>
           </div>
         </div>
       </div>
+      
+<script type="text/javascript"
+src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script type="text/javascript">
+emailjs.init('a6EtC--2fowK_8GRa')
+</script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script src="./src/js/main.js"></script>
   </body>

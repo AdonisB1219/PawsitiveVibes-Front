@@ -3,10 +3,10 @@
 //Mandamos llamar a los elementos de los formularios
 
 let nombre = document.getElementById("nombre");
-let email = document.getElementById("exampleInputEmail1");
+let email = document.getElementById("email");
 let mensaje = document.getElementById("mensaje");
 let tel = document.getElementById("tel");
-let seleccion = document.getElementById("seleccion");
+let seleccion = document.getElementById("motivo");
 let terminos = document.getElementById("exampleCheck1");
 let enviar = document.getElementById("enviar");
 
@@ -18,6 +18,31 @@ let formularioCorrecto = true;
 const regexCorreo = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 const regexTel =  /^(\+?52)?\s*\(?\d{2,3}\)?[-.\s]?\d{2,3}[-.\s]?\d{2,4}$/;
 
+const btn = document.getElementById('enviar');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   if(validarDatos()){
+
+   btn.value = 'Enviando...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_o57us32';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Mensaje enviado con éxito');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+}
+});
+
+
 function eliminarMensajeError(elemento) {
     const mensajeError = elemento.nextElementSibling;
     elemento.style.border="";
@@ -26,8 +51,7 @@ function eliminarMensajeError(elemento) {
     }
 }
 
-enviar.addEventListener("click", function(event){
-    event.preventDefault();
+function validarDatos(){
     errores = 0;
     eliminarMensajeError(nombre);
     eliminarMensajeError(email);
@@ -98,9 +122,8 @@ enviar.addEventListener("click", function(event){
 
     //Alerta 
     if(errores == 0){
-        
+        return true;
+    } else return false;
 
-    }
 
-
-})
+}

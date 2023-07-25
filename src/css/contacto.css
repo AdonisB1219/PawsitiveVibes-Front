@@ -41,13 +41,9 @@
 .ubicacion{
     display: flex;
     justify-content: center;
-    margin: 35px 23px;
     align-items: center;
 }
 
-.ubicacion .direccion p{
-    margin-left: 10px;
-}
 /*estilos div formulario*/
 .formulario{
     

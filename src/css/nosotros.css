@@ -203,26 +203,33 @@
 }
 
 .container-equipo figure:hover > .capa h3{
-    margin-top: 10px;
-    margin-bottom: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .container-equipo figure .capa h3{
-    color: #fff;
-    font-weight: 300;
+    color: #000000;
+    font-weight: 500;
     margin-bottom: 120px;
+    font-size: 25px;
     transition: all 500ms ease-out;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 .container-equipo figure .capa p{
-    color: #fff;
+    color: #000000;
     font-size: 15px;
     line-height: 1.5;
     width: 100%;
     max-width: 200px;
     margin: auto;
 } 
+
+.capa a{
+    text-decoration: none;
+    color: black;
+    font-size: 40px;
+}
 
 
 /*Tamaño de letra para celular*/
@@ -239,24 +246,4 @@
         font-size: 18px;  
     }
 }
-
-
-/*grid-----------------------*/
-/* .grid-container > * {
-    text-align: center;
-    border-radius: 10px;
-    padding: 10px;
-}
-/*Escritorio*/
-/*.grid-container{
-    display: grid;
-    grid-template-columns: (3,1fr);
-    grid-template-rows: auto auto auto auto;
-    grid-template-areas: 
-    "quienes-somos quienes-somos quienes-somos"
-    "nuestros-valores nuestros-valores nuestros-valores"
-    "mision-vision mision-vision mision-vision"
-    "equipo equipo equipo";
-    gap: 30px; 
-} */
 

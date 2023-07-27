@@ -1,29 +1,30 @@
 
 //Agregar navbar y footer
-let main = document.getElementsByTagName("main")[0];
+let header = document.getElementsByTagName("header")[0];
+let footer = document.getElementsByTagName("footer")[0];
 
-main.insertAdjacentHTML("afterbegin", `      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-<div class="container-fluid">
-  <a class="navbar-brand" href="#"><img src="./src/img/logo.png" alt="" width="100px"></a>
+header.insertAdjacentHTML("afterbegin", `<nav class="navbar navbar-expand-lg ">
+<div class="div-nav container-fluid">
+  <a class="navbar-brand" href="./index.html"><img id="logo" src="./src/img/logo.png" alt=""></a>
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarText">
-    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+  <div class=" menu collapse navbar-collapse" id="navbarText">
+    <ul class="texto-nav navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="text nav-item">
+            <a class=" nav-link active" aria-current="page" href="./index.html">Inicio</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Nosotros</a>
+          <li class="text nav-item">
+            <a class="nav-link active" href="./nosotros.html">Nosotros</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Productos</a>
+          <li class="text nav-item">
+            <a class="nav-link active" href="./productos.html">Productos</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link active"  href="#">Contáctanos</a>
+          <li class="text nav-item">
+            <a class="nav-link active"  href="./contacto.html">Contáctanos</a>
           </li>
     </ul>
-    <span class="navbar-text">
+    <span class="iconos navbar-text">
         <li class="nav-item">
             <a class="nav-link active"  href="#"><i class="bi bi-cart"></i></a>
           </li>
@@ -37,12 +38,11 @@ main.insertAdjacentHTML("afterbegin", `      <nav class="navbar navbar-expand-lg
   </div>
 </div>
 </nav>
-`)
+`);
 
-main.insertAdjacentHTML("beforeend", `<footer class="py-5">
+footer.insertAdjacentHTML("beforeend", `<footer class="py-5">
 <div class="row">
   <div class="col-6 col-md-2 mb-3">
-    
     <ul class="nav flex-column">
       <li class="nav-item mb-2"><a href="./index.html" class="nav-link p-0 text-body-secondary"><img src="./src/img/logo.png" alt="" width="100px"></a></li>
       <li class="nav-item mb-2">Siguenos en:</li>
@@ -100,5 +100,5 @@ main.insertAdjacentHTML("beforeend", `<footer class="py-5">
     </ul>
   </div>
 </div>
-</footer>`)
+</footer>`);
 

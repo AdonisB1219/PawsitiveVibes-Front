@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*----------------Aqui comienza el Nav-------------*/
+*{
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+/*Div Navbar*/
+
+.navbar{
+    /* box-shadow: 4px 4px 4px 4px rgba(0,0,0,0.4); */
+    height: 120px;
+}
+
+/*Css texto navbar*/
+
+.text{
+    font-size:24px;
+    font-weight: 600;
+    padding: 0 15px;
+}
+
+.texto-nav{
+    margin: 0 auto;
+}
+
+.menu .texto-nav li:hover{
+    background-color: #F06319;
+    border-radius: 40px;
+}
+/*Css iconos navbar*/
+.menu .iconos{
+    list-style: none;
+    display: flex;
+    margin: 30px;
+}
+
+.menu .iconos li{
+    padding: 10px;
+}
+
+.iconos li a i{
+    font-size: 30px;
+}
+
+/*Imagn navbar*/
+
+#logo{
+    width: 120px;
+    margin: 0 20px;
+}
+
+
+
+/*----------------Aqui termina el Nav-------------*/
+
+
+

@@ -1,8 +1,9 @@
 
 //Agregar navbar y footer
-let main = document.getElementsByTagName("main")[0];
+let header = document.getElementsByTagName("header")[0];
+let footer = document.getElementsByTagName("footer")[0];
 
-main.insertAdjacentHTML("afterbegin", `      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+header.insertAdjacentHTML("afterbegin", `      <nav class="navbar navbar-expand-lg bg-body-tertiary">
 <div class="container-fluid">
   <a class="navbar-brand" href="#"><img src="./src/img/logo.png" alt="" width="100px"></a>
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,7 +40,7 @@ main.insertAdjacentHTML("afterbegin", `      <nav class="navbar navbar-expand-lg
 </nav>
 `)
 
-main.insertAdjacentHTML("beforeend", `<footer class="py-5">
+footer.insertAdjacentHTML("beforeend", `<footer class="py-5">
 <div class="row">
   <div class="col-6 col-md-2 mb-3">
     

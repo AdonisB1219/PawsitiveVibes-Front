@@ -3,7 +3,7 @@
 let header = document.getElementsByTagName("header")[0];
 let footer = document.getElementsByTagName("footer")[0];
 
-header.insertAdjacentHTML("afterbegin", `<nav class="navbar navbar-expand-lg ">
+header.insertAdjacentHTML("afterbegin", `<nav class="navbar navbar-expand-lg bg-body-tertiary">
 <div class="div-nav container-fluid">
   <a class="navbar-brand" href="./index.html"><img id="logo" src="./src/img/logo.png" alt=""></a>
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,17 +11,17 @@ header.insertAdjacentHTML("afterbegin", `<nav class="navbar navbar-expand-lg ">
   </button>
   <div class=" menu collapse navbar-collapse" id="navbarText">
     <ul class="texto-nav navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="text nav-item">
-            <a class=" nav-link active" aria-current="page" href="./index.html">Inicio</a>
+        <li class="text nav-item mx-4 p-2">
+            <a class="p-2 nav-link" aria-current="page" href="./index.html">Inicio</a>
           </li>
-          <li class="text nav-item">
-            <a class="nav-link active" href="./nosotros.html">Nosotros</a>
+          <li class="text nav-item mx-4 p-2">
+            <a class="p-2 nav-link" href="./nosotros.html">Nosotros</a>
           </li>
-          <li class="text nav-item">
-            <a class="nav-link active" href="./productos.html">Productos</a>
+          <li class="text nav-item mx-4 p-2">
+            <a class="p-2 nav-link" href="./productos.html">Productos</a>
           </li>
-          <li class="text nav-item">
-            <a class="nav-link active"  href="./contacto.html">Contáctanos</a>
+          <li class="text nav-item mx-4 p-2">
+            <a class="p-2 nav-link"  href="./contacto.html">Contáctanos</a>
           </li>
     </ul>
     <span class="iconos navbar-text">
@@ -87,16 +87,11 @@ footer.insertAdjacentHTML("beforeend", `<footer class="py-5">
     </ul>
   </div>
 
-  <div class="col-md-1  ">
+  <div class="col-md-1">
     <ul class="nav flex-row">
-        <li class="nav-item mb-2"><button>Regístrate</button></li>
-       
-    </ul>
-  </div>
-  <div class="col-md-2  ">
-    <ul class="nav flex-row">
-        
-        <li class="nav-item mb-2"><button>Inicia Sesión</button></li>
+        <li class="nav-item mb-2"><button id="registrate">Regístrate</button></li>
+        <li class="nav-item mb-2"><button id="inicia-sesion">Inicia Sesión</button></li>
+
     </ul>
   </div>
 </div>

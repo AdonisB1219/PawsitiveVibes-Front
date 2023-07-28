@@ -11,8 +11,13 @@
 /*Div Navbar*/
 
 .navbar{
-    /* box-shadow: 4px 4px 4px 4px rgba(0,0,0,0.4); */
+    box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.4);
     height: 120px;
+    background-color: white;
+}
+
+.colapse{
+    background-color: white;
 }
 
 /*Css texto navbar*/
@@ -30,6 +35,15 @@
 .menu .texto-nav li:hover{
     background-color: #F06319;
     border-radius: 40px;
+}
+
+.navbar-nav > li > a:hover{
+    color: white;
+}
+
+.navbar-nav > li > a{
+    text-decoration: none;
+    color: black;
 }
 /*Css iconos navbar*/
 .menu .iconos{
@@ -58,4 +72,26 @@
 /*----------------Aqui termina el Nav-------------*/
 
 
+/*Footer*/
+#inicia-sesion{
+    border-radius: 10px;
+    color: #F06319;
+    background-color: white;
+    border: 2px solid #F06319;
+    padding: 5px 5px;
+    font-size: 22px;
+    margin-left: 20px;
+    width: 200px;
+}
 
+#registrate{
+    border-radius: 10px;
+    color: white;
+    font-weight: 500;
+    background-color: #F06319;
+    border: 1px solid white;
+    padding: 6px 6px;
+    font-size: 22px;
+    margin-left: 20px;
+    width: 200px;
+}

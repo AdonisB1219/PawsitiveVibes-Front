@@ -31,7 +31,7 @@
 
 .nuestros-valores h1{
     font-weight: 700;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
 }
 
 .valor1{
@@ -62,8 +62,8 @@
 
 /* Seccion mision vision */
 .mision-vision{
-    padding: 20px 50px;
-    margin: 50px;
+    padding: 20px 10px;
+    margin: 10px;
 }
 #container-mision{
     font-family: 'Poppins',sans-serif;

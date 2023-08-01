@@ -3,12 +3,13 @@
 let header = document.getElementsByTagName("header")[0];
 let footer = document.getElementsByTagName("footer")[0];
 
-header.insertAdjacentHTML("afterbegin", `<nav class="navbar navbar-expand-lg">
+header.insertAdjacentHTML("afterbegin", `<nav class="navbar navbar-expand-md">
 <div class="div-nav container-fluid">
   <a class="navbar-brand" href="./index.html"><img id="logo" src="./src/img/logo.png" alt=""></a>
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+</div>
   <div class=" menu collapse navbar-collapse" id="navbarText">
     <ul class="texto-nav navbar-nav me-auto mb-2 mb-lg-0">
         <li class="text nav-item mx-4 p-2">
@@ -36,7 +37,6 @@ header.insertAdjacentHTML("afterbegin", `<nav class="navbar navbar-expand-lg">
           </li>
     </span>
   </div>
-</div>
 </nav>
 `);
 

@@ -9,7 +9,7 @@ header.insertAdjacentHTML("afterbegin", `<nav class="navbar navbar-expand-md">
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-</div>
+
   <div class=" menu collapse navbar-collapse" id="navbarText">
     <ul class="texto-nav navbar-nav me-auto mb-2 mb-lg-0">
         <li class="text nav-item mx-4 p-2">

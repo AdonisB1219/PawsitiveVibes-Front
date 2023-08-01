@@ -60,65 +60,74 @@ function validarDatos(){
     eliminarMensajeError(seleccion);
     eliminarMensajeError(enviar);
     
-   nombre.value = nombre.value.trim();
-   email.value = email.value.trim();
-   mensaje.value = mensaje.value.trim();
+//    nombre.value = nombre.value.trim();
+//    email.value = email.value.trim();
+//    mensaje.value = mensaje.value.trim();
     
 
-    //NOMBRE
-    if(nombre.value.length==0 || !isNaN(nombre.value)){
-        nombre.insertAdjacentHTML("afterend",`
-            <p style="color: red" class="mensajeError">*Escriba un nombre válido.</p>
-        `);
-        nombre.style.border="solid 2px red"
-        errores ++;   
-    }
+//     //NOMBRE
+//     if(nombre.value.length==0 || !isNaN(nombre.value)){
+//         nombre.insertAdjacentHTML("afterend",`
+//             <p style="color: red" class="mensajeError">*Escriba un nombre válido.</p>
+//         `);
+//         nombre.style.border="solid 2px red"
+//         errores ++;   
+//     }
 
 
-    //Correo electrónico
-    if(!regexCorreo.test(email.value)){
-        email.insertAdjacentHTML("afterend", `
-            <p style="color: red" class="mensajeError">*El correo electrónico no es válido</p>
-        `)
-        email.style.border="solid 2px red"
-        errores ++;
-    }
+//     //Correo electrónico
+//     if(!regexCorreo.test(email.value)){
+//         email.insertAdjacentHTML("afterend", `
+//             <p style="color: red" class="mensajeError">*El correo electrónico no es válido</p>
+//         `)
+//         email.style.border="solid 2px red"
+//         errores ++;
+//     }
     
 
-    //Mensaje
-    if(mensaje.value.length==0){
-        mensaje.insertAdjacentHTML("afterend",`
-            <p style="color: red" class="mensajeError">*Escriba un mensaje.</p>
-        `);
-        mensaje.style.border="solid 2px red"
-        errores ++;
-    }
+//     //Mensaje
+//     if(mensaje.value.length==0){
+//         mensaje.insertAdjacentHTML("afterend",`
+//             <p style="color: red" class="mensajeError">*Escriba un mensaje.</p>
+//         `);
+//         mensaje.style.border="solid 2px red"
+//         errores ++;
+//     }
 
 
-    //Teléfono
-    if(!regexTel.test(tel.value)){
-       tel.insertAdjacentHTML("afterend",`
-       <p  style="color: red" class="mensajeError">*El teléfono no es válido</p>
-       `)
-       tel.style.border="solid 2px red"
-       errores ++;
-    }
+//     //Teléfono
+//     if(!regexTel.test(tel.value)){
+//        tel.insertAdjacentHTML("afterend",`
+//        <p  style="color: red" class="mensajeError">*El teléfono no es válido</p>
+//        `)
+//        tel.style.border="solid 2px red"
+//        errores ++;
+//     }
 
 
-    //Motivo
+//     //Motivo
 
-    if(seleccion.value == ""){
-        seleccion.style.border="solid 2px red"
-        errores ++;
-    }
+//     if(seleccion.value == ""){
+//         seleccion.style.border="solid 2px red"
+//         errores ++;
+//     }
    
 
-    //checkbox
-    if(!terminos.checked){
-        terminos.style.border="solid 2px red"
-        errores++;
-    }
+//     //checkbox
+//     if(!terminos.checked){
+//         terminos.style.border="solid 2px red"
+//         errores++;
+//     }
   
+
+//     //Alerta 
+//     if(errores == 0){
+        
+
+//     }
+
+
+// })
 
     //Alerta 
     if(errores == 0){

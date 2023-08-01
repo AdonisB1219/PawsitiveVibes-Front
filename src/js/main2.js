@@ -1,5 +1,5 @@
 function addItem(item, categoria){
-    const itemHTML = '<div class="col"><div class="card">\n' +
+    const itemHTML = '<div class="col"><div class="card tarjeta-producto">\n' +
         '    <img src="'+item.img +'" class="card-img-top" alt="image">\n' +
         '    <div class="card-body">\n' +
         '        <h5 class="card-title">'+item.name+'</h5>\n' +

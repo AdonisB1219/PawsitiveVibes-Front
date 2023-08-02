@@ -3,7 +3,7 @@
 let header = document.getElementsByTagName("header")[0];
 let footer = document.getElementsByTagName("footer")[0];
 
-header.insertAdjacentHTML("afterbegin", `<nav class="navbar navbar-expand-md">
+header.insertAdjacentHTML("afterbegin", `<nav class="navbar navbar-expand-xl">
 <div class="div-nav container-fluid">
   <a class="navbar-brand" href="./index.html"><img id="logo" src="./src/img/logo.png" alt=""></a>
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">

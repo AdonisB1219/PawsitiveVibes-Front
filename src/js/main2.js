@@ -1,17 +1,50 @@
 function addItem(item, categoria) {
-    const itemHTML = '<div class="col"><div class="card">\n' +
-        '    <img src="' + item.img + '" class="card-img-top tarjeta-producto" alt="image">\n' +
-        '    <div class="card-body">\n' +
-        '        <h5 class="card-title">' + item.name + '</h5>\n' +
-        '        <p class="card-text">' + item.description + '</p>\n' +
-        '        <p class="card-text precio">' + "$" + item.precio + '</p>\n' +
-        '        <a href="#" class="btn btn-success">Comprar</a>\n' +
-        '    </div>\n' +
-        '</div>\n' +
-        '<br/> </div>';
+    contadorProductos++;
+    let color = definirColorBoton(contadorProductos);
+    const itemHTML = `
+    <div class="col mt-4">
+      <div class="card h-100"">
+      <div class="flex-card h-100 d-flex justify-content-center flex-wrap">
+      <div class="imagen">
+         <img src="${item.img}" class="card-img-top center-block mx-auto d-block tarjeta-producto" alt="...">
+</div>
+</div>
+        <div class="card-body">
+          <h5 class="card-title">${item.name}</h5>
+          <p class="card-text description">${item.description}</p>
+          <p class="card-text">
+          <p class="card-text precio">$ ${item.precio}</p>
+        <div class="text-end boton-carta align-self-center">
+        <button href="#" class="boton-comprar" style="background-color:${color}">Comprar</button>
+        </div>
+      </div>
+      </div>
+    </div>`;
     const producto = document.getElementById(categoria);
     producto.insertAdjacentHTML("afterbegin", itemHTML);
+
 }
+
+
+function definirColorBoton(contador){
+    switch(contador%4){
+        case 3: 
+        color = "#50D0D3";
+        break;
+        case 2: 
+        color = "#F06319";
+        break;
+        case 1: 
+        color = "#E8A42B";
+        break;
+        case 0: 
+        color = "#33658A";
+        break;
+    }
+    return color;
+}
+
+var contadorProductos = 0;
 
 addItem({
     'name': 'Alimento para perro',

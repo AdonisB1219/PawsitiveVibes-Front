@@ -28,15 +28,15 @@ boton.addEventListener("click", (function(event){
           )
 
     } else{
-        let strErrores;
+        let strErrores = "";
         errores.forEach((error)=>{
-            strErrores += error + "\n";
+            strErrores += error + "<br>";
         });
     
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: strErrores,
+            html: strErrores,
           })
     }
 
@@ -50,6 +50,14 @@ boton.addEventListener("click", (function(event){
 function validarDatos(){
     var errores = [];
     titulo.style.border="";
+    categoria.style.border="";
+    clave.style.border="";
+    numStock.style.border="";
+    marca.style.border="";
+    descripcion.style.border="";
+    precio.style.border=""
+    descuento.style.border=""
+    checkInfo.style.border=""
     //
     //QUITAR EL ESTILO A TODOS LOS BORDES
     //
@@ -71,19 +79,19 @@ if(!(clave.value.length > 2 )){
     errores.push("Las palabras clave no son válidas");
 }
 
-if(!(numStock.value >= 0 )){
+if(!(numStock.value > 0 )){
     numStock.style.border="solid 2px red"
     errores.push("El número de Stock no es válido");
 }
 
 if(!(marca.value.length > 2 )){
     marca.style.border="solid 2px red"
-    errores.push("La marca no es válido");
+    errores.push("La marca no es válida");
 }
 
 if(!(descripcion.value.length > 10 )){
     descripcion.style.border="solid 2px red"
-    errores.push("La descripción no es válido");
+    errores.push("La descripción no es válida");
 }
 
 if(!(precio.value > 10 )){

@@ -9,6 +9,7 @@ const precio = document.getElementById("precio");
 const descuento = document.getElementById("descuento");
 const checkInfo = document.getElementById("checkInfo");
 const boton = document.getElementById("registrar");
+const botonImg = document.getElementById("boton-img");
 
 
 boton.addEventListener("click", (function(event){
@@ -19,7 +20,7 @@ boton.addEventListener("click", (function(event){
     console.log(errores.length);
 
     if (errores.length == 0){
-        let producto = {"name":titulo.value,"img":"./src/img/imgProductos/comidaPerro1.png", "description":descripcion.value, "precio":precio.value};
+        let producto = {"name":titulo.value,"img":imagen, "description":descripcion.value, "precio":precio.value};
         window.localStorage.setItem("producto", JSON.stringify(producto));
         Swal.fire(
             'Éxito',
@@ -43,6 +44,24 @@ boton.addEventListener("click", (function(event){
 
 
 }));
+
+var myWidget = cloudinary.createUploadWidget({
+    cloudName: 'dl3mykyoa', 
+    uploadPreset: 'ummhv3o6'}, (error, result) => { 
+      if (!error && result && result.event === "success") { 
+        Swal.fire(
+            'Éxito',
+            'Imagen cargada correctamente',
+            'success'
+          );
+        imagen = result.info.secure_url;
+      }
+    }
+  )
+  
+  botonImg.addEventListener("click", function(){
+      myWidget.open();
+    }, false);
 
 
 

@@ -6,8 +6,6 @@
     <title>Agregar Producto</title>
     <!-- Icon -->
     <link rel="shortcut icon" href="./src/img/logo.png">
-    <!--Link CSS-->
-    <link rel="stylesheet" href="./src/css/agregarProducto.css">
     <!--Link CSS Navbar/Footer-->
     <link rel="stylesheet" href="./src/css/navfooter.css">
     <!--Link Bootstrap-->
@@ -53,7 +51,7 @@
             <div class="col-12 col-md-6 formulario" >
                 <form id="form">
                     <div class="mb-3">
-                        <label for="descripcion" class="form-label">Mensaje</label>
+                        <label for="descripcion" class="form-label">Descripcion</label>
                         <textarea type="text" class="form-control" id="descripcion" aria-describedby="descripcion" rows="3" name="descripcion"></textarea>
                     </div>
                     <div class="form-check">
@@ -95,9 +93,10 @@
                         </select>
                     </div>
                     <div class="mb-3 form-check py-2">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">He revisado la información que voy a registrar.</label>
+                        <input type="checkbox" class="form-check-input" id="checkInfo" name="checkInfo">
+                        <label class="form-check-label" for="checkInfo">He revisado la información que voy a registrar.</label>
                     </div>
+                    <button id="registrar">Registrar</button>
                 </form>
             </div><!--div form-->
             
@@ -109,6 +108,7 @@
 
     </footer>
     <!--Scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script type="text/javascript"
 src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script type="text/javascript">
@@ -117,5 +117,6 @@ emailjs.init('a6EtC--2fowK_8GRa')
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script src="./src/js/main.js"></script>
     <script src="./src/js/navbar.js"></script>
+    <script src="./src/js/validacionesAgregarProducto.js"></script>
   </body>
 </html>

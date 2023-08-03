@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Agregar Producto</title>
+    <!-- Icon -->
+    <link rel="shortcut icon" href="./src/img/logo.png">
+    <!--Link CSS-->
+    <link rel="stylesheet" href="./src/css/agregarProducto.css">
+    <!--Link CSS Navbar/Footer-->
+    <link rel="stylesheet" href="./src/css/navfooter.css">
+    <!--Link Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!--Link iconos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <!--Header-->
+    <header>
+
+    </header>
+    <!--Main-->
+    <main>
+        <div class="container text-center">
+         <div class="row" >
+            <!--Div datos producto 1-->
+            <div class="col-12 col-md-6 formulario" >
+                <form id="form">
+                    <div class="mb-3">
+                        <label for="titulo" class="form-label">Titulo del artículo</label>
+                        <input type="text" class="form-control" name="titulo" id="titulo" aria-describedby="titulo">
+                    </div>
+                    <div class="mb-3">
+                        <label for="categoria" class="form-label">Categoría</label>
+                        <input type="text" class="form-control" id="categoria" aria-describedby="categoria" name="categoria">
+                    </div>
+                    <div class="mb-3">
+                        <label for="clave" class="form-label">Palabras clave</label>
+                        <input type="text" class="form-control" id="clave" aria-describedby="clave" name="clave">
+                    </div>
+                    <div class="mb-3">
+                        <label for="numStock" class="form-label">Número de artículos en stock</label>
+                        <input type="number" class="form-control" id="numStock" aria-describedby="numStock" name="numStock">
+                    </div>
+                    <div class="mb-3">
+                        <label for="marca" class="form-label">Marca</label>
+                        <input type="text" class="form-control" id="marca" aria-describedby="marca" name="marca">
+                    </div>
+                </form>
+            </div><!--div form 1-->
+            <!--Div form productos 2-->
+            <div class="col-12 col-md-6 formulario" >
+                <form id="form">
+                    <div class="mb-3">
+                        <label for="descripcion" class="form-label">Mensaje</label>
+                        <textarea type="text" class="form-control" id="descripcion" aria-describedby="descripcion" rows="3" name="descripcion"></textarea>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          Gatos
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                          Perros
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                          Aves
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                          Peces
+                        </label>
+                      </div>
+                      <div class="mb-3">
+                        <label for="precio" class="form-label">Precio</label>
+                        <input type="number" class="form-control" id="precio" aria-describedby="precio" name="precio">
+                    </div>
+                    <div class="form-group">
+                        <label for="descuento">Descuento</label>
+                        <select class="form-control" id="descuento" name="descuento">
+                            <option value="">-- Elige una opción --</option>
+                            <option value="opcion1">10%</option>
+                            <option value="opcion2">20%</option>
+                            <option value="opcion3">30%</option>
+                            <option value="opcion4">Otro</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 form-check py-2">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">He revisado la información que voy a registrar.</label>
+                    </div>
+                </form>
+            </div><!--div form-->
+            
+        </div>
+        </div>
+    </main>
+    <!--Footer-->
+    <footer>
+
+    </footer>
+    <!--Scripts-->
+<script type="text/javascript"
+src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript">
+emailjs.init('a6EtC--2fowK_8GRa')
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="./src/js/main.js"></script>
+    <script src="./src/js/navbar.js"></script>
+  </body>
+</html>

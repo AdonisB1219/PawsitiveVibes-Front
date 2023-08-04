@@ -21,8 +21,37 @@
         
       }
 
+      label{
+        font-size: 14px;
+        font-weight: 500;
+      }
+
       .formulario{
         padding: 0 0 0 100px;
+      }
+
+      .btnRegistrar{
+        
+        background-color: #33658A;
+      }
+
+      .btn{
+        border-radius: 20px;
+      }
+
+      .mensajeError{
+        display: block;
+      }
+
+      .info{
+        font-size: 12px;
+        color: #99A2A5;
+      }
+
+      .errorAlert{
+        font-size: 12px;
+        color: red;
+        display: none;
       }
 
     
@@ -47,22 +76,28 @@
                     <div class="mb-3">
                         <label for="titulo" class="form-label">Titulo del artículo</label>
                         <input type="text" class="form-control" name="titulo" id="titulo" aria-describedby="titulo">
+                        <p class="errorAlert" id="errorTitulo"><i class="bi bi-exclamation-circle"></i> El título debe de ser mayor a 3 caracteres.</p>
+                        
                     </div>
                     <div class="mb-3">
                         <label for="categoria" class="form-label">Categoría</label>
                         <input type="text" class="form-control" id="categoria" aria-describedby="categoria" name="categoria">
+                        <p class="errorAlert" id="errorCategoria"><i class="bi bi-exclamation-circle"></i> La categoría no es válida.</p>
                     </div>
                     <div class="mb-3">
                         <label for="clave" class="form-label">Palabras clave</label>
                         <input type="text" class="form-control" id="clave" aria-describedby="clave" name="clave">
+                        <p class="errorAlert" id="errorClave"><i class="bi bi-exclamation-circle"></i> Debes ingresar palabras clave válidas.</p>
                     </div>
                     <div class="mb-3">
                         <label for="numStock" class="form-label">Número de artículos en stock</label>
                         <input type="number" class="form-control" id="numStock" aria-describedby="numStock" name="numStock">
+                        <p class="errorAlert" id="errorNumStock"><i class="bi bi-exclamation-circle"></i> Debe haber al menos un artículo en existencia.</p>
                     </div>
                     <div class="mb-3">
                         <label for="marca" class="form-label">Marca</label>
                         <input type="text" class="form-control" id="marca" aria-describedby="marca" name="marca">
+                        <p class="errorAlert" id="errorMarca"><i class="bi bi-exclamation-circle"></i> La marca debe de tener al menos 3 caracteres.</p>
                     </div>
                 </form>
             </div><!--div form 1-->
@@ -72,6 +107,7 @@
                     <div class="mb-3">
                         <label for="descripcion" class="form-label">Descripcion</label>
                         <textarea type="text" class="form-control" id="descripcion" aria-describedby="descripcion" rows="3" name="descripcion"></textarea>
+                        <p class="errorAlert" id="errorDescripcion"><i class="bi bi-exclamation-circle"></i> La descripción debe ser de al menos 10 caracteres.</p>
                     </div>
                     <div class="row">
                       <div class = "col">
@@ -102,8 +138,8 @@
                       </div>
                       
                       <div class="col">
-                        <button type="button" id="boton-img" class="btn btn-primary" >Subir imagen</button>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <button type="button" id="boton-img" class="btn btn-outline-primary" >Subir imagen</button>
+                        <p class="info">Recuerda que la imagen debe ser de al menos de 800 x 800 píxeles.</p>
                       </div>
                       
                       
@@ -112,22 +148,27 @@
                       <div class="mb-3">
                         <label for="precio" class="form-label">Precio</label>
                         <input type="number" class="form-control" id="precio" aria-describedby="precio" name="precio">
+                        <p class="errorAlert" id="errorPrecio"><i class="bi bi-exclamation-circle"></i> El precio mínimo debe ser de $10 MXN.</p>
                       
                       <div class="form-group">
                           <label for="descuento">Descuento</label>
                           <select class="form-control" id="descuento" name="descuento">
                               <option value="">-- Elige una opción --</option>
-                              <option value="opcion1">10%</option>
+                              <option value="opcion1">Ninguno</option>
+                              <option value="opcion2">10%</option>
                               <option value="opcion2">20%</option>
                               <option value="opcion3">30%</option>
                               <option value="opcion4">Otro</option>
                           </select>
+                          <p class="errorAlert" id="errorDescuento"><i class="bi bi-exclamation-circle"></i> Selecciona una opción válida.</p>
                       </div>
                       <div class="mb-3 form-check py-2">
                           <input type="checkbox" class="form-check-input" id="checkInfo" name="checkInfo">
                           <label class="form-check-label" for="checkInfo">He revisado la información que voy a registrar.</label>
+                          <p class="info">Al aceptar esta casilla estás indicando que la información ha sido revisada para garantizar que el producto sea publicado sin errores.</p>
+                          <p class="errorAlert" id="errorCheckInfo"><i class="bi bi-exclamation-circle"></i> Debes aceptar la casilla.</p>
                       </div>
-                      <button class="btn btn-primary" id="registrar">Registrar</button>
+                      <button class="btn btn-primary btnRegistrar" id="registrar">Registrar</button>
                     </div>
                   </div>
                   

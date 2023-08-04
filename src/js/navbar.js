@@ -27,13 +27,13 @@ header.insertAdjacentHTML("afterbegin", `<nav class="navbar navbar-expand-xl">
     </ul>
     <span class="iconos navbar-text">
         <li class="nav-item">
-            <a class="nav-link active"  href="#"><i class="bi bi-cart"></i></a>
+            <a class="nav-link active"  href="./agregarProducto.html"><i class="bi bi-cart"></i></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active"  href="#"><i class="bi bi-person"></i></a>
+            <a class="nav-link active"  href="./agregarProducto.html"><i class="bi bi-person"></i></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active"  href="#"><i class="bi bi-search"></i></a>
+            <a class="nav-link active"  href="./agregarProducto.html"><i class="bi bi-search"></i></a>
           </li>
     </span>
   </div>

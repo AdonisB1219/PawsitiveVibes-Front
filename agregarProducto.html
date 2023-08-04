@@ -6,14 +6,57 @@
     <title>Agregar Producto</title>
     <!-- Icon -->
     <link rel="shortcut icon" href="./src/img/logo.png">
-    <!--Link CSS-->
-    <link rel="stylesheet" href="./src/css/agregarProducto.css">
     <!--Link CSS Navbar/Footer-->
     <link rel="stylesheet" href="./src/css/navfooter.css">
     <!--Link Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <!--Link iconos-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <!-- Clouflare -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      main{
+        margin-top: 50px;
+        
+      }
+
+      label{
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      .formulario{
+        padding: 0 0 0 100px;
+      }
+
+      .btnRegistrar{
+        
+        background-color: #33658A;
+      }
+
+      .btn{
+        border-radius: 20px;
+      }
+
+      .mensajeError{
+        display: block;
+      }
+
+      .info{
+        font-size: 12px;
+        color: #99A2A5;
+      }
+
+      .errorAlert{
+        font-size: 12px;
+        color: red;
+        display: none;
+      }
+
+    
+
+    </style>
   </head>
   <body>
     <!--Header-->
@@ -22,30 +65,39 @@
     </header>
     <!--Main-->
     <main>
-        <div class="container text-center">
+        <div class="container">
+          
          <div class="row" >
             <!--Div datos producto 1-->
             <div class="col-12 col-md-6 formulario" >
+              <h3 class="text-start">Agregar un nuevo producto</h1>
+                <br>
                 <form id="form">
                     <div class="mb-3">
                         <label for="titulo" class="form-label">Titulo del artículo</label>
                         <input type="text" class="form-control" name="titulo" id="titulo" aria-describedby="titulo">
+                        <p class="errorAlert" id="errorTitulo"><i class="bi bi-exclamation-circle"></i> El título debe de ser mayor a 3 caracteres.</p>
+                        
                     </div>
                     <div class="mb-3">
                         <label for="categoria" class="form-label">Categoría</label>
                         <input type="text" class="form-control" id="categoria" aria-describedby="categoria" name="categoria">
+                        <p class="errorAlert" id="errorCategoria"><i class="bi bi-exclamation-circle"></i> La categoría no es válida.</p>
                     </div>
                     <div class="mb-3">
                         <label for="clave" class="form-label">Palabras clave</label>
                         <input type="text" class="form-control" id="clave" aria-describedby="clave" name="clave">
+                        <p class="errorAlert" id="errorClave"><i class="bi bi-exclamation-circle"></i> Debes ingresar palabras clave válidas.</p>
                     </div>
                     <div class="mb-3">
                         <label for="numStock" class="form-label">Número de artículos en stock</label>
                         <input type="number" class="form-control" id="numStock" aria-describedby="numStock" name="numStock">
+                        <p class="errorAlert" id="errorNumStock"><i class="bi bi-exclamation-circle"></i> Debe haber al menos un artículo en existencia.</p>
                     </div>
                     <div class="mb-3">
                         <label for="marca" class="form-label">Marca</label>
                         <input type="text" class="form-control" id="marca" aria-describedby="marca" name="marca">
+                        <p class="errorAlert" id="errorMarca"><i class="bi bi-exclamation-circle"></i> La marca debe de tener al menos 3 caracteres.</p>
                     </div>
                 </form>
             </div><!--div form 1-->
@@ -53,69 +105,97 @@
             <div class="col-12 col-md-6 formulario" >
                 <form id="form">
                     <div class="mb-3">
-                        <label for="descripcion" class="form-label">Mensaje</label>
+                        <label for="descripcion" class="form-label">Descripcion</label>
                         <textarea type="text" class="form-control" id="descripcion" aria-describedby="descripcion" rows="3" name="descripcion"></textarea>
+                        <p class="errorAlert" id="errorDescripcion"><i class="bi bi-exclamation-circle"></i> La descripción debe ser de al menos 10 caracteres.</p>
                     </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                          Gatos
-                        </label>
+                    <div class="row">
+                      <div class = "col">
+                        <div class="form-check col">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                          <label class="form-check-label" for="flexRadioDefault1">
+                            Gatos
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                          <label class="form-check-label" for="flexRadioDefault2">
+                            Perros
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                          <label class="form-check-label" for="flexRadioDefault2">
+                            Aves
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                          <label class="form-check-label" for="flexRadioDefault2">
+                            Peces
+                          </label>
+                        </div>
                       </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                        <label class="form-check-label" for="flexRadioDefault2">
-                          Perros
-                        </label>
+                      
+                      <div class="col">
+                        <button type="button" id="boton-img" class="btn btn-outline-primary" >Subir imagen</button>
+                        <p class="info">Recuerda que la imagen debe ser de al menos de 800 x 800 píxeles.</p>
                       </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                        <label class="form-check-label" for="flexRadioDefault2">
-                          Aves
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                        <label class="form-check-label" for="flexRadioDefault2">
-                          Peces
-                        </label>
-                      </div>
+                      
+                      
+                    </div>
+                    <div class="row">
                       <div class="mb-3">
                         <label for="precio" class="form-label">Precio</label>
                         <input type="number" class="form-control" id="precio" aria-describedby="precio" name="precio">
+                        <p class="errorAlert" id="errorPrecio"><i class="bi bi-exclamation-circle"></i> El precio mínimo debe ser de $10 MXN.</p>
+                      
+                      <div class="form-group">
+                          <label for="descuento">Descuento</label>
+                          <select class="form-control" id="descuento" name="descuento">
+                              <option value="">-- Elige una opción --</option>
+                              <option value="opcion1">Ninguno</option>
+                              <option value="opcion2">10%</option>
+                              <option value="opcion2">20%</option>
+                              <option value="opcion3">30%</option>
+                              <option value="opcion4">Otro</option>
+                          </select>
+                          <p class="errorAlert" id="errorDescuento"><i class="bi bi-exclamation-circle"></i> Selecciona una opción válida.</p>
+                      </div>
+                      <div class="mb-3 form-check py-2">
+                          <input type="checkbox" class="form-check-input" id="checkInfo" name="checkInfo">
+                          <label class="form-check-label" for="checkInfo">He revisado la información que voy a registrar.</label>
+                          <p class="info">Al aceptar esta casilla estás indicando que la información ha sido revisada para garantizar que el producto sea publicado sin errores.</p>
+                          <p class="errorAlert" id="errorCheckInfo"><i class="bi bi-exclamation-circle"></i> Debes aceptar la casilla.</p>
+                      </div>
+                      <button class="btn btn-primary btnRegistrar" id="registrar">Registrar</button>
                     </div>
-                    <div class="form-group">
-                        <label for="descuento">Descuento</label>
-                        <select class="form-control" id="descuento" name="descuento">
-                            <option value="">-- Elige una opción --</option>
-                            <option value="opcion1">10%</option>
-                            <option value="opcion2">20%</option>
-                            <option value="opcion3">30%</option>
-                            <option value="opcion4">Otro</option>
-                        </select>
-                    </div>
-                    <div class="mb-3 form-check py-2">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">He revisado la información que voy a registrar.</label>
-                    </div>
+                  </div>
+                  
+                    
                 </form>
             </div><!--div form-->
             
         </div>
         </div>
     </main>
+   
     <!--Footer-->
     <footer>
 
     </footer>
     <!--Scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script type="text/javascript"
 src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script type="text/javascript">
 emailjs.init('a6EtC--2fowK_8GRa')
 </script>
+<script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>  
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script src="./src/js/main.js"></script>
     <script src="./src/js/navbar.js"></script>
+    <script src="./src/js/validacionesAgregarProducto.js"></script>
   </body>
 </html>

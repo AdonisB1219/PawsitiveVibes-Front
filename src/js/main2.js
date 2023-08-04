@@ -46,7 +46,18 @@ function definirColorBoton(contador){
 
 var contadorProductos = 0;
 
-addItem({
+if(localStorage.length > 0){
+    let productoNuevo = JSON.parse(window.localStorage.getItem("producto"));
+    addItem(productoNuevo, "perros");
+
+
+}
+
+
+
+
+
+/* addItem({
     'name': 'Alimento para perro',
     'img': './src/img/imgProductos/comidaPerro1.png',
     'description': 'Costal de alimento para perro adulto, Contenido: 15kg, Marca: Nupec', 'precio': 1050.00
@@ -150,4 +161,5 @@ addItem({
     'img': './src/img/imgProductos/juguetesAve1.png',
     'description': 'Juguetes de madera para aves', 'precio': 259.50
 }, "aves");
+ */
 

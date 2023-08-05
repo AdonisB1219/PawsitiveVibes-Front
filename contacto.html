@@ -29,9 +29,9 @@
                 <h1>Contáctanos.</h1>
             </div>
             
-            <div class="row" >
+            <div class="row justify-content-between" >
             <!--Div datos-contacto-->
-              <div class="col-12 col-md-6 datos-contacto" >
+              <div class="col-12 col-md-5 datos-contacto" >
                 <div class="tit" id="atencion">
                     <h3>Atención al cliente.</h3>
                 </div>
@@ -58,7 +58,7 @@
     
               </div>
             <!--Div formulario-contacto-->
-              <div class="col-12 col-md-6 formulario" >
+              <div class="col-12 col-md-5 formulario" >
                 <div class="tit" id="titulo-form">
                     <h3>¿Cómo podemos ayudarte?</h3>
                 </div>
@@ -67,19 +67,23 @@
                     <div class="mb-3">
                         <label for="nombre" class="form-label">Nombre</label>
                         <input type="text" class="form-control" name="nombre" id="nombre" aria-describedby="nombre">
+                        <p class="mensajeError" id="errorNombre"><i class="bi bi-exclamation-circle"></i> El nombre debe de contener al menos 3 caracteres.</p>
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Correo electrónico</label>
                         <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email">
+                        <p class="mensajeError" id="errorCorreo"><i class="bi bi-exclamation-circle"></i> Introduce un correo electrónico válido.</p>
                         <div id="emailHelp" class="form-text">Nunca compartirtemos tu correo con nadie</div>
                     </div>
                     <div class="mb-3">
                         <label for="mensaje" class="form-label">Mensaje</label>
                         <textarea type="text" class="form-control" id="mensaje" aria-describedby="mensaje" rows="3" name="mensaje"></textarea>
+                        <p class="mensajeError" id="errorMensaje"><i class="bi bi-exclamation-circle"></i> El mensaje debe contener al menos 20 caracteres.</p>
                     </div>
                     <div class="mb-3">
                         <label for="tel" class="form-label">Teléfono</label>
                         <input type="text" class="form-control" id="tel" aria-describedby="tel" name="tel">
+                        <p class="mensajeError" id="errorTel"><i class="bi bi-exclamation-circle"></i> Introduce un teléfono válido</p>
                     </div>
                     <div class="form-group">
                         <label for="motivo">Motivo</label>
@@ -90,11 +94,14 @@
                             <option value="opcion3">Devoluciones y aclaraciones</option>
                             <option value="opcion4">Otro</option>
                         </select>
+                        <p class="mensajeError" id="errorMotivo"><i class="bi bi-exclamation-circle"></i> Selecciona una opción válida.</p>
                     </div>
                     <div class="mb-3 form-check py-2">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Acepto terminos y condiciones</label>
+                        <label class="form-check-label" for="exampleCheck1" id="emailHelp">Acepto terminos y condiciones</label>
+                       
                     </div>
+                    <p class="mensajeError" id="errorTerminos"><i class="bi bi-exclamation-circle"></i> Debes aceptar los términos y condiciones para continuar.</p>
                     <button type="submit" class="enviar btn btn-primary" id="enviar">Enviar</button>
                 </form>
                 </div>
@@ -112,6 +119,7 @@ src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script
 <script type="text/javascript">
 emailjs.init('a6EtC--2fowK_8GRa')
 </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script src="./src/js/main.js"></script>
     <script src="./src/js/navbar.js"></script>

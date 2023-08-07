@@ -37,12 +37,16 @@ document.getElementById('form')
    btn.value = 'Enviando...';
 
    const serviceID = 'default_service';
-   const templateID = 'template_o57us32';
+   const templateID = 'contacto';
 
    emailjs.sendForm(serviceID, templateID, this)
    .then(() => {
      btn.value = 'Send Email';
-     alert('Sent!');
+     Swal.fire(
+      'Éxito',
+      'El mensaje fue enviado correctamente',
+      'success'
+    )
    }, (err) => {
      btn.value = 'Send Email';
      alert(JSON.stringify(err));
@@ -72,7 +76,7 @@ function validarDatos(){
    email.style.border=""
    mensaje.style.border=""
    tel.style.border=""
-   seleccion.style.border=""
+   opcion.style.border=""
    terminos.style.border=""
     
 
@@ -110,9 +114,9 @@ function validarDatos(){
 
     //Motivo
 
-    if(seleccion.value == ""){
+    if(opcion.value == ""){
         errorMotivo.style.display = "block"
-        seleccion.style.border="solid 2px red"
+        opcion.style.border="solid 2px red"
         errores ++;
     }
    
@@ -126,11 +130,6 @@ function validarDatos(){
   
     //Alerta 
     if(errores == 0){
-        Swal.fire(
-            'Éxito',
-            'El producto fue agregado correctamente',
-            'success'
-          )
         return true;
     } else {
         Swal.fire({

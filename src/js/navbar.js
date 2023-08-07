@@ -44,7 +44,7 @@ footer.insertAdjacentHTML("beforeend", `<footer class="py-5">
 <div class="row" style="margin-right:0;">
   <div class="col-6 col-md-2 mb-3">
     <ul class="nav flex-column">
-      <li class="nav-item mb-2"><a href="./index.html" class="nav-link p-0 text-body-secondary"><img src="./src/img/logo.png" alt="" width="100px"></a></li>
+      <li class="nav-item mb-2"><a href="./agregarProducto.html" class="nav-link p-0 text-body-secondary"><img src="./src/img/logo.png" alt="" width="100px"></a></li>
       <li class="nav-item mb-2">Siguenos en:</li>
       <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i class="bi bi-tiktok"></i>
         <i class="bi bi-instagram"></i>

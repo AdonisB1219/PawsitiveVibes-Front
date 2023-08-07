@@ -10,6 +10,14 @@ let seleccion = document.getElementById("motivo");
 let terminos = document.getElementById("exampleCheck1");
 let enviar = document.getElementById("enviar");
 
+//Llamar a los mensajes de error
+let errorNombre = document.getElementById("errorNombre");
+let errorCorreo = document.getElementById("errorCorreo");
+let errorMensaje = document.getElementById("errorMensaje");
+let errorTel = document.getElementById("errorTel");
+let errorMotivo = document.getElementById("errorMotivo");
+let errorTerminos = document.getElementById("errorTerminos");
+
 
 
 let errores = 0;
@@ -29,12 +37,16 @@ document.getElementById('form')
    btn.value = 'Enviando...';
 
    const serviceID = 'default_service';
-   const templateID = 'template_o57us32';
+   const templateID = 'contacto';
 
    emailjs.sendForm(serviceID, templateID, this)
    .then(() => {
      btn.value = 'Send Email';
-     alert('Sent!');
+     Swal.fire(
+      'Éxito',
+      'El mensaje fue enviado correctamente',
+      'success'
+    )
    }, (err) => {
      btn.value = 'Send Email';
      alert(JSON.stringify(err));
@@ -43,33 +55,34 @@ document.getElementById('form')
 });
 
 
-function eliminarMensajeError(elemento) {
-    const mensajeError = elemento.nextElementSibling;
-    elemento.style.border="";
-    if (mensajeError && mensajeError.classList.contains("mensajeError")) {
-        mensajeError.remove();
-    }
-}
+
 
 function validarDatos(){
     errores = 0;
-    eliminarMensajeError(nombre);
-    eliminarMensajeError(email);
-    eliminarMensajeError(mensaje);
-    eliminarMensajeError(tel);
-    eliminarMensajeError(seleccion);
-    eliminarMensajeError(enviar);
+    
     
    nombre.value = nombre.value.trim();
    email.value = email.value.trim();
    mensaje.value = mensaje.value.trim();
+
+   errorNombre.style.display = ""
+   errorCorreo.style.display = ""
+   errorMensaje.style.display = ""
+   errorTel.style.display = ""
+   errorMotivo.style.display = ""
+   errorTerminos.style.display = ""
+
+   nombre.style.border=""
+   email.style.border=""
+   mensaje.style.border=""
+   tel.style.border=""
+   opcion.style.border=""
+   terminos.style.border=""
     
 
     //NOMBRE
-    if(nombre.value.length==0 || !isNaN(nombre.value)){
-        nombre.insertAdjacentHTML("afterend",`
-            <p style="color: red" class="mensajeError">*Escriba un nombre válido.</p>
-        `);
+    if(nombre.value.length<=3 || !isNaN(nombre.value)){
+        errorNombre.style.display = "block"
         nombre.style.border="solid 2px red"
         errores ++;   
     }
@@ -77,19 +90,15 @@ function validarDatos(){
 
     //Correo electrónico
     if(!regexCorreo.test(email.value)){
-        email.insertAdjacentHTML("afterend", `
-            <p style="color: red" class="mensajeError">*El correo electrónico no es válido</p>
-        `)
+        errorCorreo.style.display = "block"
         email.style.border="solid 2px red"
         errores ++;
     }
     
 
     //Mensaje
-    if(mensaje.value.length==0){
-        mensaje.insertAdjacentHTML("afterend",`
-            <p style="color: red" class="mensajeError">*Escriba un mensaje.</p>
-        `);
+    if(mensaje.value.length<=20){
+        errorMensaje.style.display = "block"
         mensaje.style.border="solid 2px red"
         errores ++;
     }
@@ -97,9 +106,7 @@ function validarDatos(){
 
     //Teléfono
     if(!regexTel.test(tel.value)){
-       tel.insertAdjacentHTML("afterend",`
-       <p  style="color: red" class="mensajeError">*El teléfono no es válido</p>
-       `)
+        errorTel.style.display = "block"
        tel.style.border="solid 2px red"
        errores ++;
     }
@@ -107,14 +114,16 @@ function validarDatos(){
 
     //Motivo
 
-    if(seleccion.value == ""){
-        seleccion.style.border="solid 2px red"
+    if(opcion.value == ""){
+        errorMotivo.style.display = "block"
+        opcion.style.border="solid 2px red"
         errores ++;
     }
    
 
     //checkbox
     if(!terminos.checked){
+        errorTerminos.style.display = "block"
         terminos.style.border="solid 2px red"
         errores++;
     }
@@ -122,5 +131,13 @@ function validarDatos(){
     //Alerta 
     if(errores == 0){
         return true;
-    } else return false;
+    } else {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Revisa los datos ingresados',
+            
+          })
+        return false;
+    }
 }//funcion validarDatos

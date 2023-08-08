@@ -133,7 +133,7 @@ if(!(titulo.value.length > 3 )){
 
 if(!(categoria.value.length > 2 )){
     categoria.style.border="solid 2px red"
-    errores.push("La categoria no es válida");
+    errores.push("La categoría no es válida");
     errorCategoria.style.display = "block";
 }
 
@@ -145,7 +145,7 @@ if(!(clave.value.length > 2 )){
 
 if(!(numStock.value >= 0 )){
     numStock.style.border="solid 2px red"
-    errores.push("El número de Stock no es válido");
+    errores.push("El número de stock no es válido");
     errorNumStock.style.display = "block";
 }
 

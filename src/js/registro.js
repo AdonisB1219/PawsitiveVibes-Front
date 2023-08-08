@@ -67,7 +67,7 @@ function validarDatos() {
 
     //Correo electrónico
     if (!regexCorreo.test(email.value)) {
-        displayAlert("Por favor, ingresa un correo electronico valido.", "correo-alert", "alert-danger");
+        displayAlert("Por favor, ingresa un correo electrónico válido.", "correo-alert", "alert-danger");
         isValid = false;
         email.style.border = "solid 2px red"
 
@@ -76,7 +76,7 @@ function validarDatos() {
 
     //Teléfono
     if (!regexTel.test(numtel.value)) {
-        displayAlert("Por favor, ingresa un numero de telefono valido.", "tel-alert", "alert-danger");
+        displayAlert("Por favor, ingresa un número de teléfono válido.", "tel-alert", "alert-danger");
         isValid = false;
         numtel.style.border = "solid 2px red"
 
@@ -100,7 +100,7 @@ function validarDatos() {
     //checkbox
     if (!terminos.checked) {
         terminos.style.border = "solid 2px red"
-        displayAlert("Por favor, acepta terminos y condiciones", "terminosalert", "alert-danger");
+        displayAlert("Por favor, acepta términos y condiciones", "terminosalert", "alert-danger");
         isValid = false;
     }
 

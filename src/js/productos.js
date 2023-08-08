@@ -128,7 +128,7 @@ addItem({
 addItem({
     'name': 'Alimento Spirulina',
     'img': './src/img/imgProductos/comidaPeces1.png',
-    'description': 'Alimento Spirulina Boost para peces hervívoros pequeños', 'precio': '75'
+    'description': 'Alimento Spirulina Boost para peces herbívoros pequeños', 'precio': '75'
 }, "peces")
 
 addItem({

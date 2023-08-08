@@ -108,27 +108,29 @@
                     </div>
                     <div class="row">
                       <div class = "col">
+                        <h4>Mascota</h4>
+                        <p class="errorAlert" id="errorMascota"><i class="bi bi-exclamation-circle"></i> Debes seleccionar un tipo de mascota.</p>
                         <div class="form-check col">
-                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                          <label class="form-check-label" for="flexRadioDefault1">
+                          <input class="form-check-input" type="radio" name="mascota" id="flexRadioDefault1" value="gatos">
+                          <label class="form-check-label" for="gatos">
                             Gatos
                           </label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                          <label class="form-check-label" for="flexRadioDefault2">
+                          <input class="form-check-input" type="radio" name="mascota" id="flexRadioDefault2" value="perros">
+                          <label class="form-check-label" for="perros">
                             Perros
                           </label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                          <label class="form-check-label" for="flexRadioDefault2">
+                          <input class="form-check-input" type="radio" name="mascota" id="flexRadioDefault2" value="aves">
+                          <label class="form-check-label" for="aves">
                             Aves
                           </label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                          <label class="form-check-label" for="flexRadioDefault2">
+                          <input class="form-check-input" type="radio" name="mascota" id="flexRadioDefault2" value="peces">
+                          <label class="form-check-label" for="peces">
                             Peces
                           </label>
                         </div>
@@ -137,6 +139,8 @@
                       <div class="col">
                         <button type="button" id="boton-img" class="btn btn-outline-primary" >Subir imagen</button>
                         <p class="info">Recuerda que la imagen debe ser de al menos de 800 x 800 píxeles.</p>
+                        <p class="errorAlert" id="errorImagen"><i class="bi bi-exclamation-circle"></i>Debes subir una imagen</p>
+
                       </div>
                       
                       
@@ -151,11 +155,11 @@
                           <label for="descuento">Descuento</label>
                           <select class="form-control" id="descuento" name="descuento">
                               <option value="">-- Elige una opción --</option>
-                              <option value="opcion1">Ninguno</option>
-                              <option value="opcion2">10%</option>
-                              <option value="opcion2">20%</option>
-                              <option value="opcion3">30%</option>
-                              <option value="opcion4">Otro</option>
+                              <option value="0">Ninguno</option>
+                              <option value="10">10%</option>
+                              <option value="20">20%</option>
+                              <option value="30">30%</option>
+                              <option value="40">40%</option>
                           </select>
                           <p class="errorAlert" id="errorDescuento"><i class="bi bi-exclamation-circle"></i> Selecciona una opción válida.</p>
                       </div>

@@ -1,4 +1,4 @@
-function addItem(item, categoria) {
+function addItem(item) {
     contadorProductos++;
     let color = definirColorBoton(contadorProductos);
     const itemHTML = `
@@ -20,7 +20,7 @@ function addItem(item, categoria) {
       </div>
       </div>
     </div>`;
-    const producto = document.getElementById(categoria);
+    var producto = document.getElementById(item.mascota);
     producto.insertAdjacentHTML("afterbegin", itemHTML);
 
 }
@@ -47,11 +47,10 @@ function definirColorBoton(contador){
 var contadorProductos = 0;
 
 if(localStorage.length > 0){
-    let productoNuevo = JSON.parse(window.localStorage.getItem("producto"));
-    addItem(productoNuevo, "perros");
-
-
+    let productos = JSON.parse(window.localStorage.getItem("productos"));
+    productos.forEach(p => addItem(p));
 }
+
 
 
 

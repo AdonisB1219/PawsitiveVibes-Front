@@ -4,13 +4,12 @@ const clave = document.getElementById("clave");
 const numStock = document.getElementById("numStock");
 const marca = document.getElementById("marca");
 const descripcion = document.getElementById("descripcion");
-//opcion multiple
 const precio = document.getElementById("precio");
 const descuento = document.getElementById("descuento");
 const checkInfo = document.getElementById("checkInfo");
 const boton = document.getElementById("registrar");
 const botonImg = document.getElementById("boton-img");
-
+const mascotas = document.querySelectorAll('input[name=mascota]');
 
 //mensajes de error en formularios
 const errorTitulo = document.getElementById("errorTitulo");
@@ -22,23 +21,34 @@ const errorDescripcion = document.getElementById("errorDescripcion");
 const errorPrecio = document.getElementById("errorPrecio");
 const errorDescuento = document.getElementById("errorDescuento");
 const errorCheckInfo = document.getElementById("errorCheckInfo");
-
+const errorMascota = document.getElementById("errorMascota");
+const errorImagen = document.getElementById("errorImagen");
+var imagen = null;
+var mascota;
 
 boton.addEventListener("click", (function(event){
 
     event.preventDefault();
 
     let errores = validarDatos();
-    console.log(errores.length);
 
     if (errores.length == 0){
-        let producto = {"name":titulo.value,"img":imagen, "description":descripcion.value, "precio":precio.value};
-        window.localStorage.setItem("producto", JSON.stringify(producto));
+        let producto = {"name":titulo.value, "categoria":categoria.value, "clave": clave.value, "marca":marca.value, "stock":numStock.value, "img":imagen, "description":descripcion.value, "precio":precio.value, "mascota":mascota.value};
+        let productos = [];
+        if(window.localStorage.getItem("productos") != null){
+            console.log("no es nulo");
+            console.log(window.localStorage.getItem("productos"));
+            let json = (JSON.parse(window.localStorage.getItem("productos")));
+            let p;
+            json.forEach(p =>productos.push(p));
+        }
+        productos.push(producto);
+        window.localStorage.setItem("productos", JSON.stringify(productos));
         Swal.fire(
             'Éxito',
             'El producto fue agregado correctamente',
             'success'
-          )
+        );
 
     } else{
         let strErrores = "";
@@ -56,6 +66,7 @@ boton.addEventListener("click", (function(event){
 
 
 }));
+
 
 var myWidget = cloudinary.createUploadWidget({
     cloudName: 'dl3mykyoa', 
@@ -80,6 +91,10 @@ var myWidget = cloudinary.createUploadWidget({
 
 function validarDatos(){
     var errores = [];
+    var erroresMascota = 0;
+    mascotas.forEach(m =>{
+        m.classList.remove("border-danger");
+    });
 
     //Deja el borde predeterminado antes de volver a evaluar
     titulo.style.border="";
@@ -102,7 +117,10 @@ function validarDatos(){
     errorPrecio.style.display = "";
     errorDescuento.style.display = "";
     errorCheckInfo.style.display = "";
-    
+    errorMascota.style.display = "";
+    errorImagen.style.display = "";
+
+
   
 
 
@@ -125,7 +143,7 @@ if(!(clave.value.length > 2 )){
     errorClave.style.display = "block";
 }
 
-if(!(numStock.value > 0 )){
+if(!(numStock.value >= 0 )){
     numStock.style.border="solid 2px red"
     errores.push("El número de Stock no es válido");
     errorNumStock.style.display = "block";
@@ -149,7 +167,7 @@ if(!(precio.value > 10 )){
     errorPrecio.style.display = "block";
 }
 
-if(!(descuento.value.length > 2 )){
+if((descuento.value == "" )){
     descuento.style.border="solid 2px red"
     errores.push("El descuento no es válido");
     errorDescuento.style.display = "block";
@@ -159,6 +177,32 @@ if(!(checkInfo.checked)){
     checkInfo.style.border="solid 2px red"
     errores.push("No se marcó checkbox de revisión de información");
     errorCheckInfo.style.display = "block";
+}
+
+if(imagen == null){
+    errores.push("No se agregó imagen del producto");
+    errorImagen.style.display = "block";
+
+}
+
+
+//validar tipo de mascota seleccionado
+
+mascotas.forEach(m => {
+    if (m.checked){
+        mascota = m;
+    } else {
+        (erroresMascota++);
+    }});
+
+if(erroresMascota == 4){
+errores.push("No se seleccionó el tipo de mascota");
+errorMascota.style.display = "block";
+let m;
+console.log(mascotas);
+mascotas.forEach(m =>{
+    m.classList.add("border-danger");
+});
 }
 
 return errores;

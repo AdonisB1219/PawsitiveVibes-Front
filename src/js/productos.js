@@ -1,9 +1,42 @@
+var id = 0;
+
 function addItem(item) {
     contadorProductos++;
     let color = definirColorBoton(contadorProductos);
+    let precio = item.precio;
+    let descuento = item.descuento;
+    switch (descuento){
+        case "10":
+            precio *= 0.9;
+            break;
+            case "20":
+            precio *= 0.8;
+            break;
+            case "30":
+            precio *= 0.7;
+            break;
+            case "40":
+            precio *= 0.6;
+            break;
+    }
+    id++;
+    let precioHTML;
+    let span;
+    if (descuento != "Ninguno"){
+        precioHTML = `<p class="card-text precio" style="text-decoration:line-through; font-weight:200">$ ${item.precio}</p><p class="card-text precio"><strong>$ ${precio}</strong></p>`;
+        span = `  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size:30px">
+        ${descuento}%
+      </span>`;
+    } else{
+         precioHTML = `<p class="card-text precio">$ ${item.precio}</p>`
+    span = "";
+    }
+
+
+
     const itemHTML = `
     <div class="col mt-4">
-      <div class="card h-100"">
+      <div class="card h-100""> ${span}
       <div class="flex-card h-100 d-flex justify-content-center flex-wrap">
       <div class="imagen">
          <img src="${item.img}" class="card-img-top center-block mx-auto d-block tarjeta-producto" alt="...">
@@ -13,15 +46,17 @@ function addItem(item) {
           <h5 class="card-title">${item.name}</h5>
           <p class="card-text description">${item.description}</p>
           <p class="card-text">
-          <p class="card-text precio">$ ${item.precio}</p>
-        <div class="text-end boton-carta align-self-center">
+          ${precioHTML}
+          <div class="text-end boton-carta align-self-center">
         <button href="#" class="boton-comprar" style="background-color:${color}">Comprar</button>
         </div>
       </div>
       </div>
     </div>`;
+
     var producto = document.getElementById(item.mascota);
     producto.insertAdjacentHTML("afterbegin", itemHTML);
+
 
 }
 

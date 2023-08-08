@@ -45,6 +45,15 @@ function validarDatos() {
     confirmacontra.style.border = ""
     terminos.style.border = ""
 
+    limpiarAlerta("nombre-alert");
+    limpiarAlerta("correo-alert");
+    limpiarAlerta("tel-alert");
+    limpiarAlerta("contraseña-alert");
+    limpiarAlerta("confirmacontra-alert");
+    limpiarAlerta("terminosalert");
+
+
+
 
 
     //NOMBRE
@@ -58,7 +67,7 @@ function validarDatos() {
 
     //Correo electrónico
     if (!regexCorreo.test(email.value)) {
-        displayAlert("Por favor, ingresa un correo electronico valido.", "email-alert", "alert-danger");
+        displayAlert("Por favor, ingresa un correo electronico valido.", "correo-alert", "alert-danger");
         isValid = false;
         email.style.border = "solid 2px red"
 
@@ -67,7 +76,7 @@ function validarDatos() {
 
     //Teléfono
     if (!regexTel.test(numtel.value)) {
-        displayAlert("Por favor, ingresa un numero de telefono valido.", "numtel-alert", "alert-danger");
+        displayAlert("Por favor, ingresa un numero de telefono valido.", "tel-alert", "alert-danger");
         isValid = false;
         numtel.style.border = "solid 2px red"
 
@@ -80,6 +89,7 @@ function validarDatos() {
         contraseña.style.border = "solid 2px red"
 
     }
+
     if (!contraseña.value==confirmacontra.value) {
         displayAlert("Las contraseñas tienen que ser iguales", "confirmacontra-alert", "alert-danger");
         isValid = false;
@@ -90,7 +100,7 @@ function validarDatos() {
     //checkbox
     if (!terminos.checked) {
         terminos.style.border = "solid 2px red"
-        displayAlert("Por favor, acepta terminos y condiciones", "terminos-alert", "alert-danger");
+        displayAlert("Por favor, acepta terminos y condiciones", "terminosalert", "alert-danger");
         isValid = false;
     }
 
@@ -114,3 +124,8 @@ function displayAlert(message, alertContainerId, type) {
     // Inserta el elemento de alerta en el contenedor
     alertContainer.appendChild(alertElement);
   }
+
+function limpiarAlerta(alertContainerId){
+    const alertContainer = document.getElementById(alertContainerId);
+    alertContainer.innerHTML = "";
+}

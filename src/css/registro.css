@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+ *{
+    font-family: "Poppins", sans-serif;
+   
+} 
+
+.formulario{
+    background-color: #F06319;
+    border-radius: 30px;
+    font-size: 24px;
+    padding: 50px !important;
+    margin: 60px auto;
+    width: 70% !important;
+    color:white;
+}
+
+.input {
+    background-color: #2F4858 !important;
+}
+
+#btnregistrame{
+    background-color: #fff;
+    color:#F06319;
+    font-size: 24px;
+    padding: 15px 30px;
+}
+
+#btnregistrame:hover{
+    background-color: #F06319;
+    color:#fff;
+}
+
+#emailHelp{
+    color: #fff;
+}
+
+
+
+
+@media screen and (min-width:220px) and (max-width:767px){
+    .formulario{
+        font-size: 15px;
+    }
+    #btnregistrame{
+        font-size: 15px;
+        padding: 10px 20px;
+    }
+  }
+  
+  /*Navbar para tablet*/
+  @media screen and (min-width:768px) and (max-width:992px){
+    .formulario{
+        font-size: 20px;
+    }
+  }
+  
+  
+  /*Navbar para escritorio*/
+  @media screen and (min-width:1440px){
+    .formulario{
+        font-size: 30px;
+    }
+    #btnregistrame{
+        font-size: 25px;
+        padding: 15px 30px;
+    }
+  }

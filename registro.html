@@ -8,11 +8,12 @@
     <link rel="shortcut icon" href="./src/img/logo.png">
     <!--Link CSS Navbar/Footer-->
     <link rel="stylesheet" href="./src/css/navfooter.css">
+    <!--Link CSS registro-->
+    <link rel="stylesheet" href="./src/css/registro.css">
     <!--Link Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <!--Link iconos-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-
     <!-- Clouflare -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
@@ -21,42 +22,41 @@
 
     </header>
 
-  <form class="container">
+  <form class="container formulario">
     <h1>Regístrate</h1>
     <div class="mb-3">
         <label for="nombre" class="form-label">Nombre completo</label>
-        <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp">
+        <input type="text" class="form-control input" id="nombre" aria-describedby="emailHelp">
         <div class="alert " role="alert" id="nombre-alert"></div>
       </div>
       <div class="mb-3">
         <label for="numtel" class="form-label">Número de teléfono</label>
-        <input type="tel" class="form-control" id="numtel" aria-describedby="emailHelp">
+        <input type="tel" class="form-control input" id="numtel" aria-describedby="emailHelp">
         <div class="alert " role="alert" id="tel-alert"></div>
       </div>
     <div class="mb-3">
       <label for="email" class="form-label">Correo electrónico</label>
-      <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+      <input type="email" class="form-control input" id="email" aria-describedby="emailHelp">
       <div id="emailHelp" class="form-text">Nunca compartiremos tu correo con nadie.</div>
       <div class="alert " role="alert" id="correo-alert"></div>
     </div>
     <div class="mb-3">
       <label for="contraseña" class="form-label">Contraseña</label>
-      <input type="password" class="form-control" id="contraseña">
+      <input type="password" class="form-control input" id="contraseña">
       <div class="alert " role="alert" id="contraseña-alert"></div>
     </div>
     <div class="mb-3">
         <label for="confirmacontra" class="form-label">Confirma tu contraseña</label>
-        <input type="password" class="form-control" id="confirmacontra">
+        <input type="password" class="form-control input" id="confirmacontra">
         <div class="alert " role="alert" id="confirmacontra-alert"></div>
       </div>
     <div class="mb-3 form-check">
-      <input type="checkbox" class="form-check-input" id="terminos">
+      <input type="checkbox" class="form-check-input input" id="terminos">
       <label class="form-check-label" for="terminos">Acepto términos y condiciones</label>
       <div class="alert " role="alert" id="terminosalert"></div>
     </div>
-    <button type="submit " class="btn btn-primary" id="btnregistrame">Registrarme</button>
+    <button type="submit " class="btn " id="btnregistrame">Registrarme</button>
   </form>
-
   <footer>
 
   </footer>

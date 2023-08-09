@@ -132,19 +132,6 @@ addItem({
 }, "perros");
 
 addItem({
-    'name': 'Arenero',
-    'img': './src/img/imgProductos/arenero1.png',
-    'description': 'Arenero Jumbo con tapa', 'precio': 430,
-    'descuento':0,'mascota':'gatos'
-});
-addItem({
-    'name': 'Croquetas',
-    'img': './src/img/imgProductos/comidaGato1.png',
-    'description': "Croquetas Hills Hill's cience diet", 'precio': 500,
-    'descuento':30,'mascota':'gatos'
-});
-/*
-addItem({
     'name': 'Catnip',
     'img': './src/img/imgProductos/jugueteGato1.png',
     'description': "Juguete de aguacate con catnip", 'precio': 130
@@ -154,18 +141,6 @@ addItem({
     'img': './src/img/imgProductos/rascador1.png',
     'description': "Torre Razcador café", 'precio': 2500
 }, "gatos");
-
-addItem({
-    'name': 'Adorno de Tesoro',
-    'img': './src/img/imgProductos/adorno1.png',
-    'description': 'Figura de decoración ideal peceras', 'precio': '45'
-}, "peces");
-
-addItem({
-    'name': 'Acuario Lego',
-    'img': './src/img/imgProductos/acuario1.png',
-    'description': 'Acuario en forma de lego tamaño pequeño', 'precio': '325'
-}, "peces");
 
 addItem({
     'name': 'Alimento Spirulina',
@@ -184,23 +159,56 @@ addItem({
     'img': './src/img/imgProductos/casaAve1.png',
     'description': 'Casa de acero inoxidable', 'precio': 999.99
 }, "aves");
+*/
+// addItem({
+//     'name': 'Arenero',
+//     'img': './src/img/imgProductos/arenero1.png',
+//     'description': 'Arenero Jumbo con tapa', 'precio': 430,
+//     'descuento':0,'mascota':'gatos'
+// });
+// addItem({
+//     'name': 'Croquetas',
+//     'img': './src/img/imgProductos/comidaGato1.png',
+//     'description': "Croquetas Hills Hill's cience diet", 'precio': 500,
+//     'descuento':"30",'mascota':'gatos'
+// });
+// addItem({
+//     'name': 'Adorno de Tesoro',
+//     'img': './src/img/imgProductos/adorno1.png',
+//     'description': 'Figura de decoración ideal peceras', 'precio': '45',
+//     'descuento':"10",'mascota':'peces'
 
-addItem({
-    'name': 'Comida para aves',
-    'img': './src/img/imgProductos/comidaAve1.png',
-    'description': 'Comida Red kite para aves', 'precio': 349.00
-}, "aves");
+// });
 
-addItem({
-    'name': 'Comedero para aves',
-    'img': './src/img/imgProductos/comidaAve2.png',
-    'description': 'Todo tipo de aves', 'precio': 189.00
-}, "aves");
+// addItem({
+//     'name': 'Acuario Lego',
+//     'img': './src/img/imgProductos/acuario1.png',
+//     'description': 'Acuario en forma de lego tamaño pequeño', 'precio': '325',
+//     'descuento':"0",'mascota':'peces'
 
-addItem({
-    'name': 'Kit de juguetes para aves',
-    'img': './src/img/imgProductos/juguetesAve1.png',
-    'description': 'Juguetes de madera para aves', 'precio': 259.50
-}, "aves");
- */
+// });
+// addItem({
+//     'name': 'Comida para aves',
+//     'img': './src/img/imgProductos/comidaAve1.png',
+//     'description': 'Comida Red kite para aves', 'precio': 349.00,
+//     'descuento':"0",'mascota':'aves'
+
+// });
+
+// addItem({
+//     'name': 'Comedero para aves',
+//     'img': './src/img/imgProductos/comidaAve2.png',
+//     'description': 'Todo tipo de aves', 'precio': 189.00,
+//     'descuento':"30",'mascota':'aves'
+
+// });
+
+// addItem({
+//     'name': 'Kit de juguetes para aves',
+//     'img': './src/img/imgProductos/juguetesAve1.png',
+//     'description': 'Juguetes de madera para aves', 'precio': 259.50,
+//     'descuento':"20",'mascota':'aves'
+
+// });
+ 
 

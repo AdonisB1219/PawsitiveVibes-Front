@@ -50,6 +50,28 @@ boton.addEventListener("click", (function(event){
             'El producto fue agregado correctamente',
             'success'
         );
+        titulo.value='';
+      categoria.value='';
+      clave.value='';
+      numStock.value='';
+      marca.value='';
+      descripcion.value='';
+      precio.value='';
+      descuento.value='';
+      checkInfo.checked = false;
+  
+  
+      errorTitulo.style.border = '';
+      errorCategoria.style.border = '';
+      errorClave.style.border = '';
+      errorNumStock.style.border = '';
+      errorMarca.style.border = '';
+      errorDescripcion.style.border = '';
+      errorPrecio.style.border = '';
+      errorDescuento.style.border = '';
+      errorCheckInfo.style.border = '';
+      errorMascota.style.border = '';
+      errorImagen.style.border = '';
 
     } else{
         let strErrores = "";
@@ -75,8 +97,11 @@ var myWidget = cloudinary.createUploadWidget({
             'Imagen cargada correctamente',
             'success'
           );
+         
+
         imagen = result.info.secure_url;
       }
+      
     }
   )
   

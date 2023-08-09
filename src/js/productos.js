@@ -8,21 +8,25 @@ function addItem(item) {
     switch (descuento){
         case "10":
             precio *= 0.9;
+            precio = precio.toFixed(2);
             break;
             case "20":
             precio *= 0.8;
+            precio = precio.toFixed(2);
             break;
             case "30":
             precio *= 0.7;
+            precio = precio.toFixed(2);
             break;
             case "40":
             precio *= 0.6;
+            precio = precio.toFixed(2);
             break;
     }
     id++;
     let precioHTML;
     let span;
-    if (descuento != "Ninguno"){
+    if (descuento != 0){
         precioHTML = `<p class="card-text precio" style="text-decoration:line-through; font-weight:200">$ ${item.precio}</p><p class="card-text precio"><strong>$ ${precio}</strong></p>`;
         span = `  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size:30px">
         ${descuento}%

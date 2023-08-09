@@ -59,8 +59,15 @@
         height: 100%;
         margin: 0;
         padding: 0;
+        z-index: -1;
       }
-
+      .categorias figcaption{
+        position: absolute;
+        margin: 2% 2.7%;
+        z-index: 1;
+        font-size: larger;
+        color: white;
+      }
       .imagen-promocional{
         width: 100%;
         padding: 0;
@@ -95,15 +102,26 @@
       .lo-mas-vendido{
         width: 100%;
         text-align: center;
-        padding-bottom: 10px;
-        margin-top: 0;
+        margin-top: 30px;
       }
       h4{
         text-align: center;
         margin: 30px 0;
       }
-      h4, p{
+      h4{
+        font-size: 1.5rem;
+      }
+      p{
         font-size: 1rem;
+      }
+      /* .card{
+        margin: 0;
+        padding: 0;
+      } */
+      .card img{
+        width: 100%;
+        height: 50%;
+        object-fit: contain;
       }
     </style>
   </head>
@@ -117,18 +135,24 @@
       <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="https://www.shutterstock.com/image-photo/sweet-pug-dog-easter-white-260nw-2126816039.jpg" class="d-block w-100" alt="...">
+            <img src="./src/img/imgInicio/Slide1.PNG" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="https://www.shutterstock.com/image-photo/funny-gray-kittens-smiling-dogs-260nw-2036583293.jpg" class="d-block w-100" alt="...">
+            <img src="./src/img/imgInicio/Slide2.PNG" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="https://www.shutterstock.com/image-photo/pet-store-background-dog-supermarket-260nw-2274639357.jpg" class="d-block w-100" alt="...">
+            <img src="./src/img/imgInicio/Slide3.PNG" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./src/img/imgInicio/Slide4.PNG" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./src/img/imgInicio/Slide5.PNG" class="d-block w-100" alt="...">
           </div>
         </div>
       </div>
       <div class="container">
-        <h4>En Pawsitive vibes creeemos que el amor es reciproco, por eso nos esforzamos para ayudarte a regresarles un poco del amor que ellos te brindan. Spread love and Pawsitive Vibes.</h4>
+        <h4>En Pawsitive vibes creeemos que el amor es recíproco, por eso nos esforzamos para ayudarte a regresarles un poco del amor que ellos te dan. Spread love and Pawsitive Vibes.</h4>
       </div>
         <div class="principal container-sm text-center">
           <div class="row g-2">
@@ -137,21 +161,25 @@
                 <ul>
                   <li>
                     <figure>
+                      <figcaption>Gatos</figcaption>
                       <img src="https://comunidad.retorn.com/wp-content/uploads/cache/2018/09/gatitos/3008811440.jpg" alt="">
                     </figure>
                   </li>
                   <li>
                     <figure>
+                      <figcaption>Perros</figcaption>
                       <img src="https://pawal.cl/modules/ph_simpleblog/covers/9.jpg" alt="">
                     </figure>
                   </li>
                   <li>
                     <figure>
+                      <figcaption>Peces</figcaption>
                       <img src="https://todopez.es/wp-content/uploads/2023/04/cuantos-goldfish-puedo-tener-en-50-litros.jpg" alt="">
                     </figure>
                   </li>
                   <li>
                     <figure>
+                      <figcaption>Aves</figcaption>
                       <img src="https://i.pinimg.com/1200x/fb/30/42/fb3042cb712ba9599dd2acbad4083769.jpg" alt="">
                     </figure>
                   </li>
@@ -183,35 +211,36 @@
       </div>
       <div class="lo-mas-vendido container-fluid">
         <h3>Lo más vendido</h3>
+        <br>
         <div class="container text-center">
           <div class="row">
             <div class="col">
-              <div class="card">
-                <img src="./src/img/etica.jpg" class="card-img-top" alt="...">
+              <div class="card h-75">
+                <img src="./src/img/imgInicio/alimento.jpeg" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <h5 class="card-title">Alimento para gato</h5>
+                  <p class="card-text">Alimento para gato de la mejor calidad, por costal de 20 kilos.</p>
+                  <a href="#" class="btn btn-primary" style="background-color: #F06319; border-color: #F06319;">Ver más</a>
                 </div>
               </div>
             </div>
             <div class="col">
-              <div class="card">
-                <img src="./src/img/etica.jpg" class="card-img-top" alt="...">
+              <div class="card h-75">
+                <img src="./src/img/imgInicio/pecera.jpeg" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <h5 class="card-title">Pecera mediana</h5>
+                  <p class="card-text">Perfecta para ser el hábitat de de peces de tamaño mediano y pequeño.</p>
+                  <a href="#" class="btn btn-primary" style="background-color: #E8A42B; border-color:#E8A42B;">Ver más</a>
                 </div>
               </div>
             </div>
             <div class="col">
-              <div class="card">
-                <img src="./src/img/etica.jpg" class="card-img-top" alt="...">
+              <div class="card h-75">
+                <img src="./src/img/imgInicio/calmante.jpeg" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <h5 class="card-title">Calmante para gato </h5>
+                  <p class="card-text">Calmante auxiliar en la reducción de estres en tu mascota.</p>
+                  <a href="#" class="btn btn-primary" style="background-color: #33658A; border-color: #33658A;">Ver más</a>
                 </div>
               </div>
             </div>

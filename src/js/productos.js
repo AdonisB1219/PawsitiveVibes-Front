@@ -28,8 +28,8 @@ function addItem(item) {
     let span;
     if (descuento != 0){
         precioHTML = `<p class="card-text precio" style="text-decoration:line-through; font-weight:200">$ ${item.precio}</p><p class="card-text precio"><strong>$ ${precio}</strong></p>`;
-        span = `  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size:30px">
-        ${descuento}%
+        span = `  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size:25px">
+        -${descuento}%
       </span>`;
     } else{
          precioHTML = `<p class="card-text precio">$ ${item.precio}</p>`
@@ -94,12 +94,12 @@ if(localStorage.length > 0){
 
 
 
-
-/* addItem({
+/*
+addItem({
     'name': 'Alimento para perro',
     'img': './src/img/imgProductos/comidaPerro1.png',
-    'description': 'Costal de alimento para perro adulto, Contenido: 15kg, Marca: Nupec', 'precio': 1050.00
-}, "perros");
+    'description': 'Costal de alimento para perro adulto, Contenido: 15kg, Marca: Nupec', 'precio': 1050.00, 'descuento':20,'mascota':'perros'
+});
 
 addItem({
     'name': 'Juguete para perro',
@@ -134,13 +134,16 @@ addItem({
 addItem({
     'name': 'Arenero',
     'img': './src/img/imgProductos/arenero1.png',
-    'description': 'Arenero Jumbo con tapa', 'precio': 430
-}, "gatos");
+    'description': 'Arenero Jumbo con tapa', 'precio': 430,
+    'descuento':0,'mascota':'gatos'
+});
 addItem({
     'name': 'Croquetas',
     'img': './src/img/imgProductos/comidaGato1.png',
-    'description': "Croquetas Hills Hill's cience diet", 'precio': 500
-}, "gatos");
+    'description': "Croquetas Hills Hill's cience diet", 'precio': 500,
+    'descuento':30,'mascota':'gatos'
+});
+/*
 addItem({
     'name': 'Catnip',
     'img': './src/img/imgProductos/jugueteGato1.png',

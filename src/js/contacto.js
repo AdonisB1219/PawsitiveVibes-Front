@@ -47,6 +47,27 @@ document.getElementById('form')
       'El mensaje fue enviado correctamente',
       'success'
     )
+    // Limpiar los campos después de enviar el formulario
+        nombre.value = '';
+        email.value = '';
+        mensaje.value = '';
+        tel.value = '';
+        opcion.selectedIndex = 0; 
+        terminos.checked = false;
+
+        // Restablecer los estilos y mensajes de error
+        nombre.style.border = '';
+        email.style.border = '';
+        mensaje.style.border = '';
+        tel.style.border = '';
+        opcion.style.border = '';
+        terminos.style.border = '';
+        errorNombre.style.display = '';
+        errorCorreo.style.display = '';
+        errorMensaje.style.display = '';
+        errorTel.style.display = '';
+        errorMotivo.style.display = '';
+        errorTerminos.style.display = '';
    }, (err) => {
      btn.value = 'Send Email';
      alert(JSON.stringify(err));

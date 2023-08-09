@@ -30,7 +30,7 @@ header.insertAdjacentHTML("afterbegin", `<nav class="navbar navbar-expand-xl">
             <a class="nav-link active"  href="./agregarProducto.html"><i class="bi bi-cart"></i></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active"  href="./agregarProducto.html"><i class="bi bi-person"></i></a>
+            <a class="nav-link active"  href="./registro.html"><i class="bi bi-person"></i></a>
           </li>
           <li class="nav-item">
             <a class="nav-link active"  href="./agregarProducto.html"><i class="bi bi-search"></i></a>

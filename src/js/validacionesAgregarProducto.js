@@ -33,6 +33,7 @@ boton.addEventListener("click", (function(event){
     let errores = validarDatos();
 
     if (errores.length == 0){
+        
         let producto = {"name":titulo.value, "categoria":categoria.value, "clave": clave.value, "marca":marca.value, "stock":numStock.value, "img":imagen, "description":descripcion.value, "precio":precio.value, "mascota":mascota.value, "descuento":descuento.value};
         let productos = [];
         if(window.localStorage.getItem("productos") != null){
@@ -62,9 +63,6 @@ boton.addEventListener("click", (function(event){
             html: strErrores,
           })
     }
-
-
-
 }));
 
 

@@ -94,121 +94,227 @@ if(localStorage.length > 0){
 
 
 
-/*
+
 addItem({
     'name': 'Alimento para perro',
+    'categoria': 'Alimento',
+    'clave': 'croquetas',
+    'description': 'Alimento seco sabor salmón 2.5k',
+    'descuento': '0',
     'img': './src/img/imgProductos/comidaPerro1.png',
-    'description': 'Costal de alimento para perro adulto, Contenido: 15kg, Marca: Nupec', 'precio': 1050.00, 'descuento':20,'mascota':'perros'
+    'Marca': 'Nupec',
+    'mascota': 'perros',
+    'precio': 1050, 
+    'stock': 2
 });
 
 addItem({
-    'name': 'Juguete para perro',
+    'name': 'Juguete peludo',
+    'categoria': 'Juguete',
+    'clave': 'juguete',
+    'description': 'Juguete suave de peluche para perro',
+    'descuento': '10',
     'img': './src/img/imgProductos/juguetePerro1.png',
-    'description': 'Juguete de estambre, 3 colores', 'precio': 230.00
-}, "perros")
+    'Marca': 'Nupec',
+    'mascota': 'perros',
+    'precio': 210, 
+    'stock': 2
+});
 
 addItem({
-    'name': 'Juguete para perro',
+    'name': 'Juguete',
+    'categoria': 'Juguete',
+    'clave': 'juguete',
+    'description': 'Juguete en forma de pato para perro grande',
+    'descuento': '20',
     'img': './src/img/imgProductos/juguetePerro2.png',
-    'description': 'Juguete de peluche, pato', 'precio': 180.00
-}, "perros")
+    'Marca': 'Nupec',
+    'mascota': 'perros',
+    'precio': 210, 
+    'stock': 2
+});
 
 addItem({
-    'name': 'Juguete para perro',
+   'name': 'Juguete',
+    'categoria': 'Juguete',
+    'clave': 'juguete',
+    'description': 'Rueda masticable para perro',
+    'descuento': '0',
     'img': './src/img/imgProductos/juguetePerro3.png',
-    'description': 'Juguete de plástico', 'precio': 120.00
-}, "perros");
+    'Marca': 'Nupec',
+    'mascota': 'perros',
+    'precio': 200, 
+    'stock': 2
+});
 
 addItem({
-    'name': 'Juguete para perro',
+    'name': 'Juguete',
+    'categoria': 'Juguete',
+    'clave': 'juguete',
+    'description': 'trenza de tela para moder y jalar',
+    'descuento': '0',
     'img': './src/img/imgProductos/juguetePerro4.png',
-    'description': 'Juguete pelota con lazo, 2 colores', 'precio': 140.00
-}, "perros");
+    'Marca': 'Nupec',
+    'mascota': 'perros',
+    'precio': 150, 
+    'stock': 2
+});
 
 addItem({
-    'name': 'Juguete para perro',
+    'name': 'Juguete',
+    'categoria': 'Juguete',
+    'clave': 'juguete',
+    'description': 'trenza de tela para moder y jalar',
+    'descuento': '0',
     'img': './src/img/imgProductos/juguetePerro5.png',
-    'description': 'Juguete pelota de plástico, 2 colores', 'precio': 85.00
-}, "perros");
+    'Marca': 'Nupec',
+    'mascota': 'perros',
+    'precio': 150, 
+    'stock': 2
+});
 
 addItem({
-    'name': 'Catnip',
+    'name': 'Juguete',
+    'categoria': 'Juguete',
+    'clave': 'juguete',
+    'description': 'trenza de tela para moder y jalar',
+    'descuento': '0',
     'img': './src/img/imgProductos/jugueteGato1.png',
-    'description': "Juguete de aguacate con catnip", 'precio': 130
-}, "gatos");
+    'Marca': 'Nupec',
+    'mascota': 'gatos',
+    'precio': 150, 
+    'stock': 2
+});
+
 addItem({
-    'name': 'Razcador',
+    'name': 'Razcador en torre',
+    'categoria': 'Juguete',
+    'clave': 'juguete',
+    'description': 'Razcador en torre para 5 gatos',
+    'descuento': '20',
     'img': './src/img/imgProductos/rascador1.png',
-    'description': "Torre Razcador café", 'precio': 2500
-}, "gatos");
+    'Marca': 'Nupec',
+    'mascota': 'gatos',
+    'precio': 3600, 
+    'stock': 2
+});
 
 addItem({
-    'name': 'Alimento Spirulina',
+    'name': 'Comida sabor atún',
+    'categoria': 'Juguete',
+    'clave': 'juguete',
+    'description': 'Comida para peces con mucha hambre 1.5k',
+    'descuento': '0',
     'img': './src/img/imgProductos/comidaPeces1.png',
-    'description': 'Alimento Spirulina Boost para peces herbívoros pequeños', 'precio': '75'
-}, "peces")
+    'Marca': 'Nupec',
+    'mascota': 'peces',
+    'precio': 150, 
+    'stock': 2
+});
 
 addItem({
-    'name': 'Alimento TetraColor',
+    'name': 'Comida en ojuelas',
+    'categoria': 'Juguete',
+    'clave': 'juguete',
+    'description': 'Comida para peces con mucha hambre',
+    'descuento': '0',
     'img': './src/img/imgProductos/comidaPeces2.png',
-    'description': 'Alimento TetraColor en forma granular para peces', 'precio': '84'
-}, "peces")
+    'Marca': 'Nupec',
+    'mascota': 'peces',
+    'precio': 150, 
+    'stock': 2
+});
 
 addItem({
-    'name': 'Casa para aves',
+    'name': 'Jaula para loro',
+    'categoria': 'Juguete',
+    'clave': 'juguete',
+    'description': 'Jaula para loro de metal',
+    'descuento': '0',
     'img': './src/img/imgProductos/casaAve1.png',
-    'description': 'Casa de acero inoxidable', 'precio': 999.99
-}, "aves");
-*/
-// addItem({
-//     'name': 'Arenero',
-//     'img': './src/img/imgProductos/arenero1.png',
-//     'description': 'Arenero Jumbo con tapa', 'precio': 430,
-//     'descuento':0,'mascota':'gatos'
-// });
-// addItem({
-//     'name': 'Croquetas',
-//     'img': './src/img/imgProductos/comidaGato1.png',
-//     'description': "Croquetas Hills Hill's cience diet", 'precio': 500,
-//     'descuento':"30",'mascota':'gatos'
-// });
-// addItem({
-//     'name': 'Adorno de Tesoro',
-//     'img': './src/img/imgProductos/adorno1.png',
-//     'description': 'Figura de decoración ideal peceras', 'precio': '45',
-//     'descuento':"10",'mascota':'peces'
+    'Marca': 'Nupec',
+    'mascota': 'aves',
+    'precio': 150, 
+    'stock': 2
+});
 
-// });
+ addItem({
+    'name': 'Arenero',
+    'categoria': 'Juguete',
+    'clave': 'juguete',
+    'description': 'Arenero redondo gris con blanco',
+    'descuento': '0',
+    'img': './src/img/imgProductos/arenero1.png',
+    'Marca': 'Nupec',
+    'mascota': 'gatos',
+    'precio': 150, 
+    'stock': 2
+});
 
-// addItem({
-//     'name': 'Acuario Lego',
-//     'img': './src/img/imgProductos/acuario1.png',
-//     'description': 'Acuario en forma de lego tamaño pequeño', 'precio': '325',
-//     'descuento':"0",'mascota':'peces'
+ addItem({
+    'name': 'Comida gatuna',
+    'categoria': 'Juguete',
+    'clave': 'juguete',
+    'description': 'Comida para gatos con mucha hambre',
+    'descuento': '0',
+    'img': './src/img/imgProductos/comidaGato1.png',
+    'Marca': 'Nupec',
+    'mascota': 'gatos',
+    'precio': 150, 
+    'stock': 2
+ });
 
-// });
-// addItem({
-//     'name': 'Comida para aves',
-//     'img': './src/img/imgProductos/comidaAve1.png',
-//     'description': 'Comida Red kite para aves', 'precio': 349.00,
-//     'descuento':"0",'mascota':'aves'
+ addItem({
+    'name': 'Adorno',
+    'categoria': 'Juguete',
+    'clave': 'juguete',
+    'description': 'Este es un adorno bien padre',
+    'descuento': '10',
+    'img': './src/img/imgProductos/adorno1.png',
+    'Marca': 'Nupec',
+    'mascota': 'peces',
+    'precio': 80, 
+    'stock': 2
+ });
 
-// });
+ addItem({
+    'name': 'Adorno',
+    'categoria': 'Juguete',
+    'clave': 'juguete',
+    'description': 'Este es un adorno bien padre',
+    'descuento': '10',
+    'img': './src/img/imgProductos/acuario1.png',
+    'Marca': 'Nupec',
+    'mascota': 'peces',
+    'precio': 320, 
+    'stock': 2
+});
 
-// addItem({
-//     'name': 'Comedero para aves',
-//     'img': './src/img/imgProductos/comidaAve2.png',
-//     'description': 'Todo tipo de aves', 'precio': 189.00,
-//     'descuento':"30",'mascota':'aves'
+ addItem({
+    'name': 'Adorno',
+    'categoria': 'Juguete',
+    'clave': 'juguete',
+    'description': 'Este es un adorno bien padre',
+    'descuento': '10',
+    'img': './src/img/imgProductos/comidaAve2.png',
+    'Marca': 'Nupec',
+    'mascota': 'aves',
+    'precio': 380, 
+    'stock': 2
+});
 
-// });
 
-// addItem({
-//     'name': 'Kit de juguetes para aves',
-//     'img': './src/img/imgProductos/juguetesAve1.png',
-//     'description': 'Juguetes de madera para aves', 'precio': 259.50,
-//     'descuento':"20",'mascota':'aves'
-
-// });
+addItem({
+    'name': 'Adorno',
+    'categoria': 'Juguete',
+    'clave': 'juguete',
+    'description': 'Este es un adorno bien padre',
+    'descuento': '10',
+    'img': './src/img/imgProductos/juguetesAve1.png',
+    'Marca': 'Nupec',
+    'mascota': 'aves',
+    'precio': 200, 
+    'stock': 2
+});
  
 

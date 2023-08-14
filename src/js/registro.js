@@ -14,15 +14,44 @@ const regexContra = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{
 btnregistrame.addEventListener("click", (function (event) {
 
     event.preventDefault();
-console.log("Hoola");
     if(validarDatos()){
         let usuario = {"nombre":nombre.value, "numtel":numtel.value, "email": email.value, "contraseña":contraseña.value};
-        window.localStorage.setItem("usuario", JSON.stringify(usuario));
-        Swal.fire(
-            'Éxito',
-            'Te registraste con éxito',
-            'success'
-        );
+        let usuarios = [];
+        let usuarioRepetido;
+        if(window.localStorage.getItem("usuarios") != null){
+            let json = (JSON.parse(window.localStorage.getItem("usuarios")));
+
+            //agrega usuarios del localStorage
+            json.forEach(u => {
+                if(usuario.nombre == u.nombre){
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        html: 'Ya hay una cuenta con este correo',
+                      });
+                    usuarioRepetido = true;
+                }
+                
+                usuarios.push(u);
+              
+            });
+
+            }
+
+            //Agrega usuario registrado
+            if(!usuarioRepetido)
+            {
+                usuarios.push(usuario);
+                Swal.fire(
+                    'Éxito',
+                    'Te registraste con éxito',
+                    'success'
+                );
+            }
+
+
+        window.localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
     }
 
 }))

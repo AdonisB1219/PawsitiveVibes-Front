@@ -75,6 +75,12 @@ footer{
     margin: 0 20px;
 }
 
+.logeado{
+    border-radius: 10px;
+    background-color: rgb(187, 232, 187);
+}
+
+
 
 
 /*----------------Aqui termina el Nav-------------*/

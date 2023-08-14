@@ -30,7 +30,7 @@ header.insertAdjacentHTML("afterbegin", `<nav class="navbar navbar-expand-xl">
             <a class="nav-link active"  href="./agregarProducto.html"><i class="bi bi-cart"></i></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active"  href="./registro.html"><i class="bi bi-person"></i></a>
+            <a class="nav-link active"  href="./registro.html"><i class="bi bi-person" id="icono-cuenta"></i></a>
           </li>
           <li class="nav-item">
             <a class="nav-link active"  href="./agregarProducto.html"><i class="bi bi-search"></i></a>
@@ -89,11 +89,19 @@ footer.insertAdjacentHTML("beforeend", `<footer class="py-5">
 
   <div class="col-md-1">
     <ul class="nav flex-row">
-        <li class="nav-item mb-2"><button id="registrate">Regístrate</button></li>
-        <li class="nav-item mb-2"><button id="inicia-sesion">Inicia Sesión</button></li>
+    <a class="nav-link active"  href="./registro.html"><li class="nav-item mb-2"><button id="registrate">Regístrate</button></li></a>
+    <a class="nav-link active"  href="./inicioSesion.html"><li class="nav-item mb-2"><button id="inicia-sesion">Inicia Sesión</button></li></a>
 
     </ul>
   </div>
 </div>
 </footer>`);
 
+
+//Para detectar inicio de sesión
+const cuenta = document.getElementById("icono-cuenta");
+
+
+if(JSON.parse(window.localStorage.getItem("usuario-logeado") != null)){
+  cuenta.classList.add("logeado");
+}

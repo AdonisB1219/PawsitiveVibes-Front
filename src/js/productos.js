@@ -85,7 +85,7 @@ function definirColorBoton(contador){
 
 var contadorProductos = 0;
 
-if(localStorage != null){
+if(localStorage.getItem("productos") != null){
     let productos = JSON.parse(window.localStorage.getItem("productos"));
     productos.forEach(p => addItem(p));
 }

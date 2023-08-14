@@ -6,6 +6,7 @@ const confirmacontra = document.getElementById("confirmacontra");
 const terminosalert = document.getElementById("terminos-alert");
 const terminos = document.getElementById("terminos");
 const btnregistrame = document.getElementById("btnregistrame");
+const btnTerminos = document.getElementById("btnTerminos");
 
 const regexCorreo = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 const regexTel = /^(\+?52)?\s*\(?\d{2,3}\)?[-.\s]?\d{2,3}[-.\s]?\d{2,4}$/;

@@ -5,33 +5,66 @@
 } 
 
 .formulario{
-    background-color: #F06319;
+    
     border-radius: 30px;
     font-size: 24px;
     padding: 50px !important;
     margin: 60px auto;
     width: 70% !important;
-    color:white;
+   
 }
 
-.input {
-    background-color: #2F4858 !important;
+.titulo{
+    font-size: 4rem;
+    font-weight: 650;
+    text-align: center;
+}
+
+input {
+   border-color: #F06319 !important;
+   height: 70px;
+   border-radius: 15px !important;
+   font-size: 1.5rem !important;
+}
+
+.form-label{
+    font-size: 1.7rem;
+    font-weight: 450;
+}
+
+.link{
+    font-size: 1.3rem;
+    font-weight: 450;
+    color: #555555;
+}
+
+#btn-inicio{
+    background-color: #33658A;
+    color:#ffffff;
+    font-size: 24px;
+    padding: 15px 30px;
+}
+
+#btn-inicio:hover{
+    background-color: #50D0D3;
+    color:#fff;
 }
 
 #btnregistrame{
-    background-color: #fff;
-    color:#F06319;
+    background-color: #33658A;
+    color:#ffffff;
     font-size: 24px;
     padding: 15px 30px;
 }
 
 #btnregistrame:hover{
-    background-color: #F06319;
+    background-color: #50D0D3;
     color:#fff;
 }
 
 #emailHelp{
-    color: #fff;
+    font-size: 1rem;
+    color: #99A2A5;
 }
 
 

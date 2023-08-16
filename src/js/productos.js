@@ -52,11 +52,11 @@ function addItem(item) {
           <p class="card-text">
           ${precioHTML}
           <div class="text-end boton-carta align-self-center">
-        <button type="button" class="boton-comprar" data-bs-toggle="modal" data-bs-target="#prod${agregarid}" style="background-color:${color}">Comprar</button>
+        <button type="button" class="boton-comprar" data-bs-toggle="modal" data-bs-target="#prod" style="background-color:${color}">Comprar</button>
         </div>
       </div>
       </div>
-    </div>`;//TODO agregar el id en la fila 55. ${id}
+    </div>`;//TODO agregar el id en la fila 55.  data-bs-target="#prod${id}"
 
 
     const detalleProd = `        <div class="container">

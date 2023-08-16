@@ -9,6 +9,16 @@ const btnregistrame = document.getElementById("btnregistrame");
 const btnTerminos = document.getElementById("btnTerminos");
 const imgPerfil = document.querySelectorAll('input[type=radio]');
 
+function limpiar(){
+
+    nombre.value = '';
+    numtel.value = '';
+    email.value = '';
+    contraseña.value = '';
+    confirmacontra.value = '';
+    terminos.value = '';
+}
+
 const regexCorreo = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 const regexTel = /^(\+?52)?\s*\(?\d{2,3}\)?[-.\s]?\d{2,3}[-.\s]?\d{2,4}$/;
 const regexContra = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/;
@@ -59,7 +69,7 @@ btnregistrame.addEventListener("click", (function (event) {
         window.localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
     }
-
+ limpiar();
 }))
 
 function validarDatos() {
@@ -125,7 +135,7 @@ function validarDatos() {
 
     }
 
-    if (!contraseña.value==confirmacontra.value) {
+    if (contraseña.value!==confirmacontra.value) {
         displayAlert("Las contraseñas tienen que ser iguales", "confirmacontra-alert", "alert-danger");
         isValid = false;
         confirmacontra.style.border = "solid 2px red"

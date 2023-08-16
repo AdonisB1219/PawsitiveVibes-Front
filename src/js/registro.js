@@ -63,13 +63,14 @@ btnregistrame.addEventListener("click", (function (event) {
                     'Te registraste con éxito',
                     'success'
                 );
+                limpiar();
             }
 
 
         window.localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
     }
- limpiar();
+ 
 }))
 
 function validarDatos() {

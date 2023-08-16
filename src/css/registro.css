@@ -8,10 +8,15 @@
     
     border-radius: 30px;
     font-size: 24px;
-    padding: 50px !important;
-    margin: 60px auto;
+    padding: 30px 100px !important;
+    margin: 20px auto;
     width: 70% !important;
    
+}
+
+.alert{
+    font-size: 15px;
+    padding: 2px;
 }
 
 .titulo{
@@ -22,13 +27,17 @@
 
 input {
    border-color: #F06319 !important;
-   height: 70px;
+   height: 50px;
    border-radius: 15px !important;
-   font-size: 1.5rem !important;
+   font-size: 1.3rem !important;
+}
+
+input[type="checkbox"]{
+    border-radius: 5px !important;
 }
 
 .form-label{
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     font-weight: 450;
 }
 
@@ -67,22 +76,85 @@ input {
     color: #99A2A5;
 }
 
+#link-terminos{
+    background-color: white; color: rgb(82, 82, 82); border: none; text-decoration: underline; font-size: 1.5rem;
+}
+
 
 
 
 @media screen and (min-width:220px) and (max-width:767px){
+
+    .titulo{
+        font-size: 30px;
+    }
     .formulario{
         font-size: 15px;
+        margin: 20px 10px;
+        padding: 0px !important;
     }
     #btnregistrame{
         font-size: 15px;
         padding: 10px 20px;
     }
+
+    .form-label{
+        font-size: 20px;
+    }
+
+    input{
+        height: 40px;
+        font-size: 35px !important;
+    }
+
+    input[type="radio"], input[type="checkbox"]{
+        height: 20px;
+        width: 20px;
+    }
+
+    .icono{
+        width: 60px;
+    }
+    #link-terminos{
+        font-size: 20px;
+    }
+    
   }
   
   /*Navbar para tablet*/
   @media screen and (min-width:768px) and (max-width:992px){
+
+    .titulo{
+        font-size: 30px;
+    }
     .formulario{
+        font-size: 20px;
+        margin: 20px 10px;
+        padding: 0px !important;
+    }
+    #btnregistrame{
+        font-size: 15px;
+        padding: 10px 20px;
+    }
+
+    .form-label{
+        font-size: 20px;
+    }
+
+    input{
+        height: 40px;
+        font-size: 35px !important;
+    }
+
+    input[type="radio"], input[type="checkbox"]{
+        height: 20px;
+        width: 20px;
+    }
+
+    .icono{
+        width: 60px;
+    }
+    #link-terminos{
         font-size: 20px;
     }
   }

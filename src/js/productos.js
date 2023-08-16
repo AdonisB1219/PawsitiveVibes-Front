@@ -52,14 +52,145 @@ function addItem(item) {
           <p class="card-text">
           ${precioHTML}
           <div class="text-end boton-carta align-self-center">
-        <button href="#" class="boton-comprar" style="background-color:${color}">Comprar</button>
+        <button type="button" class="boton-comprar" data-bs-toggle="modal" data-bs-target="#prod${id}" style="background-color:${color}">Comprar</button>
         </div>
       </div>
       </div>
     </div>`;
 
+
+    const detalleProd = `        <div class="container">
+    <h3 id="mascat">${item.mascota.toUpperCase()} / ${item.categoria.toUpperCase()}</h3>
+    <div class="row">
+        <h1 class="col" id="nomProd">${item.name}</h1>
+        <h3 class="col" id="stock">En Stock [${item.stock}]</h3>
+    </div>
+    <div class="row sec1">
+        <div class="col">
+            <div>
+                <div class="card cardMain border-0" style="width: 27rem;">
+                    <img src="${item.img}" alt="" class="col card-img-top center-block mx-auto d-block tarjeta-producto" >
+                    
+                </div>
+                <br>
+                
+                <div class="row">
+                    <div class="card cardSec  shadow-none" style="width: 5rem;">
+                        <img src="./src/img/imgProductos/juguetePerro4.png" alt="" class="col card-img-top center-block mx-auto d-block tarjeta-producto" >
+                    </div>
+                    <div class="card cardSec  shadow-none" style="width: 5rem;">
+                        <img src="./src/img/imgProductos/jugueteGato1.png" alt="" class="col card-img-top center-block mx-auto d-block tarjeta-producto" >
+                    </div>
+                    <div class="card cardSec  shadow-none" style="width: 5rem;">
+                        <img src="./src/img/imgProductos/jugueteGato1.png" alt="" class="col card-img-top center-block mx-auto d-block tarjeta-producto" >
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class=" col infoGen">
+            <div class="row row-cols-auto">
+                <div class="col">
+                    <i class="bi bi-star-fill star"></i>
+                    <i class="bi bi-star-fill star"></i>
+                    <i class="bi bi-star-fill star"></i>
+                    <i class="bi bi-star-fill star"></i>
+                    <i class="bi bi-star-fill star"></i>
+                </div>
+                <p class="col rese"> 12 Calificaciones</p>
+            </div>
+            
+            <h3 class="subTitle">DESCRIPCIÓN</h3>
+            <p class="descripcion">${item.description}</p>
+            <br>
+
+            <div class="row row-cols-auto">
+                <h3 class="col">${precioHTML}</h3>
+                
+                <div class=" btn-group btn-group-lg" role="group" aria-label="Large button group">
+                    <div class="btn-group btn-group-lg me-2" role="group" aria-label="First group">
+                        <button type="button" class="btn "><i class="bi bi-dash-square col"></i></button>
+                        <button type="button" class="btn contUni ">1</button>
+                        <button type="button" class="btn "><i class="bi bi-plus-square col"></i></button>
+                    
+                    </div>
+                </div>  
+                
+            </div>
+            <br>
+            <br>
+            <div class="col">
+                <button type="button" class="btn btnComprar">Comprar ahora</button>
+                <button type="button border" class="btn btnCarr">Añadir al carrito</button> 
+            </div>
+        </div>
+        
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <div>
+        <h5 class="subTitle">OPINIONES</h5>
+        <br>
+        <div class="row">
+            
+            <div class="col">
+                <div class="row row-cols-auto">
+                    <i class="bi bi-person-bounding-box col imgPerfil"></i>
+                    <h4 class="col">Kristin Swanson</h4>
+                    <div class="col">
+                        <i cl ass="bi bi-star-fill star"></i>
+                        <i class="bi bi-star-fill star"></i>
+                        <i class="bi bi-star-fill star"></i>
+                        <i class="bi bi-star-fill star"></i>
+                        <i class="bi bi-star-fill star"></i>
+                    </div>
+                </div>
+                <div class="col">
+                   
+                
+
+                <p class="fecha">Nov 09, 2022</p>
+                <p class="descripcion">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita inventore libero sint fugiat atque quasi nam incidunt, corporis fuga exercitationem ad neque tempore error magnam laborum eius? Ipsum quos, perferendis exercitationem facere, labore eos modi ut aliquid numquam, rerum quisquam.</p>
+                </div>
+            </div>
+            
+            <div class="col">
+                <img src="./src/img/imgProductos/pelota-amarilaverde.png" alt="" style="width: 190px">
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div>
+        <h2 id="tituloProductosRelacionados" class="text-center">Productos Relacionados</h2>
+        <br>
+        
+    </div>
+
+</div>`;
+
+    
+    const modal = `<div class="modal fade" id="prod${id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">${item.name}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ${detalleProd}
+        </div>
+      </div>
+    </div>
+  </div>`;
+
     var producto = document.getElementById(item.mascota);
     producto.insertAdjacentHTML("afterbegin", itemHTML);
+    document.getElementsByTagName("body")[0].insertAdjacentHTML("afterbegin", modal);
+
 
 
 }

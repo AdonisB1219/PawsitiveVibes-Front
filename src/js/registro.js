@@ -7,6 +7,7 @@ const terminosalert = document.getElementById("terminos-alert");
 const terminos = document.getElementById("terminos");
 const btnregistrame = document.getElementById("btnregistrame");
 const btnTerminos = document.getElementById("btnTerminos");
+const imgPerfil = document.querySelectorAll('input[type=radio]');
 
 const regexCorreo = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 const regexTel = /^(\+?52)?\s*\(?\d{2,3}\)?[-.\s]?\d{2,3}[-.\s]?\d{2,4}$/;
@@ -16,7 +17,11 @@ btnregistrame.addEventListener("click", (function (event) {
 
     event.preventDefault();
     if(validarDatos()){
-        let usuario = {"nombre":nombre.value, "numtel":numtel.value, "email": email.value, "contraseña":contraseña.value};
+        imgPerfil.forEach(img => {
+            if (img.checked){
+                imgSelec = img;
+            }});
+        let usuario = {"nombre":nombre.value, "numtel":numtel.value, "email": email.value, "contraseña":contraseña.value, "imgPerfil": imgSelec.id};
         let usuarios = [];
         let usuarioRepetido;
         if(window.localStorage.getItem("usuarios") != null){
@@ -114,7 +119,7 @@ function validarDatos() {
 
     //Contraseña
     if (!regexContra.test(contraseña.value)) {
-        displayAlert("Debe contener al menos: \n Una letra mayúscula  \n Una letra minúscula \n Un número \n Un caracter especial \n Una longitud mínima de 8 caracteres", "contraseña-alert", "alert-danger");
+        displayAlert("Debe contener al menos: \n Una letra mayúscula,  \n una letra minúscula, \n un número \n, un caracter especial (#?!@$ %^&*-) \n , una longitud mínima de 8 caracteres.", "contraseña-alert", "alert-danger");
         isValid = false;
         contraseña.style.border = "solid 2px red"
 

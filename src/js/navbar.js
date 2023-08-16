@@ -2,6 +2,24 @@
 //Agregar navbar y footer
 let header = document.getElementsByTagName("header")[0];
 let footer = document.getElementsByTagName("footer")[0];
+let imgPerfilNav = `<i class="bi bi-person" id="icono-cuenta"></i>`;
+let iconoPerfil = `          <li class="nav-item dropdown dropstart">
+<a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+${imgPerfilNav}
+</a>
+<ul class="dropdown-menu dropdown-menu-start">
+  <li><a class="dropdown-item" href="./registro.html"><button id="registrate">Regístrate</button></a></li>
+  <li><a class="dropdown-item" href="./inicioSesion.html"><button id="inicia-sesion">Inicia Sesión</button></a></li>
+</ul> </li>`;
+
+if(JSON.parse(window.localStorage.getItem("usuario-logeado") != null)){
+  let idImg = JSON.parse(window.localStorage.getItem("usuario-logeado")).imgPerfil;
+  imgPerfilNav = `<img style="width:40px; heigth: auto;" src="./src/img/perfil${idImg}.png" alt="">`;
+  iconoPerfil = `          <li class="nav-item">
+  <a class="nav-link">
+  ${imgPerfilNav}
+  </a> </li>`;  
+}
 
 header.insertAdjacentHTML("afterbegin", `<nav class="navbar navbar-expand-xl">
 <div class="div-nav container-fluid">
@@ -25,16 +43,15 @@ header.insertAdjacentHTML("afterbegin", `<nav class="navbar navbar-expand-xl">
             <a class="p-2 nav-link"  href="./contacto.html">Contáctanos</a>
           </li>
     </ul>
-    <span class="iconos navbar-text">
-        <li class="nav-item">
-            <a class="nav-link active"  href="./agregarProducto.html"><i class="bi bi-cart"></i></a>
-          </li>
+    <span class="iconos navbar-text d-flex flex-row-reverse">
+    <li class="nav-item">
+    <a class="nav-link active"  href="./agregarProducto.html"><i class="bi bi-search"></i></a>
+  </li>
+          ${iconoPerfil}
+
           <li class="nav-item">
-            <a class="nav-link active"  href="./registro.html"><i class="bi bi-person" id="icono-cuenta"></i></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active"  href="./agregarProducto.html"><i class="bi bi-search"></i></a>
-          </li>
+          <a class="nav-link active"  href="./agregarProducto.html"><i class="bi bi-cart"></i></a>
+        </li>
     </span>
   </div>
 </nav>
@@ -96,12 +113,3 @@ footer.insertAdjacentHTML("beforeend", `<footer class="py-5">
   </div>
 </div>
 </footer>`);
-
-
-//Para detectar inicio de sesión
-const cuenta = document.getElementById("icono-cuenta");
-
-
-if(JSON.parse(window.localStorage.getItem("usuario-logeado") != null)){
-  cuenta.classList.add("logeado");
-}

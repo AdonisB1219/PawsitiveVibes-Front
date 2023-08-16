@@ -29,7 +29,7 @@ btnregistrame.addEventListener("click", (function (event) {
 
             //agrega usuarios del localStorage
             json.forEach(u => {
-                if(usuario.nombre == u.nombre){
+                if(usuario.email == u.email){
                     Swal.fire({
                         icon: 'error',
                         title: 'Oops...',

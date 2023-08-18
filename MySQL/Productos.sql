@@ -1,4 +1,5 @@
 USE pawsitivevibes;
+
 INSERT INTO productos (titulo, categoria, numstock, marca, descripcion, seccion, descuento, precio, imagen)
 VALUES ('Arenero', 'Higiene', 5, 'Nupec', 'Arenero para gato', 'Gatos', 10, 450, '/src/img/imgProductos/arenero1.png');
 INSERT INTO productos (titulo, categoria, numstock, marca, descripcion, seccion, descuento, precio, imagen)

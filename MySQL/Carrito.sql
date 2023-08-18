@@ -1,4 +1,5 @@
 USE pawsitivevibes;
+
 INSERT INTO carrito (cantidad, productos_id, usuario_id)
 VALUES (6, 6, 6);
 INSERT INTO carrito (cantidad, productos_id, usuario_id)

@@ -27,7 +27,7 @@ boton.addEventListener("click",function(event){
                           bottom
                         `
                       });
-                setTimeout(()=>window.location.href = "./index.html", 5000);
+                setTimeout(()=>window.location.href = "./index.html", 3000);
                     
             
 }});

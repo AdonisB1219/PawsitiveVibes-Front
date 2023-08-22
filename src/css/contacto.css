@@ -63,3 +63,7 @@
 #enviar{
     background-color: #33658A;
 }
+
+#link-terminos{
+    background-color: white; color: rgb(82, 82, 82); border: none; text-decoration: underline; font-size: 20px;
+}

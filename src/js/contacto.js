@@ -24,7 +24,7 @@ let errores = 0;
 let formularioCorrecto = true;
 
 const regexCorreo = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-const regexTel =  /^(\+?52)?\s*\(?\d{2,3}\)?[-.\s]?\d{2,3}[-.\s]?\d{2,4}$/;
+const regexTel =  /^(?!.*(\d).*\3)\d{0,10}$/;
 
 const btn = document.getElementById('enviar');
 
@@ -102,7 +102,7 @@ function validarDatos(){
     
 
     //NOMBRE
-    if(nombre.value.length<=3 || !isNaN(nombre.value)){
+    if(nombre.value.length<3 || !isNaN(nombre.value)){
         errorNombre.style.display = "block"
         nombre.style.border="solid 2px red"
         errores ++;   
@@ -126,7 +126,9 @@ function validarDatos(){
 
 
     //Teléfono
-    if(!regexTel.test(tel.value)){
+    y=0;
+    tel.value.split("").forEach(n=>y+=parseInt(n));
+    if(!regexTel.test(tel.value) || y < 15){
         errorTel.style.display = "block"
        tel.style.border="solid 2px red"
        errores ++;

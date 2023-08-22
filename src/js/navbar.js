@@ -15,11 +15,28 @@ ${imgPerfilNav}
 if(JSON.parse(window.localStorage.getItem("usuario-logeado") != null)){
   let idImg = JSON.parse(window.localStorage.getItem("usuario-logeado")).imgPerfil;
   imgPerfilNav = `<img style="width:40px; heigth: auto;" src="./src/img/perfil${idImg}.png" alt="">`;
-  iconoPerfil = `          <li class="nav-item">
-  <a class="nav-link">
+  iconoPerfil = `          <li class="nav-item dropdown dropstart">
+  <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
   ${imgPerfilNav}
-  </a> </li>`;  
+  </a>
+  <ul class="dropdown-menu dropdown-menu-start">
+    <li><a class="dropdown-item"><button id="cerrar-sesion">Cerrar sesión</button></a></li>
+  </ul> </li>`;
+
+  setTimeout(()=>{
+    const cerrarSesion = document.getElementById("cerrar-sesion");
+
+  cerrarSesion.addEventListener("click", function(event){
+    event.preventDefault();
+    window.localStorage.removeItem("usuario-logeado");
+    location.reload();
+  });
+  }, 1000);
+  
+  
 }
+
+
 
 header.insertAdjacentHTML("afterbegin", `<nav class="navbar navbar-expand-xl">
 <div class="div-nav container-fluid">
@@ -77,7 +94,7 @@ footer.insertAdjacentHTML("beforeend", `<footer class="py-5">
 
       <li class="nav-item mb-2"><a href="./index.html" class="nav-link p-0 text-body-secondary">Inicio</a></li>
       <li class="nav-item mb-2"><a href="./nosotros.html" class="nav-link p-0 text-body-secondary">Nosotros</a></li>
-      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Productos</a></li>
+      <li class="nav-item mb-2"><a href="./productos.html" class="nav-link p-0 text-body-secondary">Productos</a></li>
       <li class="nav-item mb-2"><a href="./contacto.html" class="nav-link p-0 text-body-secondary">Contáctanos</a></li>
       
     </ul>
@@ -86,10 +103,10 @@ footer.insertAdjacentHTML("beforeend", `<footer class="py-5">
   <div class="col-6 col-md-2 mb-3">
     <h5>Categorías</h5>
     <ul class="nav flex-column">
-      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Perros</a></li>
-      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Gatos</a></li>
-      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Aves</a></li>
-      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Peces</a></li>
+      <li class="nav-item mb-2"><a href="./productos.html#perros-cont" class="nav-link p-0 text-body-secondary">Perros</a></li>
+      <li class="nav-item mb-2"><a href="./productos.html#gatos-cont" class="nav-link p-0 text-body-secondary">Gatos</a></li>
+      <li class="nav-item mb-2"><a href="./productos.html#aves-cont" class="nav-link p-0 text-body-secondary">Aves</a></li>
+      <li class="nav-item mb-2"><a href="./productos.html#peces-cont" class="nav-link p-0 text-body-secondary">Peces</a></li>
       
     </ul>
   </div>

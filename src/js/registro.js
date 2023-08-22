@@ -20,7 +20,7 @@ function limpiar(){
 }
 
 const regexCorreo = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-const regexTel = /^(\+?52)?\s*\(?\d{2,3}\)?[-.\s]?\d{2,3}[-.\s]?\d{2,4}$/;
+const regexTel =  /^(?!.*(\d).*\3)\d{0,10}$/;
 const regexContra = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/;
 
 btnregistrame.addEventListener("click", (function (event) {
@@ -97,6 +97,7 @@ function validarDatos() {
     limpiarAlerta("contraseña-alert");
     limpiarAlerta("confirmacontra-alert");
     limpiarAlerta("terminosalert");
+    limpiarAlerta("terminos");
 
 
 
@@ -121,7 +122,9 @@ function validarDatos() {
 
 
     //Teléfono
-    if (!regexTel.test(numtel.value)) {
+    y=0;
+    tel.value.split("").forEach(n=>y+=parseInt(n));
+    if(!regexTel.test(tel.value) || y < 15){
         displayAlert("Por favor, ingresa un número de teléfono válido.", "tel-alert", "alert-danger");
         isValid = false;
         numtel.style.border = "solid 2px red"

@@ -22,67 +22,59 @@
       }
       .principal{
         display: flex;
-        padding: 0;
-      }/* contenedorDeCategoriasYImgPromocional */
+        flex-direction: row;
+
+      }
       .categorias{
-        width: 100%;
-        height: 100%;
-        padding: 0;
-       }/*contenedorDeLasCategorias */
-      .categorias ul{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-items: center;
         width: 100%;
-        height: 100%;
-        list-style-type: none;
-        margin: 0;
         padding: 0;
-      }
-      .categorias ul li{
+       }/*contenedorDeLasCategorias */
+       .imagen-categorias{
         width: 25%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-      .categorias ul li figure{
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+       }
+       .imagen-categorias:hover{
+        scale: 92%;
+        transition: all 1ms;
+       }
+      .imagen-categorias a{
         width: 100%;
         height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-      .categorias img{
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        z-index: -1;
-      }
-      .categorias figcaption{
-        position: absolute;
-        margin: 2% 2.7%;
+       }
+      .imagen-categorias h6{
+        position: relative;
+        top: 10%;
         z-index: 1;
-        font-size: larger;
+        text-align: center;
         color: white;
+        background-color: transparent;
+        border-radius: 20px;
+        border: 1px white solid;
+        width: 50%;
+        margin: 0 auto;
+        padding: 2.5px;
+        backdrop-filter: blur(10px);
       }
-      .imagen-promocional{
+      .imagen-categorias img{
+        position: relative;
         width: 100%;
-        padding: 0;
-        margin: auto;
-      }
-      .imagen-promocional img{
-        width: 100%;
-        object-fit: contain;
-        padding: 0;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        overflow: hidden;
       }
       .beneficios{
         margin-top: 20px;
         margin-bottom: 0;
         background-color: #33658A;
         color: white;
+        padding: 0.5%;
       }
       .beneficios ul{
         display: flex;
@@ -98,6 +90,35 @@
         margin-top: 10px;
         text-align: center;
         padding: 0;
+      }
+      .beneficios ul li i{
+        font-size: 2em;
+      }
+      .cliente{
+        display: flex;
+        background-image: url("https://www.helpguide.org/wp-content/uploads/2023/02/Benefits-of-Pets.jpeg");
+        height: 70vh;
+        background-size: 100%;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      .cliente p{
+        background-color: transparent;
+        border: 1px solid white;
+        border-radius: 20px;
+        width: 40%;
+        backdrop-filter: blur(10px);
+        color: white;
+        font-size: 1.5rem;
+        font-style: oblique;
+        font-weight: 500;
+        text-align: center;
+        margin-right: 5%;
+        padding: 20px;
+        box-shadow: 0 0 7px 1px white;
+        text-align: justify;
       }
       .lo-mas-vendido{
         width: 100%;
@@ -132,7 +153,7 @@
     </header>
     <!--Main-->
     <main>
-      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" style="z-index: -1;">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="./src/img/imgInicio/Slide1.PNG" class="d-block w-100" alt="...">
@@ -152,67 +173,57 @@
         </div>
       </div>
       <div class="container">
-        <h4>En Pawsitive vibes creeemos que el amor es recíproco, por eso nos esforzamos para ayudarte a regresarles un poco del amor que ellos te dan. Spread love and Pawsitive Vibes.</h4>
+        <h4>En Pawsitive vibes creemos que el amor es recíproco, por eso nos esforzamos para ayudarte a regresarles un poco del amor que ellos te dan. Spread love and Pawsitive Vibes.</h4>
       </div>
-        <div class="principal container-sm text-center">
-          <div class="row g-2">
-            <div class="col-sm">
-              <div class="categorias container-fluid">
-                <ul>
-                  <li>
-                    <figure>
-                      <figcaption>Gatos</figcaption>
-                      <img src="https://comunidad.retorn.com/wp-content/uploads/cache/2018/09/gatitos/3008811440.jpg" alt="">
-                    </figure>
-                  </li>
-                  <li>
-                    <figure>
-                      <figcaption>Perros</figcaption>
-                      <img src="https://pawal.cl/modules/ph_simpleblog/covers/9.jpg" alt="">
-                    </figure>
-                  </li>
-                  <li>
-                    <figure>
-                      <figcaption>Peces</figcaption>
-                      <img src="https://todopez.es/wp-content/uploads/2023/04/cuantos-goldfish-puedo-tener-en-50-litros.jpg" alt="">
-                    </figure>
-                  </li>
-                  <li>
-                    <figure>
-                      <figcaption>Aves</figcaption>
-                      <img src="https://i.pinimg.com/1200x/fb/30/42/fb3042cb712ba9599dd2acbad4083769.jpg" alt="">
-                    </figure>
-                  </li>
-                </ul>
-              </div>
+      <div class="row g-2">
+        <div class="col-sm">
+          <div class="categorias container-fluid">  
+          <div class="imagen-categorias">
+              <h6>Gatos</h6>
+              <a href="./productos.html#gatos"><img src="https://comunidad.retorn.com/wp-content/uploads/cache/2018/09/gatitos/3008811440.jpg" alt=""></a>
             </div>
-            <div class="col-sm">
-              <figure class="imagen-promocional">
-                <img src="https://cdn.bioguia.com/embed/0317cc93374895b55105e66d966c3c1573642994/Perro-y-humano.jpg?imagick=1&size=500" alt="">
-              </figure>
+            <div class="imagen-categorias">
+              <h6>Perros</h6>
+              <a href="./productos.html#perros"><img src="https://pawal.cl/modules/ph_simpleblog/covers/9.jpg" alt=""></a>
             </div>
+            <div class="imagen-categorias">
+              <h6>Peces</h6>
+              <a href="./productos.html#peces"><img src="https://todopez.es/wp-content/uploads/2023/04/cuantos-goldfish-puedo-tener-en-50-litros.jpg" alt=""></a>
+            </div>
+            <div class="imagen-categorias">
+              <h6>Aves</h6>
+              <a href="./productos.html#aves"><img src="https://i.pinimg.com/1200x/fb/30/42/fb3042cb712ba9599dd2acbad4083769.jpg" alt=""></a>
             </div>
           </div>
+        </div>
+      </div>
       <div class="beneficios container-fluid">
         <ul>
           <li>
+          <i class="bi bi-truck"></i>
           <h6>Entregas el mismo día</h6>
-          <p>Compra lo que necesitas cuando lo necesitas.</p>
+          <p>No esperes por tus compras</p>
           </li>
           <li>
-            <h6>Compras seguras</h6>
-          <p>Todas tus compras estan protegidas.</p>
+            <i class="bi bi-shield-check"></i>
+            <h6>Compras protegidas</h6>
+            <p>Seguridad en todas tus compras</p>
           </li>
           <li>
+            <i class="bi bi-shop"></i>
             <h6>Horarios flexibles</h6>
-          <p>Estamos abiertos de lunes a domingo de 9:00 a 21:00.</p>
+            <p>Lo que necesitas cuando lo necesitas</p>
           </li>
         </ul>
       </div>
-      <div class="lo-mas-vendido container-fluid">
+      <br>
+      <div class="cliente container-fluid">
+      <p>" En Pawsitive Vibes encuentro todo lo que le gusta. Nunca lo había visto tan feliz y verlo feliz me hace feliz a mí " - María Cantú</p>
+      </div>
+      <div class="lo-mas-vendido container-fluid text-center">
         <h3>Lo más vendido</h3>
         <br>
-        <div class="container text-center">
+        <div class="container">
           <div class="row">
             <div class="col">
               <div class="card h-75">
@@ -220,7 +231,7 @@
                 <div class="card-body">
                   <h5 class="card-title">Alimento para gato</h5>
                   <p class="card-text">Alimento para gato de la mejor calidad, por costal de 20 kilos.</p>
-                  <a href="#" class="btn btn-primary" style="background-color: #F06319; border-color: #F06319;">Ver más</a>
+                  <a href="./productos.html" class="btn btn-primary" style="background-color: #F06319; border-color: #F06319;">Ver más</a>
                 </div>
               </div>
             </div>
@@ -230,7 +241,7 @@
                 <div class="card-body">
                   <h5 class="card-title">Pecera mediana</h5>
                   <p class="card-text">Perfecta para ser el hábitat de de peces de tamaño mediano y pequeño.</p>
-                  <a href="#" class="btn btn-primary" style="background-color: #E8A42B; border-color:#E8A42B;">Ver más</a>
+                  <a href="./productos.html" class="btn btn-primary" style="background-color: #E8A42B; border-color:#E8A42B;">Ver más</a>
                 </div>
               </div>
             </div>
@@ -240,7 +251,7 @@
                 <div class="card-body">
                   <h5 class="card-title">Calmante para gato </h5>
                   <p class="card-text">Calmante auxiliar en la reducción de estres en tu mascota.</p>
-                  <a href="#" class="btn btn-primary" style="background-color: #33658A; border-color: #33658A;">Ver más</a>
+                  <a href="./productos.html" class="btn btn-primary" style="background-color: #33658A; border-color: #33658A;">Ver más</a>
                 </div>
               </div>
             </div>

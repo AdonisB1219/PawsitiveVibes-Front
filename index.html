@@ -38,7 +38,7 @@
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
-       }
+       }/*categorias  */
        .imagen-categorias:hover{
         scale: 92%;
         transition: all 1ms;
@@ -103,7 +103,7 @@
         background-repeat: no-repeat;
         justify-content: flex-end;
         align-items: center;
-      }
+       }
       .cliente p{
         background-color: transparent;
         border: 1px solid white;
@@ -111,7 +111,7 @@
         width: 40%;
         backdrop-filter: blur(10px);
         color: white;
-        font-size: 1.5rem;
+        font-size: 1.5em;
         font-style: oblique;
         font-weight: 500;
         text-align: center;
@@ -129,11 +129,8 @@
         text-align: center;
         margin: 30px 0;
       }
-      h4{
-        font-size: 1.5rem;
-      }
       p{
-        font-size: 1rem;
+        font-size: 1em;
       }
       /* .card{
         margin: 0;
@@ -143,6 +140,32 @@
         width: 100%;
         height: 50%;
         object-fit: contain;
+      }
+
+      @media (max-width: 768px) {
+        .cliente{
+          height: 40vh;
+        }
+        .cliente p{
+          font-size: 1em;
+        }
+      }
+      @media (max-width: 540px) {
+        .cliente{
+          height: 30vh;
+        }
+        .cliente p{
+          font-size: 0.7em;
+        }
+        .imagen-categorias{
+          height: 30vh;
+        }
+        .imagen-categorias h6{
+          font-size: 50%;
+        }
+        h4{
+          font-size: 80%;
+        }
       }
     </style>
   </head>

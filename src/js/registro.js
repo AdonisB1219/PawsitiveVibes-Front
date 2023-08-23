@@ -123,8 +123,8 @@ function validarDatos() {
 
     //Teléfono
     y=0;
-    tel.value.split("").forEach(n=>y+=parseInt(n));
-    if(!regexTel.test(tel.value) || y < 15){
+    numtel.value.split("").forEach(n=>y+=parseInt(n));
+    if(!regexTel.test(numtel.value) || y < 15){
         displayAlert("Por favor, ingresa un número de teléfono válido.", "tel-alert", "alert-danger");
         isValid = false;
         numtel.style.border = "solid 2px red"

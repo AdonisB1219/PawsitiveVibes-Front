@@ -103,10 +103,10 @@ footer.insertAdjacentHTML("beforeend", `<footer class="py-5">
   <div class="col-6 col-md-2 mb-3">
     <h5>Categorías</h5>
     <ul class="nav flex-column">
-      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Perros</a></li>
-      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Gatos</a></li>
-      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Aves</a></li>
-      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Peces</a></li>
+      <li class="nav-item mb-2"><a href="./productos.html#perros" class="nav-link p-0 text-body-secondary">Perros</a></li>
+      <li class="nav-item mb-2"><a href="./productos.html#gatos" class="nav-link p-0 text-body-secondary">Gatos</a></li>
+      <li class="nav-item mb-2"><a href="./productos.html#aves" class="nav-link p-0 text-body-secondary">Aves</a></li>
+      <li class="nav-item mb-2"><a href="./productos.html#peces" class="nav-link p-0 text-body-secondary">Peces</a></li>
       
     </ul>
   </div>

@@ -9,6 +9,7 @@ const btnregistrame = document.getElementById("btnregistrame");
 const btnTerminos = document.getElementById("btnTerminos");
 const imgPerfil = document.querySelectorAll('input[type=radio]');
 
+
 function limpiar(){
 
     nombre.value = '';
@@ -17,6 +18,7 @@ function limpiar(){
     contraseña.value = '';
     confirmacontra.value = '';
     terminos.value = '';
+    btnTerminos=false;
     //Funcion para limpiar los checkbox
     imgPerfil.forEach(radio => {
         radio.checked = false;
@@ -108,7 +110,7 @@ function validarDatos() {
 
 
     //NOMBRE
-    if (nombre.value.length <= 3 || !isNaN(nombre.value)) {
+    if (nombre.value.length <= 2 || !isNaN(nombre.value)) {
         displayAlert("Por favor, ingresa tu nombre completo.", "nombre-alert", "alert-danger");
         isValid = false;
         nombre.style.border = "solid 2px red"

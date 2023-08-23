@@ -9,6 +9,11 @@ const btnregistrame = document.getElementById("btnregistrame");
 const btnTerminos = document.getElementById("btnTerminos");
 const imgPerfil = document.querySelectorAll('input[type=radio]');
 
+//Para que al cargar la imagen no exista un boton seleccionado de forma predeterminada
+imgPerfil.forEach(radio => {
+    radio.checked = false;
+});
+terminos.checked = false;
 
 function limpiar(){
 
@@ -17,12 +22,14 @@ function limpiar(){
     email.value = '';
     contraseña.value = '';
     confirmacontra.value = '';
-    terminos.value = '';
-    btnTerminos=false;
+   // terminos.value = '';
+   
+
     //Funcion para limpiar los checkbox
     imgPerfil.forEach(radio => {
         radio.checked = false;
     });
+    terminos.checked = false;
 }
 
 const regexCorreo = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

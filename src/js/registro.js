@@ -17,6 +17,10 @@ function limpiar(){
     contraseña.value = '';
     confirmacontra.value = '';
     terminos.value = '';
+    //Funcion para limpiar los checkbox
+    imgPerfil.forEach(radio => {
+        radio.checked = false;
+    });
 }
 
 const regexCorreo = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

@@ -292,10 +292,10 @@ addItem({
 });
 
 addItem({
-    'name': 'Juguete',
+    'name': 'Juguete limpia dientes',
     'categoria': 'Juguete',
     'clave': 'juguete',
-    'description': 'trenza de tela para moder y jalar',
+    'description': 'Para morder y limpiar los dientes de tu mascota',
     'descuento': '0',
     'img': './src/img/imgProductos/juguetePerro5.png',
     'Marca': 'Nupec',
@@ -318,7 +318,7 @@ addItem({
 });
 
 addItem({
-    'name': 'Razcador en torre',
+    'name': 'Rascador en torre',
     'categoria': 'Juguete',
     'clave': 'juguete',
     'description': 'Razcador en torre para 5 gatos',
@@ -396,10 +396,10 @@ addItem({
  });
 
  addItem({
-    'name': 'Adorno',
+    'name': 'Ambientación',
     'categoria': 'Juguete',
     'clave': 'juguete',
-    'description': 'Este es un adorno bien padre',
+    'description': 'Para el habitat de tu amigo acuático.',
     'descuento': '10',
     'img': './src/img/imgProductos/adorno1.png',
     'Marca': 'Nupec',

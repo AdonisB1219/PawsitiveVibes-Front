@@ -59,6 +59,9 @@ boton.addEventListener("click", (function(event){
       precio.value='';
       descuento.value='';
       checkInfo.checked = false;
+      mascotas.forEach(radio => {
+        radio.checked = false;
+    });
   
   
       errorTitulo.style.border = '';

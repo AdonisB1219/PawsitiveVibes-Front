@@ -305,10 +305,10 @@ addItem({
 });
 
 addItem({
-    'name': 'Juguete',
+    'name': 'Juguete aguacate',
     'categoria': 'Juguete',
     'clave': 'juguete',
-    'description': 'trenza de tela para moder y jalar',
+    'description': 'Juguete en forma de aguacate con catnip para gato',
     'descuento': '0',
     'img': './src/img/imgProductos/jugueteGato1.png',
     'Marca': 'Nupec',
@@ -334,7 +334,7 @@ addItem({
     'name': 'Comida sabor atún',
     'categoria': 'Juguete',
     'clave': 'juguete',
-    'description': 'Comida para peces con mucha hambre 1.5k',
+    'description': 'Comida para peces nutricionada con Spirulina en ojuelas 1.5k',
     'descuento': '0',
     'img': './src/img/imgProductos/comidaPeces1.png',
     'Marca': 'Nupec',
@@ -347,7 +347,7 @@ addItem({
     'name': 'Comida en ojuelas',
     'categoria': 'Juguete',
     'clave': 'juguete',
-    'description': 'Comida para peces con mucha hambre',
+    'description': 'Comida para todo tipo de peces adicionada con vitaminas y minerales',
     'descuento': '0',
     'img': './src/img/imgProductos/comidaPeces2.png',
     'Marca': 'Nupec',
@@ -383,10 +383,10 @@ addItem({
 });
 
  addItem({
-    'name': 'Comida gatuna',
+    'name': 'Croquetas Para gato',
     'categoria': 'Juguete',
     'clave': 'juguete',
-    'description': 'Comida para gatos con mucha hambre',
+    'description': 'Croquetas para gatos adultos sabor pollo, 3.5K',
     'descuento': '0',
     'img': './src/img/imgProductos/comidaGato1.png',
     'Marca': 'Nupec',
@@ -412,7 +412,7 @@ addItem({
     'name': 'Adorno',
     'categoria': 'Juguete',
     'clave': 'juguete',
-    'description': 'Este es un adorno bien padre',
+    'description': 'Adorno para pecera pequeña color azul, no inclute peces',
     'descuento': '10',
     'img': './src/img/imgProductos/acuario1.png',
     'Marca': 'Nupec',
@@ -422,10 +422,10 @@ addItem({
 });
 
  addItem({
-    'name': 'Adorno',
+    'name': 'Porta comida',
     'categoria': 'Juguete',
     'clave': 'juguete',
-    'description': 'Este es un adorno bien padre',
+    'description': 'Porta comida para aves con capacidad de 500g',
     'descuento': '10',
     'img': './src/img/imgProductos/comidaAve2.png',
     'Marca': 'Nupec',

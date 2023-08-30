@@ -132,16 +132,16 @@
       p{
         font-size: 1em;
       }
-      /* .card{
+      .card{
+        display: flex;
         margin: 0;
         padding: 0;
-      } */
+      }
       .card img{
         width: 100%;
         height: 50%;
         object-fit: contain;
       }
-
       @media (max-width: 768px) {
         .cliente{
           height: 40vh;
@@ -246,9 +246,9 @@
       <div class="lo-mas-vendido container-fluid text-center">
         <h3>Lo más vendido</h3>
         <br>
-        <div class="container">
+        <div class="container-fluid">
           <div class="row">
-            <div class="col">
+            <div class="col-md">
               <div class="card h-75">
                 <img src="./src/img/imgInicio/alimento.jpeg" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -258,17 +258,17 @@
                 </div>
               </div>
             </div>
-            <div class="col">
+            <div class="col-md">
               <div class="card h-75">
                 <img src="./src/img/imgInicio/pecera.jpeg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Pecera mediana</h5>
-                  <p class="card-text">Perfecta para ser el hábitat de de peces de tamaño mediano y pequeño.</p>
+                  <p class="card-text">Perfecta para ser el hábitat de peces de tamaño mediano y pequeño.</p>
                   <a href="./productos.html" class="btn btn-primary" style="background-color: #E8A42B; border-color:#E8A42B;">Ver más</a>
                 </div>
               </div>
             </div>
-            <div class="col">
+            <div class="col-md">
               <div class="card h-75">
                 <img src="./src/img/imgInicio/calmante.jpeg" class="card-img-top" alt="...">
                 <div class="card-body">

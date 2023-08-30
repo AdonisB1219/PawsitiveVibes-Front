@@ -152,7 +152,7 @@ function validarDatos(){
 
 if(!(titulo.value.length > 3 )){
     titulo.style.border="solid 2px red"
-    errores.push("El titulo no es válido");
+    errores.push("El título no es válido");
     errorTitulo.style.display = "block";
 }
 

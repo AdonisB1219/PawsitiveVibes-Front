@@ -1,4 +1,23 @@
 var id = 0;
+let promesa = fetch("http://127.0.0.1:8080/api/productos/", {
+    method: "GET"
+});
+let contadorProductos = 0;
+
+
+//let promesa = [{"id":1,"titulo":"Arenero","categoria":"Muebles","numStock":2,"marca":"Nupec","descripcion":"Arenero cerrado para gato","seccion":"gatos","descuento":0,"precio":310.0,"imagen":"https://phantom-marca-mx.unidadeditorial.es/bb0f8e5a5dc3495d7e4695b204c67b70/resize/1200/f/jpg/mx/assets/multimedia/imagenes/2023/04/03/16805545425507.jpg"},{"id":2,"titulo":"Croquetas","categoria":"Alimento","numStock":3,"marca":"Nupec","descripcion":"Costal de 4 kilos de croquetas","seccion":"perros","descuento":10,"precio":500.0,"imagen":"https://phantom-marca-mx.unidadeditorial.es/bb0f8e5a5dc3495d7e4695b204c67b70/resize/1200/f/jpg/mx/assets/multimedia/imagenes/2023/04/03/16805545425507.jpg"}];
+
+promesa.then(
+    (response)=>{response.json()
+    .then((data)=>{
+        data.forEach((producto)=>{
+            addItemBD(producto)
+        });
+    })
+}
+).catch((error)=> {
+    console.log(error);
+})
 
 function addItem(item) {
     contadorProductos++;
@@ -214,7 +233,6 @@ function definirColorBoton(contador){
     return color;
 }
 
-var contadorProductos = 0;
 
 if(localStorage.getItem("productos") != null){
     let productos = JSON.parse(window.localStorage.getItem("productos"));

@@ -1,5 +1,5 @@
 var id = 0;
-let promesa = fetch("http://127.0.0.1:8080/api/productos/", {
+let promesa = fetch("https://pawsitivevibesecommerce.onrender.com/api/productos/", {
     method: "GET"
 });
 let contadorProductos = 0;

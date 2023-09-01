@@ -9,10 +9,6 @@ const btnregistrame = document.getElementById("btnregistrame");
 const btnTerminos = document.getElementById("btnTerminos");
 const imgPerfil = document.querySelectorAll('input[type=radio]');
 
-// let promesa = fetch("https://pawsitivevibesecommerce.onrender.com/api/usuarios/", {
-//     method: "POST"
-// });
-
 //Para que al cargar la imagen no exista un boton seleccionado de forma predeterminada
 imgPerfil.forEach(radio => {
     radio.checked = false;
@@ -43,62 +39,46 @@ const regexContra = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{
 btnregistrame.addEventListener("click", (function (event) {
 
     event.preventDefault();
-    if(validarDatos()){
+    if (validarDatos()) {
+        let imgPerfilSelec = null;
         imgPerfil.forEach(img => {
-            if (img.checked){
-                imgSelec = img;
-            }});
-        let usuario = {"nombre": nombre.value, "numtel":numtel.value, "email": email.value, "contraseña":contraseña.value, "imgPerfil": imgSelec.id};
-        let usuarios = [];
-        let usuarioRepetido;
-        if(window.localStorage.getItem("usuarios") != null){
-            let json = (JSON.parse(window.localStorage.getItem("usuarios")));
-
-            //agrega usuarios del localStorage
-            json.forEach(u => {
-                if(usuario.email == u.email){
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Oops...',
-                        html: 'Ya hay una cuenta con este correo',
-                      });
-                    usuarioRepetido = true;
-                }
-                
-                usuarios.push(u);
-              
-            });
-
+            if (img.checked) {
+                imgPerfilSelec = img.id;
             }
-
-            //Agrega usuario registrado
-            if(!usuarioRepetido)
-            {
-                usuarios.push(usuario);
+        });
+    
+        let usuario = {
+            "nombre": nombre.value,
+            "telefono": numtel.value,
+            "correo": email.value,
+            "contrasena": contraseña.value,
+            "imagen": imgPerfilSelec
+        };
+    
+        fetch("https://pawsitivevibesecommerce.onrender.com/api/usuarios/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(usuario)
+        }).then((response) => {
+            if (response.ok) {
                 Swal.fire(
                     'Éxito',
                     'Te registraste con éxito',
                     'success'
                 );
-                limpiar();
+                limpiar(); // Limpia los campos del formulario después de un registro exitoso
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Hubo un problema al registrar el usuario',
+                });
             }
-
-
-        window.localStorage.setItem("usuarios", JSON.stringify(usuarios));
-    //     promesa.then(response => response.text())
-    //     .then(Swal.fire(
-    //       'Éxito',
-    //       'Te registraste con éxito',
-    //       'success'
-    //   ))
-    //     .catch(Swal.fire({
-    //       icon: 'error',
-    //       title: 'Oops...',
-    //       html: 'Algo salió mal',
-    //     }));
-
-        
-
+        }).catch((error) => {
+            console.log(error);
+        });
     }
  
 }))

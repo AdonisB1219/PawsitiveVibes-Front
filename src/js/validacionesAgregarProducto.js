@@ -32,61 +32,77 @@ boton.addEventListener("click", (function(event){
 
     let errores = validarDatos();
 
-    if (errores.length == 0){
-        
-        let producto = {"name":titulo.value, "categoria":categoria.value, "clave": clave.value, "marca":marca.value, "stock":numStock.value, "img":imagen, "description":descripcion.value, "precio":precio.value, "mascota":mascota.value, "descuento":descuento.value};
-        let productos = [];
-        if(window.localStorage.getItem("productos") != null){
-            console.log("no es nulo");
-            console.log(window.localStorage.getItem("productos"));
-            let json = (JSON.parse(window.localStorage.getItem("productos")));
-            let p;
-            json.forEach(p =>productos.push(p));
-        }
-        productos.push(producto);
-        window.localStorage.setItem("productos", JSON.stringify(productos));
-        Swal.fire(
-            'Éxito',
-            'El producto fue agregado correctamente',
-            'success'
-        );
-        titulo.value='';
-      categoria.value='';
-      clave.value='';
-      numStock.value='';
-      marca.value='';
-      descripcion.value='';
-      precio.value='';
-      descuento.value='';
-      checkInfo.checked = false;
-      mascotas.forEach(radio => {
-        radio.checked = false;
-    });
-  
-  
-      errorTitulo.style.border = '';
-      errorCategoria.style.border = '';
-      errorClave.style.border = '';
-      errorNumStock.style.border = '';
-      errorMarca.style.border = '';
-      errorDescripcion.style.border = '';
-      errorPrecio.style.border = '';
-      errorDescuento.style.border = '';
-      errorCheckInfo.style.border = '';
-      errorMascota.style.border = '';
-      errorImagen.style.border = '';
+    if (errores.length == 0) {
+        let producto = {
+            "titulo": titulo.value,
+            "categoria": categoria.value,
+            "marca": marca.value,
+            "numStock": numStock.value,
+            "imagen": imagen,
+            "descripcion": descripcion.value,
+            "precio": precio.value,
+            "seccion": mascota.value,
+            "descuento": descuento.value
 
-    } else{
-        let strErrores = "";
-        errores.forEach((error)=>{
-            strErrores += error + "<br>";
-        });
+           
+        };
     
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            html: strErrores,
-          })
+        // Realizar la solicitud POST a la API
+        fetch("https://pawsitivevibesecommerce.onrender.com/api/productos/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(producto)
+        }).then((response) => {
+            if (response.ok) {
+                // Si la respuesta es exitosa, agregar el producto localmente (opcional)
+                // productos.push(producto);
+    
+                // Limpiar los campos y mostrar el mensaje de éxito
+                Swal.fire(
+                    'Éxito',
+                    'El producto fue agregado correctamente',
+                    'success'
+                );
+                
+                // Limpiar los campos del formulario
+                titulo.value = '';
+                categoria.value = '';
+                clave.value = '';
+                numStock.value = '';
+                marca.value = '';
+                descripcion.value = '';
+                precio.value = '';
+                descuento.value = '';
+                checkInfo.checked = false;
+                mascotas.forEach(radio => {
+                    radio.checked = false;
+                });
+    
+                // Limpiar los mensajes de error
+                errorTitulo.style.border = '';
+                errorCategoria.style.border = '';
+                errorClave.style.border = '';
+                errorNumStock.style.border = '';
+                errorMarca.style.border = '';
+                errorDescripcion.style.border = '';
+                errorPrecio.style.border = '';
+                errorDescuento.style.border = '';
+                errorCheckInfo.style.border = '';
+                errorMascota.style.border = '';
+                errorImagen.style.border = '';
+            } else {
+                // Si hay un error en la respuesta de la API, mostrar un mensaje de error
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Hubo un problema al agregar el producto',
+                });
+            }
+        }).catch((error) => {
+            console.log(error);
+        });
     }
 }));
 

@@ -472,19 +472,19 @@ function addItemBD(item) {
     let precio = item.precio;
     let descuento = item.descuento;
     switch (descuento){
-        case "10":
+        case 10:
             precio *= 0.9;
             precio = precio.toFixed(2);
             break;
-            case "20":
+            case 20:
             precio *= 0.8;
             precio = precio.toFixed(2);
             break;
-            case "30":
+            case 30:
             precio *= 0.7;
             precio = precio.toFixed(2);
             break;
-            case "40":
+            case 40:
             precio *= 0.6;
             precio = precio.toFixed(2);
             break;

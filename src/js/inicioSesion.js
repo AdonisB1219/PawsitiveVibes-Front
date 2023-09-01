@@ -3,14 +3,36 @@ const password = document.getElementById("contrasena");
 const boton = document.getElementById("btn-inicio");
 const cuenta = document.getElementById("icono-cuenta");
 var usuarios = [];
+let promesa = fetch("https://pawsitivevibesecommerce.onrender.com/api/usuarios/", {
+    method: "GET"
+});
+promesa.then(
+    (response)=>{response.json()
+    .then((data)=>{
+        data.forEach((usuario)=>{
+            usuarios.push(usuario);
+        });
+    })
+}
+).catch((error)=> {
+    console.log(error);
+})
+
+console.log(usuarios);
+usuarios.forEach(usuario => JSON.parse(usuario));
+console.log(usuarios);
 
 boton.addEventListener("click",function(event){
     event.preventDefault();
     let logeado = false;
-    let json = (JSON.parse(window.localStorage.getItem("usuarios")));
-        json.forEach(u => {
-            if(u.email == email.value && u.contraseña == password.value){
-                window.localStorage.setItem("usuario-logeado", JSON.stringify(u));
+    console.log(usuarios);
+    console.log(email.value);
+    console.log(password.value);
+    console.log(usuarios[0].correo);
+    console.log(usuarios[0].contrasena);
+        usuarios.forEach(usuario => {
+            if(usuario.correo == email.value && usuario.contrasena == password.value){
+                window.localStorage.setItem("usuario-logeado", JSON.stringify(usuario));
                 logeado = true;
                     Swal.fire({
                         icon: 'success',

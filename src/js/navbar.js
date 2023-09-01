@@ -13,7 +13,7 @@ ${imgPerfilNav}
 </ul> </li>`;
 
 if(JSON.parse(window.localStorage.getItem("usuario-logeado") != null)){
-  let idImg = JSON.parse(window.localStorage.getItem("usuario-logeado")).imgPerfil;
+  let idImg = JSON.parse(window.localStorage.getItem("usuario-logeado")).imagen;
   imgPerfilNav = `<img style="width:40px; heigth: auto;" src="./src/img/perfil${idImg}.png" alt="">`;
   iconoPerfil = `          <li class="nav-item dropdown dropstart">
   <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">

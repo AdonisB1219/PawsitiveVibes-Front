@@ -9,6 +9,10 @@ const btnregistrame = document.getElementById("btnregistrame");
 const btnTerminos = document.getElementById("btnTerminos");
 const imgPerfil = document.querySelectorAll('input[type=radio]');
 
+// let promesa = fetch("https://pawsitivevibesecommerce.onrender.com/api/usuarios/", {
+//     method: "POST"
+// });
+
 //Para que al cargar la imagen no exista un boton seleccionado de forma predeterminada
 imgPerfil.forEach(radio => {
     radio.checked = false;
@@ -44,7 +48,7 @@ btnregistrame.addEventListener("click", (function (event) {
             if (img.checked){
                 imgSelec = img;
             }});
-        let usuario = {"nombre":nombre.value, "numtel":numtel.value, "email": email.value, "contraseña":contraseña.value, "imgPerfil": imgSelec.id};
+        let usuario = {"nombre": nombre.value, "numtel":numtel.value, "email": email.value, "contraseña":contraseña.value, "imgPerfil": imgSelec.id};
         let usuarios = [];
         let usuarioRepetido;
         if(window.localStorage.getItem("usuarios") != null){
@@ -81,6 +85,19 @@ btnregistrame.addEventListener("click", (function (event) {
 
 
         window.localStorage.setItem("usuarios", JSON.stringify(usuarios));
+    //     promesa.then(response => response.text())
+    //     .then(Swal.fire(
+    //       'Éxito',
+    //       'Te registraste con éxito',
+    //       'success'
+    //   ))
+    //     .catch(Swal.fire({
+    //       icon: 'error',
+    //       title: 'Oops...',
+    //       html: 'Algo salió mal',
+    //     }));
+
+        
 
     }
  

@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+ *{
+    font-family: "Poppins", sans-serif;
+   
+} 
+#emailHelp{
+    font-size: 12px;
+}
+
+.tit h3{
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Poppins',sans-serif;
+    
+}
+.title h1{
+    font-weight: 800;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Poppins',sans-serif;
+    padding: 30px 0;
+}
+/*div contenedor de todos los datos, atencion ,telefono*/
+.datos-contacto{
+    font-size: 15px;
+    text-align: center;
+}
+/*estilos iconos*/
+.iconos{
+    font-size: 25px;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/*estilos div info horario,telefono*/
+.info{
+    margin: 35px 10px;
+}
+/*estilos div ubicacion y direccion*/
+.ubicacion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*estilos div formulario*/
+.formulario{
+    
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/* Mensajes de error */
+.mensajeError{
+    font-size: 12px;
+    color: red;
+    display: none;
+}
+
+#enviar{
+    background-color: #33658A;
+}
+
+#link-terminos{
+    background-color: white; color: rgb(82, 82, 82); border: none; text-decoration: underline; font-size: 20px;
+}

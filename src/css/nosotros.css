@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    font-family: "Poppins", sans-serif;
+  /*   text-align: center; */
+    padding: 0;
+    margin: 0;
+}
+
+/*Seccion quienes somos*/
+.quienes-somos{
+    align-content: center;
+    text-align: justify;
+    font-family: 'Poppins',sans-serif;
+    padding: 30px 0 50px 0;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.quienes-somos h1{
+    font-weight: 700;
+    text-align: center
+}
+
+/*Seccion valores*/
+.nuestros-valores{
+    align-content: center;
+    padding: 0px 50px 0px 50px;
+    text-align: center;
+    margin: auto;
+    font-family: 'Poppins',sans-serif;
+}
+
+.nuestros-valores h1{
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
+.valor1{
+    background-color: #F06319;
+   border: 20px;
+   padding: 9px;
+   border-radius: 15px;
+   color: white;
+}
+.valor2{
+    background-color: #E8A42B;
+   border: 20px;
+   padding: 9px;
+   border-radius: 15px;
+   color: white;
+}
+.valor3{
+   background-color: #33658A;
+   border: 20px;
+   padding: 9px;
+   border-radius: 15px;
+   color: white;
+}
+
+.card-text{
+    font-weight: 500;
+}
+
+/* Seccion mision vision */
+.mision-vision{
+    padding: 20px 10px;
+    margin: 10px;
+}
+#container-mision{
+    font-family: 'Poppins',sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+#container-mision h1{
+    font-weight: 700;
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+#container-vision{
+    font-family: 'Poppins',sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+#container-vision h1{
+    font-weight: 700;
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+
+/*Seccion Equipo*/
+
+.titulo-equipo h1{
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
+}
+
+#quienes-somos{
+    grid-area: quienes-somos;
+}
+.nuestros-valores{
+    grid-area: nuestros-valores;
+}
+
+.equipo{
+    grid-area: equipo;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#container-text{
+        width: 30%;
+        min-width: 300px;
+        margin: 0;
+        padding: 0;
+        gap: 30px;
+        align-items: center;
+        justify-content: center;
+    }
+#container-imagen img{
+    border-radius: 10px;
+    padding: 120px 5px 0px 25px;
+}
+.card{
+    margin: 0;
+}
+.divimg{
+    width: 100%;
+    height: 70%;
+    overflow: hidden;
+}
+.titulo{
+    display: block;
+    width: 100%;
+   
+}
+
+.card-img-top{
+    object-fit: scale-down;
+}
+
+/* animacion fotos equipo*/
+.container-equipo{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.container-equipo figure{
+    position: relative;
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0px 0px 25px rgba(0, 0,0, 0.5);
+    cursor:pointer;
+}
+
+.container-equipo figure img{
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out;
+}
+
+.container-equipo figure .capa{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+} 
+
+.diego figure .capa {
+    background: rgba(80, 208, 211, 0.7);
+}
+.carlos figure .capa {
+    background: rgba(240, 99, 25, 0.7);
+}
+.adonis figure .capa {
+    background: rgba(232, 164, 43, 0.7);
+}
+.beti figure .capa {
+    background: rgba(191, 212, 239, 0.7);
+}
+.adri figure .capa {
+    background: rgba(80, 208, 211, 0.7);
+}
+.mariel figure .capa {
+    background: rgba(240, 99, 25, 0.7);
+}
+
+.container-equipo figure:hover > .capa{
+    opacity: 1;
+    visibility: visible;
+}
+
+.container-equipo figure:hover > .capa h3{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.container-equipo figure .capa h3{
+    color: #000000;
+    font-weight: 500;
+    margin-bottom: 120px;
+    font-size: 25px;
+    transition: all 500ms ease-out;
+    margin-top: 25px;
+}
+
+.container-equipo figure .capa p{
+    color: #000000;
+    font-size: 15px;
+    line-height: 1.5;
+    width: 100%;
+    max-width: 200px;
+    margin: auto;
+} 
+
+.capa a{
+    text-decoration: none;
+    color: black;
+    font-size: 40px;
+}
+
+
+/*Tamaño de letra para celular*/
+@media (max-width: 600px) {
+    .quienes-somos > p{
+        font-size: 18px;
+    }
+    
+    #container-mision > p{
+        font-size: 18px;  
+    }
+
+    #container-vision > p{
+        font-size: 18px;  
+    }
+}
+

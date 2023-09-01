@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inicio</title>
+    <!-- Icon -->
+    <link rel="shortcut icon" href="./src/img/logo.png">
+    <!--Link CSS Navbar-->
+    <link rel="stylesheet" href="./src/css/navfooter.css">
+    <!--Link Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!--Link iconos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Iconos de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Poppins">
+    <style>
+      body{
+        font-family: "Poppins", sans-serif;
+      }
+      .principal{
+        display: flex;
+        flex-direction: row;
+
+      }
+      .categorias{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 0;
+       }/*contenedorDeLasCategorias */
+       .imagen-categorias{
+        width: 25%;
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+       }/*categorias  */
+       .imagen-categorias:hover{
+        scale: 92%;
+        transition: all 1ms;
+       }
+      .imagen-categorias a{
+        width: 100%;
+        height: 100%;
+       }
+      .imagen-categorias h6{
+        position: relative;
+        top: 10%;
+        z-index: 1;
+        text-align: center;
+        color: white;
+        background-color: transparent;
+        border-radius: 20px;
+        border: 1px white solid;
+        width: 50%;
+        margin: 0 auto;
+        padding: 2.5px;
+        backdrop-filter: blur(10px);
+      }
+      .imagen-categorias img{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        overflow: hidden;
+      }
+      .beneficios{
+        margin-top: 20px;
+        margin-bottom: 0;
+        background-color: #33658A;
+        color: white;
+        padding: 0.5%;
+      }
+      .beneficios ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        list-style-type: none;
+        padding: 0;
+        justify-content: space-evenly;
+      }
+      .beneficios ul li{
+        width: 30%;
+        margin-top: 10px;
+        text-align: center;
+        padding: 0;
+      }
+      .beneficios ul li i{
+        font-size: 2em;
+      }
+      .cliente{
+        display: flex;
+        background-image: url("https://www.helpguide.org/wp-content/uploads/2023/02/Benefits-of-Pets.jpeg");
+        height: 70vh;
+        background-size: 100%;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        justify-content: flex-end;
+        align-items: center;
+       }
+      .cliente p{
+        background-color: transparent;
+        border: 1px solid white;
+        border-radius: 20px;
+        width: 40%;
+        backdrop-filter: blur(10px);
+        color: white;
+        font-size: 1.5em;
+        font-style: oblique;
+        font-weight: 500;
+        text-align: center;
+        margin-right: 5%;
+        padding: 20px;
+        box-shadow: 0 0 7px 1px white;
+        text-align: justify;
+      }
+      .lo-mas-vendido{
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+      }
+      h4{
+        text-align: center;
+        margin: 30px 0;
+      }
+      p{
+        font-size: 1em;
+      }
+      .card{
+        display: flex;
+        margin: 0;
+        padding: 0;
+      }
+      .card img{
+        width: 100%;
+        height: 50%;
+        object-fit: contain;
+      }
+      @media (max-width: 768px) {
+        .cliente{
+          height: 40vh;
+        }
+        .cliente p{
+          font-size: 1em;
+        }
+      }
+      @media (max-width: 540px) {
+        .cliente{
+          height: 30vh;
+        }
+        .cliente p{
+          font-size: 0.7em;
+        }
+        .imagen-categorias{
+          height: 30vh;
+        }
+        .imagen-categorias h6{
+          font-size: 50%;
+        }
+        h4{
+          font-size: 80%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!--Header-->
+    <header>
+
+    </header>
+    <!--Main-->
+    <main>
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" style="z-index: -1;">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./src/img/imgInicio/Slide1.PNG" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./src/img/imgInicio/Slide2.PNG" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./src/img/imgInicio/Slide3.PNG" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./src/img/imgInicio/Slide4.PNG" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./src/img/imgInicio/Slide5.PNG" class="d-block w-100" alt="...">
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <h4>En Pawsitive vibes creemos que el amor es recíproco, por eso nos esforzamos para ayudarte a regresarles un poco del amor que ellos te dan. Spread love and Pawsitive Vibes.</h4>
+      </div>
+      <div class="row g-2">
+        <div class="col-sm">
+          <div class="categorias container-fluid">  
+          <div class="imagen-categorias">
+              <h6>Gatos</h6>
+              <a href="./productos.html#gatos"><img src="https://comunidad.retorn.com/wp-content/uploads/cache/2018/09/gatitos/3008811440.jpg" alt=""></a>
+            </div>
+            <div class="imagen-categorias">
+              <h6>Perros</h6>
+              <a href="./productos.html#perros"><img src="https://pawal.cl/modules/ph_simpleblog/covers/9.jpg" alt=""></a>
+            </div>
+            <div class="imagen-categorias">
+              <h6>Peces</h6>
+              <a href="./productos.html#peces"><img src="https://todopez.es/wp-content/uploads/2023/04/cuantos-goldfish-puedo-tener-en-50-litros.jpg" alt=""></a>
+            </div>
+            <div class="imagen-categorias">
+              <h6>Aves</h6>
+              <a href="./productos.html#aves"><img src="https://i.pinimg.com/1200x/fb/30/42/fb3042cb712ba9599dd2acbad4083769.jpg" alt=""></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="beneficios container-fluid">
+        <ul>
+          <li>
+          <i class="bi bi-truck"></i>
+          <h6>Entregas el mismo día</h6>
+          <p>No esperes por tus compras</p>
+          </li>
+          <li>
+            <i class="bi bi-shield-check"></i>
+            <h6>Compras protegidas</h6>
+            <p>Seguridad en todas tus compras</p>
+          </li>
+          <li>
+            <i class="bi bi-shop"></i>
+            <h6>Horarios flexibles</h6>
+            <p>Lo que necesitas cuando lo necesitas</p>
+          </li>
+        </ul>
+      </div>
+      <br>
+      <div class="cliente container-fluid">
+      <p>" En Pawsitive Vibes encuentro todo lo que le gusta. Nunca lo había visto tan feliz y verlo feliz me hace feliz a mí " - María Cantú</p>
+      </div>
+      <div class="lo-mas-vendido container-fluid text-center">
+        <h3>Lo más vendido</h3>
+        <br>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md">
+              <div class="card h-75">
+                <img src="./src/img/imgInicio/alimento.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Alimento para gato</h5>
+                  <p class="card-text">Alimento para gato de la mejor calidad, por costal de 20 kilos.</p>
+                  <a href="./productos.html" class="btn btn-primary" style="background-color: #F06319; border-color: #F06319;">Ver más</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="card h-75">
+                <img src="./src/img/imgInicio/pecera.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Pecera mediana</h5>
+                  <p class="card-text">Perfecta para ser el hábitat de peces de tamaño mediano y pequeño.</p>
+                  <a href="./productos.html" class="btn btn-primary" style="background-color: #E8A42B; border-color:#E8A42B;">Ver más</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="card h-75">
+                <img src="./src/img/imgInicio/calmante.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Calmante para gato </h5>
+                  <p class="card-text">Calmante auxiliar en la reducción de estres en tu mascota.</p>
+                  <a href="./productos.html" class="btn btn-primary" style="background-color: #33658A; border-color: #33658A;">Ver más</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!--Footer-->
+    <footer>
+
+    </footer>
+    <!--Scripts-->
+<script type="text/javascript"
+src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript">
+emailjs.init('a6EtC--2fowK_8GRa')
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="./src/js/navbar.js"></script>
+  </body>
+</html>

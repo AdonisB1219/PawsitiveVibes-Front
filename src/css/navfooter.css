@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*----------------Aqui comienza el Nav-------------*/
+header{
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+footer{
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+/*Div Navbar*/
+
+.navbar{
+    box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.4);
+    /* height: 120px; */
+    background-color: white;
+    width: 100%;
+}
+
+.colapse{
+    background-color: white;
+}
+
+/*Css texto navbar*/
+
+.text{
+    font-size:24px;
+    font-weight: 600;
+    padding: 0 15px;
+}
+
+.texto-nav{
+    margin: 0 auto;
+}
+
+.menu .texto-nav li:hover{
+    background-color: #F06319;
+    border-radius: 40px;
+}
+
+.navbar-nav > li > a:hover{
+    color: white;
+}
+
+.navbar-nav > li > a{
+    text-decoration: none;
+    color: black;
+}
+/*Css iconos navbar*/
+.menu .iconos{
+    list-style: none;
+    display: flex;
+    margin: 30px;
+}
+
+.menu .iconos li{
+    padding: 10px;
+}
+
+.iconos li a i{
+    font-size: 30px;
+}
+
+/*Imagn navbar*/
+
+#logo{
+    width: 120px;
+    margin: 0 20px;
+}
+
+.logeado{
+    border-radius: 10px;
+    background-color: rgb(187, 232, 187);
+}
+
+
+
+
+/*----------------Aqui termina el Nav-------------*/
+
+
+/*Footer*/
+
+#inicia-sesion, #cerrar-sesion{
+    border-radius: 10px;
+    color: #F06319;
+    background-color: white;
+    border: 2px solid #F06319;
+    padding: 5px 5px;
+    font-size: 22px;
+    margin-left: 20px;
+    width: 200px;
+}
+
+#registrate{
+    border-radius: 10px;
+    color: white;
+    font-weight: 500;
+    background-color: #F06319;
+    border: 1px solid white;
+    padding: 6px 6px;
+    font-size: 22px;
+    margin-left: 20px;
+    width: 200px;
+}
+
+/* Para las tarejtas de los productos */
+ .tarjeta-producto {
+    width: 100%;
+    height: 30vh;
+    object-fit: scale-down;
+    
+} 
+.card-title{
+    font-weight: bold;
+   
+}
+.precio{
+    font-weight: bold;
+    font-size: 30px;
+}
+.comprar{
+ width: 100%;
+}
+.card{
+    box-shadow: 5px 5px 8px gray;
+}
+
+.carta{
+    width: auto;
+    height: 30vh;
+}
+
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+   height: 100%;
+}
+
+.description{
+    flex-grow: 1;
+}
+
+.boton-carta{
+    width: 100%;
+    align-items: stretch;
+}
+
+.boton-comprar{
+    width: 100%;
+    align-items: stretch;
+    font-weight: 500;
+    border: 0;
+    border-radius: 10px;
+    color: white;
+    padding: 5px 0px;
+}
+
+
+/* Para la página de productos*/
+
+.titulo-seccion{
+    margin-left: 20px;
+    font-size: 35px;
+    font-weight: 600;
+}

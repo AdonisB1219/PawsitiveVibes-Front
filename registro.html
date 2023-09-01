@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registro usuarios</title>
+    <!-- Icon -->
+    <link rel="shortcut icon" href="./src/img/logo.png">
+    <!--Link CSS Navbar/Footer-->
+    <link rel="stylesheet" href="./src/css/navfooter.css">
+    <!--Link CSS registro-->
+    <link rel="stylesheet" href="./src/css/registro.css">
+    <!--Link Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!--Link iconos-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- Clouflare -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+
+    <header>
+
+    </header>
+
+  <form class="container formulario">
+    <h1 class="titulo">Regístrate</h1>
+    <br>
+    <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre completo</label>
+        <input type="text" class="form-control input" id="nombre" aria-describedby="emailHelp">
+        <div class="alert " role="alert" id="nombre-alert"></div>
+      </div>
+      <div class="mb-3">
+        <label for="numtel" class="form-label">Número de teléfono</label>
+        <input type="tel" class="form-control input" id="numtel" aria-describedby="emailHelp">
+        <div class="alert " role="alert" id="tel-alert"></div>
+      </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Correo electrónico</label>
+      <input type="email" class="form-control input" id="email" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">Nunca compartiremos tu correo con nadie.</div>
+      <div class="alert " role="alert" id="correo-alert"></div>
+    </div>
+    <div class="mb-3">
+      <label for="contraseña" class="form-label">Contraseña</label>
+      <input type="password" class="form-control input" id="contraseña">
+      <div class="alert " role="alert" id="contraseña-alert"></div>
+    </div>
+    <div class="mb-3">
+        <label for="confirmacontra" class="form-label">Confirma tu contraseña</label>
+        <input type="password" class="form-control input" id="confirmacontra">
+        <div class="alert " role="alert" id="confirmacontra-alert"></div>
+      </div>
+      <div class="mb-3">
+        <p class="form-label">Selecciona un ícono para tu perfil</p>
+        <div class="row cols-lg-2">
+        <div class="col">
+        <div class="form-check form-check-inline">          <input class="form-check-input" type="radio" name="imgicon" id="1" checked>
+          <label class="form-check-label" for="1">
+            <img class="icono" src="./src/img/perfil1.png" alt="">
+          </label>
+        </div>
+
+        <div class="form-check form-check-inline">          <input class="form-check-input" type="radio" name="imgicon" id="2">
+          <label class="form-check-label" for="2">
+            <img class="icono" src="./src/img/perfil2.png" alt="">
+          </label>
+        </div>
+      </div>
+      <div class="col">
+
+        <div class="form-check form-check-inline">          <input class="form-check-input" type="radio" name="imgicon" id="3">
+          <label class="form-check-label" for="3">
+            <img class="icono" src="./src/img/perfil3.png" alt="">
+          </label>
+        </div>
+        <div class="form-check form-check-inline">          <input class="form-check-input" type="radio" name="imgicon" id="4">
+          <label class="form-check-label" for="4">
+            <img class="icono" src="./src/img/perfil4.png" alt="">
+          </label>
+        </div>
+      </div>
+      <div class="col">
+
+        <div class="form-check form-check-inline">          <input class="form-check-input" type="radio" name="imgicon" id="5">
+          <label class="form-check-label" for="5">
+            <img class="icono" src="./src/img/perfil5.png" alt="">
+          </label>
+        </div>
+        <div class="form-check form-check-inline">          <input class="form-check-input" type="radio" name="imgicon" id="6">
+          <label class="form-check-label" for="6">
+            <img class="icono" src="./src/img/perfil6.png" alt="">
+          </label>
+        </div>
+      </div>
+      <div class="col">
+
+        <div class="form-check form-check-inline">          <input class="form-check-input" type="radio" name="imgicon" id="7">
+          <label class="form-check-label" for="7">
+            <img class="icono" src="./src/img/perfil7.png" alt="">
+          </label>
+        </div>
+        <div class="form-check form-check-inline">          <input class="form-check-input" type="radio" name="imgicon" id="8">
+          <label class="form-check-label" for="8">
+            <img class="icono" src="./src/img/perfil8.png" alt="">
+          </label>
+        </div>
+      </div>
+
+      </div>
+
+      </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input input" id="terminos">
+      <label class="form-check-label" for="terminos"> 
+        <!-- Button trigger modal -->
+          <button type="button" id="link-terminos" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Acepto Términos y condiciones
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-xl">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Términos y condiciones</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="font-size: medium;">
+                  1. Identidad y Datos de Contacto del Responsable
+
+                  Nombre de la Tienda en Línea: Pawsitive Vibes
+                  Responsable: Grupo Pawsitive
+                  Correo Electrónico: pawsitivevibes@gmail.com
+                  Teléfono de Contacto:
+                  <br> 
+                                  
+                  2. Información Recopilada
+                                  
+                  En Pawsitive Vibes, recopilamos información personal de nuestros usuarios con el propósito de brindar un servicio de calidad y personalizado. La información que recopilamos incluye, pero no se limita a:
+                                  
+                  Nombre y apellidos
+                  Dirección postal
+                  Dirección de correo electrónico
+                  Número de teléfono
+                  Información de pago y facturación
+                  Información sobre las mascotas (nombre, especie, raza, etc.)
+                  Historial de compras y preferencias
+                  <br>
+                  3. Uso de la Información
+                                  
+                  La información personal recopilada se utilizará para los siguientes propósitos:
+                                  
+                  Procesamiento de pedidos y envíos.
+                  Comunicación sobre el estado de los pedidos y ofertas especiales.
+                  Personalización de la experiencia de compra.
+                  Mejora de nuestros productos y servicios.
+                  Cumplimiento de obligaciones legales.
+                  Envío de boletines y promociones (con consentimiento explícito).
+                  <br>
+                  4. Compartir Información
+                                  
+                  Garantizamos que la información personal de nuestros usuarios no será vendida, alquilada ni compartida con terceros, excepto en los siguientes casos:
+                                  
+                  Proveedores de servicios y socios involucrados en el proceso de compra y envío.
+                  Autoridades gubernamentales o entidades reguladoras cuando sea requerido por la ley.
+                  <br>
+                  5. Seguridad de Datos
+                                  
+                  Nos comprometemos a mantener la seguridad de la información personal. Utilizamos medidas de seguridad técnicas y organizativas para prevenir el acceso no autorizado, la divulgación o la                    modificación de los datos personales.
+                  <br>
+                  6. Derechos de los Usuarios
+                                  
+                  Los usuarios tienen los siguientes derechos con respecto a sus datos personales:
+                                  
+                  Acceso y rectificación: Pueden acceder y corregir sus datos personales.
+                  Supresión: Pueden solicitar la eliminación de sus datos, bajo ciertas condiciones.
+                  Oposición: Pueden oponerse al procesamiento de sus datos en ciertas circunstancias.
+                  Portabilidad: Pueden solicitar la transferencia de sus datos a otra entidad.
+                  <br>
+                  7. Cambios al Aviso de Privacidad
+                                  
+                  Nos reservamos el derecho de modificar este aviso de privacidad en cualquier momento. Se recomienda a los usuarios revisar periódicamente para estar al tanto de cualquier cambio.
+                                  
+                  Si tienes preguntas o inquietudes sobre este aviso de privacidad, por favor contáctanos a través de los datos proporcionados en la sección 1.
+                  <br>
+                  Fecha de última actualización: [14/08/2023]
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </label>
+      
+      <!-- Scrollable modal -->
+
+      <div class="alert " role="alert" id="terminosalert"></div>
+    </div>
+    <button type="submit " class="btn " id="btnregistrame">Registrarme</button>
+  </form>
+  <footer>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="./src/js/navbar.js"></script>
+  <script src="./src/js/registro.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  
+</body>
+</html>

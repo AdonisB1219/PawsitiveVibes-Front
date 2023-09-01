@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contacto</title>
+    <!-- Icon -->
+    <link rel="shortcut icon" href="./src/img/logo.png">
+    <!--Link CSS-->
+    <link rel="stylesheet" href="./src/css/contacto.css">
+    <!--Link CSS Navbar/Footer-->
+    <link rel="stylesheet" href="./src/css/navfooter.css">
+    <!--Link Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!--Link iconos-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- cloudflare -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <!--Header-->
+    <header>
+
+    </header>
+    <!--Main-->
+    <main>
+        <div class="container">
+            <div class="title">
+                <h1>Contáctanos.</h1>
+            </div>
+            
+            <div class="row justify-content-between" >
+            <!--Div datos-contacto-->
+              <div class="col-12 col-md-5 datos-contacto" >
+                <div class="tit" id="atencion">
+                    <h3>Atención al cliente.</h3>
+                </div>
+                <div class="info" id="telefono">
+                    <i class="iconos fa-solid fa-phone"></i>
+                    <p>+ 52 6691009316</p>
+                    <p>800 910 5682</p>
+                </div>
+                <div class="info" id="horario">
+                    <i class="iconos fa-solid fa-clock"></i>
+                    <p>Lunes a Viernes: 9 a 19 hrs</p>
+                    <p>Sábado y Domingo: 10 a 17 hrs</p>
+                </div>
+                <div class="ubicacion row">
+                    <div class="mapa col-12">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.450481925854!2d-99.20189222641966!3d19.436135040571216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d202049e615117%3A0xe4bb3c7492bbef21!2sAv.%20Homero%201099%2C%20Polanco%2C%20Polanco%20III%20Secc%2C%20Miguel%20Hidalgo%2C%2011540%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses!2smx!4v1690231989742!5m2!1ses!2smx" width="300" height="225" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="direccion col-12 col-xl-6">
+                        <p >Calle Homero, #1099, Ciudad de México, México.</p>
+                    </div>   
+                </div>
+    
+              </div>
+            <!--Div formulario-contacto-->
+              <div class="col-12 col-md-5 formulario" >
+                <div class="tit" id="titulo-form">
+                    <h3>¿Cómo podemos ayudarte?</h3>
+                </div>
+                <div class="form1">
+                <form id="form">
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" name="nombre" id="nombre" aria-describedby="nombre">
+                        <p class="mensajeError" id="errorNombre"><i class="bi bi-exclamation-circle"></i> El nombre debe de contener al menos 3 caracteres.</p>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo electrónico</label>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email">
+                        <p class="mensajeError" id="errorCorreo"><i class="bi bi-exclamation-circle"></i> Introduce un correo electrónico válido.</p>
+                        <div id="emailHelp" class="form-text">Nunca compartirtemos tu correo con nadie.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="mensaje" class="form-label">Mensaje</label>
+                        <textarea type="text" class="form-control" id="mensaje" aria-describedby="mensaje" rows="3" name="mensaje"></textarea>
+                        <p class="mensajeError" id="errorMensaje"><i class="bi bi-exclamation-circle"></i> El mensaje debe contener al menos 20 caracteres.</p>
+                    </div>
+                    <div class="mb-3">
+                        <label for="tel" class="form-label">Teléfono</label>
+                        <input type="text" class="form-control" id="tel" aria-describedby="tel" name="tel">
+                        <p class="mensajeError" id="errorTel"><i class="bi bi-exclamation-circle"></i> Introduce un teléfono válido</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="motivo">Motivo</label>
+                        <select class="form-control" id="opcion" name="opcion">
+                            <option value="">-- Elige una opción --</option>
+                            <option value="Sugerencias">Sugerencias</option>
+                            <option value="Quejas">Quejas</option>
+                            <option value="Devoluciones y Aclaraciones">Devoluciones y aclaraciones</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                        <p class="mensajeError" id="errorMotivo"><i class="bi bi-exclamation-circle"></i> Selecciona una opción válida.</p>
+                    </div>
+                    <div class="mb-3 form-check py-2">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <button type="button" id="link-terminos" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Acepto Términos y condiciones
+                          </button>
+                
+                          <!-- Modal -->
+                          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable modal-xl">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h1 class="modal-title fs-5" id="exampleModalLabel">Términos y condiciones</h1>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body" style="font-size: medium;">
+                                  1. Identidad y Datos de Contacto del Responsable
+                
+                                  Nombre de la Tienda en Línea: Pawsitive Vibes
+                                  Responsable: Grupo Pawsitive
+                                  Correo Electrónico: pawsitivevibes@gmail.com
+                                  Teléfono de Contacto:
+                                  <br> 
+                                                  
+                                  2. Información Recopilada
+                                                  
+                                  En Pawsitive Vibes, recopilamos información personal de nuestros usuarios con el propósito de brindar un servicio de calidad y personalizado. La información que recopilamos incluye, pero no se limita a:
+                                                  
+                                  Nombre y apellidos
+                                  Dirección postal
+                                  Dirección de correo electrónico
+                                  Número de teléfono
+                                  Información de pago y facturación
+                                  Información sobre las mascotas (nombre, especie, raza, etc.)
+                                  Historial de compras y preferencias
+                                  <br>
+                                  3. Uso de la Información
+                                                  
+                                  La información personal recopilada se utilizará para los siguientes propósitos:
+                                                  
+                                  Procesamiento de pedidos y envíos.
+                                  Comunicación sobre el estado de los pedidos y ofertas especiales.
+                                  Personalización de la experiencia de compra.
+                                  Mejora de nuestros productos y servicios.
+                                  Cumplimiento de obligaciones legales.
+                                  Envío de boletines y promociones (con consentimiento explícito).
+                                  <br>
+                                  4. Compartir Información
+                                                  
+                                  Garantizamos que la información personal de nuestros usuarios no será vendida, alquilada ni compartida con terceros, excepto en los siguientes casos:
+                                                  
+                                  Proveedores de servicios y socios involucrados en el proceso de compra y envío.
+                                  Autoridades gubernamentales o entidades reguladoras cuando sea requerido por la ley.
+                                  <br>
+                                  5. Seguridad de Datos
+                                                  
+                                  Nos comprometemos a mantener la seguridad de la información personal. Utilizamos medidas de seguridad técnicas y organizativas para prevenir el acceso no autorizado, la divulgación o la                    modificación de los datos personales.
+                                  <br>
+                                  6. Derechos de los Usuarios
+                                                  
+                                  Los usuarios tienen los siguientes derechos con respecto a sus datos personales:
+                                                  
+                                  Acceso y rectificación: Pueden acceder y corregir sus datos personales.
+                                  Supresión: Pueden solicitar la eliminación de sus datos, bajo ciertas condiciones.
+                                  Oposición: Pueden oponerse al procesamiento de sus datos en ciertas circunstancias.
+                                  Portabilidad: Pueden solicitar la transferencia de sus datos a otra entidad.
+                                  <br>
+                                  7. Cambios al Aviso de Privacidad
+                                                  
+                                  Nos reservamos el derecho de modificar este aviso de privacidad en cualquier momento. Se recomienda a los usuarios revisar periódicamente para estar al tanto de cualquier cambio.
+                                                  
+                                  Si tienes preguntas o inquietudes sobre este aviso de privacidad, por favor contáctanos a través de los datos proporcionados en la sección 1.
+                                  <br>
+                                  Fecha de última actualización: [14/08/2023]
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                       
+                    </div>
+                    <p class="mensajeError" id="errorTerminos"><i class="bi bi-exclamation-circle"></i> Debes aceptar los términos y condiciones para continuar.</p>
+                    <button type="submit" class="enviar btn btn-primary" id="enviar">Enviar</button>
+                </form>
+                </div>
+              </div>
+            </div>
+          </div>
+    </main>
+    <!--Footer-->
+    <footer>
+
+    </footer>
+    <!--Scripts-->
+<script type="text/javascript"
+src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript">
+emailjs.init('GyGBftE0oP7o_4osB')
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="./src/js/contacto.js"></script>
+    <script src="./src/js/navbar.js"></script>
+  </body>
+</html>
